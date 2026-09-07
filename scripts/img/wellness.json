@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "healthy fresh vegetables and fruits balanced diet nutrition",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 3,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/66a0e3141278.jpg",
+      "caption": "A circular arrangement of healthy foods—fruits, vegetables, grains, eggs, cheese, milk—on white background. Contains Dreamstime watermarks and logo, ID 438561695, pamela angelista. Not suitable for background image due to watermarks.",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1210px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f05c28813555.jpeg",
+      "caption": "Vibrant healthy foods: salmon, avocado, broccoli, berries, nuts, spinach, olive oil, and seeds arranged on stone surface.",
+      "source": "Michigan Primary Care Partners",
+      "original_width": "1120px",
+      "original_height": "747px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f5a3ee4570cd.jpg",
+      "caption": "",
+      "source": "Harvard Health",
+      "original_width": "1500px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/61ed867ef82b.jpg",
+      "caption": "",
+      "source": "Healthdirect",
+      "original_width": "2339px",
+      "original_height": "3308px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/91bffdf3dcf0.jpg",
+      "caption": "The image is an infographic titled \"THE PERFECT PLATE GUIDE\" with subtitle \"Build a balanced plate.\" A circular plate diagram shows four sections: Vegetables (\"Fill half your plate with colorful veggies\"), Whole Grains (\"Choose whole grains for energy\"), Fruits (\"Enjoy a variety of fruits every day\"), and Protein (\"Choose lean meats, eggs, beans, or tofu\"). Website www.reallygreatsite.com appears at bottom. Contains substantial text.",
+      "source": "Canva",
+      "original_width": "1131px",
+      "original_height": "1600px"
+    }
+  ]
+}

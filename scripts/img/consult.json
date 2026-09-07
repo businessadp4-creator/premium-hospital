@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "doctor holding elderly patient hand compassion care hospital",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/632f6dd06d63.jpg",
+      "caption": "Close-up of two clasped hands comforting a hospitalized woman lying under a teal blanket; no text, no watermark, suitable for background image.",
+      "source": "Growth Power Suite",
+      "original_width": "2000px",
+      "original_height": "1125px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0f4adba2812c.jpg",
+      "caption": "Young female doctor with stethoscope examines elderly woman's hands in bright clinical room. Contains Dreamstime watermark.",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1156px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/53aeb6a6b6b3.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "1193px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bd96652440e1.jpg",
+      "caption": "An elderly woman wearing a blue face mask rests on a cane while a caregiver gently supports her hand.",
+      "source": "Heart to Heart's home care",
+      "original_width": "1380px",
+      "original_height": "920px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e6f50970143e.jpg",
+      "caption": "A young caregiver in blue uniform gently holds an elderly woman's hands while she rests in a bright, cozy bedroom. suitable for background image",
+      "source": "MJHS",
+      "original_width": "2800px",
+      "original_height": "934px"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "medical laboratory technician analyzing blood test samples modern laboratory",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 5,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ba576c8632d5.jpg",
+      "caption": "Lab workers in blue scrubs operate an automated biochemical analyzer; contains Alamy watermarks, so not suitable for background image.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5c862d2eac50.jpeg",
+      "caption": "A woman's hands prepare a mail-in medical test kit with instructions, adhesive bandages, foil packets, and purple lancet device.",
+      "source": "Neoteryx",
+      "original_width": "1175px",
+      "original_height": "685px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/41a8b185c403.jpg",
+      "caption": "Flat-style illustration of a doctor consulting a male patient seated on a hospital bed, with a medical monitor; no text, no watermark, clean high-contrast vector graphic suitable for background image.",
+      "source": "Mayo Clinic College of Medicine and Science",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/80fd092b6404.jpg",
+      "caption": "A doctor in white coat and purple gloves injects a masked blonde woman in a bright clinic; small \"ICR\" logo visible.",
+      "source": "Labcorp",
+      "original_width": "2000px",
+      "original_height": "776px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5001ab0b0405.png",
+      "caption": "Infographic comparing wet lab vs dry lab, containing a large amount of text information; full text not output.",
+      "source": "University Lab Partners",
+      "original_width": "1920px",
+      "original_height": "1280px"
+    }
+  ]
+}

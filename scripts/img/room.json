@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "modern private hospital patient room interior clean bed",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 3,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ff14f430fc27.jpg",
+      "caption": "A clean, modern hospital ward with three white patient beds, blue mattresses, green privacy curtains, wall-mounted medical gas panels, ceiling lights, bedside cabinets, and botanical wall art. No watermarks or text; high clarity, strong visual impact — suitable for background image.",
+      "source": "Nilkamal Edge",
+      "original_width": "4000px",
+      "original_height": "2238px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c768bba1d970.jpg",
+      "caption": "",
+      "source": "Tedisel Medical",
+      "original_width": "1920px",
+      "original_height": "1076px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2334efb1c40d.jpg",
+      "caption": "Bright empty medical examination room with green padded beds, IV stand, white blinds, tiled floor; contains Alamy watermark, not suitable for background.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/609ef4201f3b.jpg",
+      "caption": "An empty hospital room with a neatly made bed, orange recliner chair, IV stand, medical equipment, and yellow biohazard waste bin.",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2250px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/61569c0ee540.jpg",
+      "caption": "",
+      "source": "Asian Hospital and Medical Center",
+      "original_width": "1546px",
+      "original_height": "1031px"
+    }
+  ]
+}

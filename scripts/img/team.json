@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "team of doctors and nurses walking in modern hospital corridor professional",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0ffbb7ac5d6b.png",
+      "caption": "Doctors in white lab coats walking down a bright, modern hospital corridor, viewed from behind, cool blue tones.",
+      "source": "Infection Control Today",
+      "original_width": "2011px",
+      "original_height": "704px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4b7887a63e44.jpg",
+      "caption": "Doctors and nurses walking down a bright, white hospital corridor, high clarity, minimal text, visually clean. Suitable for background image.",
+      "source": "CoVet",
+      "original_width": "5523px",
+      "original_height": "3682px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9b4f6a2f874c.jpg",
+      "caption": "Three medical staff walking and talking in a bright hospital hallway; text includes \"EXIT\" on sign.",
+      "source": "Loyola Today - Loyola University Chicago",
+      "original_width": "1920px",
+      "original_height": "1280px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/201223e4d7e6.jpg",
+      "caption": "Six diverse medical professionals in scrubs and white coat pose with stethoscopes and badges in a bright hospital lobby.",
+      "source": "StockCake",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d6da830e8018.png",
+      "caption": "",
+      "source": "Skills for Health",
+      "original_width": "1600px",
+      "original_height": "900px"
+    }
+  ]
+}

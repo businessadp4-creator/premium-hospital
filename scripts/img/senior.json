@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "senior indian couple morning walk exercise park healthy",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 5,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6b1f7ba12a3b.jpg",
+      "caption": "Gemini分析异常",
+      "source": "South China Morning Post",
+      "original_width": "2000px",
+      "original_height": "1400px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bc963149c976.jpg",
+      "caption": "A happy couple holds hands walking a boardwalk at sunset; stock photo with Dreamstime watermarks, ID 470951348.",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1158px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3d9f6c200ecf.jpg",
+      "caption": "A middle-aged man in a white shirt points toward colorful red and blue playground equipment surrounded by lush green trees.",
+      "source": "Union Leader",
+      "original_width": "1795px",
+      "original_height": "1010px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/59ccf931b66a.jpg",
+      "caption": "A person stands arms-raised in a mountain stream surrounded by green meadows, pine forests, and snow-dusted rocky peaks. Suitable for background image.",
+      "source": "Tripadvisor",
+      "original_width": "1200px",
+      "original_height": "810px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b44d1c2257fa.jpg",
+      "caption": "Tall palm trees line a sandy desert oasis trail with a small water puddle reflecting under a bright blue sky. Suitable for background image.",
+      "source": "Yelp",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    }
+  ]
+}

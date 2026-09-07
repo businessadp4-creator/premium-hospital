@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "stethoscope with red heart health checkup concept",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 3,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4ec12f6196d1.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "1993px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fbe84e9b7c8c.jpg",
+      "caption": "A red heart resting on a medical stethoscope against a white background. suitable for background image",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2115px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b2c614a239f7.jpg",
+      "caption": "A healthcare worker in blue scrubs with stethoscope holds a colorful anatomical human heart model. Suitable for background image.",
+      "source": "Archer Review",
+      "original_width": "1200px",
+      "original_height": "900px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8be5968cf005.jpg",
+      "caption": "A hand holds a red heart while another hand holds a stethoscope, symbolizing heart healthcare. Contains Unsplash+ watermark.",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0f2955c34b38.jpg",
+      "caption": "",
+      "source": "ibhre.org",
+      "original_width": "4423px",
+      "original_height": "1552px"
+    }
+  ]
+}

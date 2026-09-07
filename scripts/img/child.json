@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "pediatrician examining happy child with mother in clinic",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 5,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d9e67c280cdc.jpg",
+      "caption": "A female doctor examines a young girl's throat while her mother watches, in a bright clinic room with Alamy watermark.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "962px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9a28b20e2c32.jpg",
+      "caption": "A female doctor with stethoscope consults a smiling mother and her young daughter in a clinic room. Contains Alamy watermark.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "957px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6cd87717ed5b.jpg",
+      "caption": "A smiling female doctor uses a stethoscope to examine a happy young girl in a bright clinical setting.",
+      "source": "123RF",
+      "original_width": "1300px",
+      "original_height": "866px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/44882d97fb83.jpg",
+      "caption": "A smiling mother holding her newborn baby, gently touching the infant's hand in a bright, cozy home setting. Suitable for background image.",
+      "source": "Zarminali Pediatrics",
+      "original_width": "1152px",
+      "original_height": "900px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/17b674ae6485.jpg",
+      "caption": "A smiling young girl looks up at a doctor writing on a clipboard in a bright room. Suitable for background image.",
+      "source": "Today's Parent",
+      "original_width": "1600px",
+      "original_height": "1200px"
+    }
+  ]
+}

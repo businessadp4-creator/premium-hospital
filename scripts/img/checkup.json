@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "doctor measuring blood pressure of patient health checkup",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 3,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d213093f9706.jpg",
+      "caption": "Female doctor measuring blood pressure of senior female patient in a clinic. Contains Dreamstime watermark (ID 413872858).",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "990px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/802fe4cdf0cf.jpg",
+      "caption": "Doctor measuring a patient's blood pressure with a digital monitor in a bright clinic; contains Alamy watermarks, Image ID: PCP5F3.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "936px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/00ba00859c2d.jpg",
+      "caption": "A nurse measures a seated woman's blood pressure with a sphygmomanometer and stethoscope; bold text \"BLOOD PRESSURE\" displayed.",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ecd275d71da5.jpg",
+      "caption": "",
+      "source": "Cleveland Clinic",
+      "original_width": "800px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3899a77c46c2.jpg",
+      "caption": "",
+      "source": "Harvard Health",
+      "original_width": "1200px",
+      "original_height": "930px"
+    }
+  ]
+}

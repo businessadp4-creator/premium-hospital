@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "modern hospital intensive care unit with monitoring equipment",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9b2c86427c13.jpg",
+      "caption": "Operating room with anesthesia machine, patient monitors, medical equipment on teal walls; contains Alamy watermarks and image ID text.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "957px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5212634bb6c7.jpg",
+      "caption": "A hospital vital signs monitor displaying heart rate 82, blood pressure 113/63, and ECG waveforms. Contains 123RF watermarks; includes text like \"LEAD OFF\", \"SpO2 100\", \"17\".",
+      "source": "123RF",
+      "original_width": "866px",
+      "original_height": "1300px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/51ed37aadcae.jpg",
+      "caption": "An ICU patient lies intubated on a hospital bed, surrounded by infusion pumps, ventilator, and vital sign monitors displaying \"PATIENT CURARISE.\"",
+      "source": "STAT News",
+      "original_width": "5616px",
+      "original_height": "3744px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f7820bb923fd.webp",
+      "caption": "",
+      "source": "The Hospital Studios",
+      "original_width": "768px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ff5a45fb0aee.jpg",
+      "caption": "A hand adjusts a medical monitor's controls in a clinic; image is blurry with visible Alamy watermarks.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "957px"
+    }
+  ]
+}

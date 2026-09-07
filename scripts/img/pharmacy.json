@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "pharmacist at hospital pharmacy counter with medicines",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6f45188a48ef.jpg",
+      "caption": "Pharmacist in white coat comparing two unlabeled white pill bottles with yellow and red caps on blurred pharmacy shelves. Contains Alamy watermark; not suitable for background use.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/221b804af257.jpg",
+      "caption": "A pharmacist in a white and green uniform hands a white medicine bag with green cross to a customer at a pharmacy counter.",
+      "source": "Hospital Management System",
+      "original_width": "2549px",
+      "original_height": "1434px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0dc8d4023ce3.jpg",
+      "caption": "Smiling male pharmacist in white coat and glasses at pharmacy counter; blurred colleague, stocked shelves, Alamy watermarks.",
+      "source": "Alamy",
+      "original_width": "1296px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3f068efbd2f8.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1221px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/09e6d5a34a49.jpg",
+      "caption": "A smiling pharmacist in a white coat with ID badge helps an elderly female patient at a pharmacy counter.",
+      "source": "The University of Kansas Health System",
+      "original_width": "1440px",
+      "original_height": "586px"
+    }
+  ]
+}

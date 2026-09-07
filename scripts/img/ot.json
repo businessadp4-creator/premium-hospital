@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "modern hospital operation theatre surgical room equipment",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2ea4c9b69db9.jpg",
+      "caption": "A modern operating room with surgical lights, operating table, monitors, and anesthesia equipment. Contains Alamy watermarks; not suitable for background use.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7fc5d81c8249.jpg",
+      "caption": "Gemini分析异常",
+      "source": "World Health Expo",
+      "original_width": "1540px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/da9e76d0f873.jpg",
+      "caption": "A bright, modern empty operating room with surgical lights, monitors showing anatomical images, equipment, and cabinets. High clarity, strong visual impact, no watermark — suitable for background image.",
+      "source": "Alibaba.com",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1333626d5142.jpg",
+      "caption": "A modern operating room with a surgical table, blue walls, beach boardwalk murals, surgical lights, and monitors displaying coastal scenery.",
+      "source": "STERIS",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/411c21e43920.jpg",
+      "caption": "",
+      "source": "Dragon Medical Devices",
+      "original_width": "1920px",
+      "original_height": "700px"
+    }
+  ]
+}

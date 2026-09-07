@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "query": "professional headshot portrait of Indian female doctor in white coat smiling",
+  "count": 8,
+  "ranked": true,
+  "captioned_count": 7,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9e08dcb244dc.jpg",
+      "caption": "A smiling young female doctor in a white coat with stethoscope, arms crossed, against a white background. Contains Alamy watermark and \"alamy\", \"Image ID: 2R98Y8A\", \"www.alamy.com\" text. Not suitable for background image due to watermarks.",
+      "source": "Alamy",
+      "original_width": "866px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f9290ee527bc.jpg",
+      "caption": "Professional portrait of a smiling woman with long dark hair wearing a white lab coat, arms crossed, embroidered text \"Sara\" visible.",
+      "source": "sjidermatology.com",
+      "original_width": "976px",
+      "original_height": "1464px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/05cfc8ea06e2.png",
+      "caption": "",
+      "source": "Axiom Dentistry",
+      "original_width": "1122px",
+      "original_height": "1402px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/084b467aa90b.jpg",
+      "caption": "A female doctor in a white coat with a stethoscope poses against a light background; contains 123RF watermarks.",
+      "source": "123RF",
+      "original_width": "867px",
+      "original_height": "1300px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ed05dc960c93.jpg",
+      "caption": "Smiling female doctor wearing glasses, headset, stethoscope, and white coat. Contains Depositphotos watermark; not suitable as background.",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1168px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f147cd994da5.jpg",
+      "caption": "A smiling female doctor with crossed arms, wearing a white coat embroidered \"Shamita Trivedi, D.O.\", on white background.",
+      "source": "Casad Health & Wellness",
+      "original_width": "800px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2fd94f355130.jpg",
+      "caption": "Smiling female doctor in white coat holding tablet, walking outside a modern glass hospital entrance at sunset; text \"hospital name\" visible.",
+      "source": "Media.io",
+      "original_width": "928px",
+      "original_height": "1152px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f23f44144157.jpg",
+      "caption": "Professional headshot of a smiling young woman with long wavy brown-blonde hair, wearing a dark blazer over a white top, gray background. No text or watermarks. Suitable for background image.",
+      "source": "Four States Dental Care",
+      "original_width": "800px",
+      "original_height": "1000px"
+    }
+  ]
+}

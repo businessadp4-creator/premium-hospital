@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "hospital emergency sign with ambulance at hospital entrance",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 2,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1b65bcd57af9.jpg",
+      "caption": "Red \"AMBULANCE ONLY\" sign on hospital entrance canopy. Text: \"AMBULANCE ONLY\", \"alamy\", \"Image ID: 2H7F8K0\", \"www.alamy.com\". Contains Alamy watermarks; not suitable for background image.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "821px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/44fe22ef7281.jpg",
+      "caption": "",
+      "source": "San Antonio Report",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/338acf65a4f4.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1161px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/898e0156c352.jpg",
+      "caption": "Hospital emergency entrance signs for TriStar Bellevue ER, with ambulance entrance and diesel fuel warning signs. Text: \"TriStar Bellevue ER, EMERGENCY, ENTRANCE, AMBULANCE, 7734 Highway 70 South, AMBULANCE ENTRANCE ONLY, DANGER DIESEL FUEL NO SMOKING NO OPEN FLAMES.\"",
+      "source": "WKRN",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eef7dd6a570f.jpg",
+      "caption": "",
+      "source": "NBC Boston",
+      "original_width": "1920px",
+      "original_height": "1080px"
+    }
+  ]
+}

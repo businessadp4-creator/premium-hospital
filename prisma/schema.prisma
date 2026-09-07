@@ -1,0 +1,149 @@
+// ============================================================================
+// Durga Multi Specialty Hospital — Database Schema
+// ----------------------------------------------------------------------------
+// ACTIVELY USED in this build:
+//   AppointmentRequest, ContactRequest  (form submissions -> API routes)
+//
+// CMS-READY (defined for future staff-managed content; currently content is
+// served from typed TypeScript modules in src/lib/content which mirror these
+// models one-to-one, so migrating to DB/CMS later is a straight seed):
+//   Department, Doctor, Service, HealthPackage, Facility,
+//   Testimonial, BlogPost, HospitalSetting
+// ============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// --- Patient-facing form flows (active) -------------------------------------
+
+model AppointmentRequest {
+  id             String   @id @default(cuid())
+  patientName    String
+  phone          String
+  email          String?
+  departmentSlug String // references Department.slug (validated in API layer)
+  doctorSlug     String? // references Doctor.slug (validated in API layer)
+  preferredDate  String // ISO date string yyyy-mm-dd
+  preferredTime  String // slot label e.g. "10:00 AM - 12:00 PM"
+  message        String?
+  status         String   @default("pending") // pending | confirmed | completed | cancelled
+  source         String   @default("website")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([status])
+}
+
+model ContactRequest {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  subject   String?
+  message   String
+  status    String   @default("new") // new | in_progress | resolved
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+// --- CMS-ready content models (future staff management) ---------------------
+
+model Department {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  name        String
+  tagline     String
+  description String
+  icon        String // lucide icon key
+  image       String?
+  highlights  String // JSON array of strings
+  order       Int     @default(0)
+  isActive    Boolean @default(true)
+  doctors     Doctor[]
+}
+
+model Doctor {
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  name           String
+  qualifications String
+  speciality     String
+  departmentSlug String
+  department     Department @relation(fields: [departmentSlug], references: [slug])
+  designation    String
+  experienceYears Int
+  languages      String // JSON array
+  bio            String
+  expertise      String // JSON array of strings
+  photo          String?
+  consultationInfo String?
+  isActive       Boolean  @default(true)
+}
+
+model Service {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  category    String // clinical | diagnostic | emergency | surgical | preventive | specialised
+  name        String
+  description String
+  icon        String?
+  order       Int     @default(0)
+}
+
+model HealthPackage {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  name        String
+  description String
+  includes    String // JSON array of strings
+  price       String? // display-only string, e.g. "Rs. 2,500" — omit if not provided
+  recommendedFor String?
+  isPopular   Boolean @default(false)
+  order       Int     @default(0)
+}
+
+model Facility {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  name        String
+  description String
+  image       String?
+  order       Int     @default(0)
+}
+
+model Testimonial {
+  id          String  @id @default(cuid())
+  patientName String
+  treatment   String?
+  rating      Int     @default(5)
+  quote       String
+  isPublished Boolean @default(false) // only authentic, hospital-verified testimonials get published
+  createdAt   DateTime @default(now())
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  category    String
+  excerpt     String
+  content     String
+  coverImage  String?
+  authorName  String
+  readMinutes Int      @default(4)
+  publishedAt DateTime
+  isPublished Boolean  @default(true)
+}
+
+model HospitalSetting {
+  key   String @id
+  value String
+}

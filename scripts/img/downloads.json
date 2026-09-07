@@ -1,0 +1,98 @@
+[
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b816b1bb955c.jpg",
+    "out": "/home/z/my-project/public/images/hero.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0ffbb7ac5d6b.png",
+    "out": "/home/z/my-project/public/images/team.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/449b60620260.jpg",
+    "out": "/home/z/my-project/public/images/lobby.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/609ef4201f3b.jpg",
+    "out": "/home/z/my-project/public/images/room.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/51ed37aadcae.jpg",
+    "out": "/home/z/my-project/public/images/icu.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/411c21e43920.jpg",
+    "out": "/home/z/my-project/public/images/ot.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5001ab0b0405.png",
+    "out": "/home/z/my-project/public/images/lab.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/019e01444812.jpg",
+    "out": "/home/z/my-project/public/images/imaging.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/221b804af257.jpg",
+    "out": "/home/z/my-project/public/images/pharmacy.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eef7dd6a570f.jpg",
+    "out": "/home/z/my-project/public/images/emergency.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e6f50970143e.jpg",
+    "out": "/home/z/my-project/public/images/consult.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/00ba00859c2d.jpg",
+    "out": "/home/z/my-project/public/images/checkup.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/17b674ae6485.jpg",
+    "out": "/home/z/my-project/public/images/child.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/61ed867ef82b.jpg",
+    "out": "/home/z/my-project/public/images/wellness.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4ec12f6196d1.jpg",
+    "out": "/home/z/my-project/public/images/heart.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6b1f7ba12a3b.jpg",
+    "out": "/home/z/my-project/public/images/senior.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3f5d087da530.jpg",
+    "out": "/home/z/my-project/public/images/doctor-m-1.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/176511dc7a55.jpg",
+    "out": "/home/z/my-project/public/images/doctor-m-2.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5f95ae127781.jpg",
+    "out": "/home/z/my-project/public/images/doctor-m-3.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/298e91169132.jpg",
+    "out": "/home/z/my-project/public/images/doctor-m-4.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/05cfc8ea06e2.png",
+    "out": "/home/z/my-project/public/images/doctor-f-1.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f9290ee527bc.jpg",
+    "out": "/home/z/my-project/public/images/doctor-f-2.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2fd94f355130.jpg",
+    "out": "/home/z/my-project/public/images/doctor-f-3.jpg"
+  },
+  {
+    "url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f147cd994da5.jpg",
+    "out": "/home/z/my-project/public/images/doctor-f-4.jpg"
+  }
+]

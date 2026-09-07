@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "Indian doctor warmly consulting elderly patient in modern bright hospital",
+  "count": 6,
+  "ranked": true,
+  "captioned_count": 2,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3cf9085f1c86.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1500px",
+      "original_height": "1102px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/89c125ba0b93.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1500px",
+      "original_height": "1100px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/df7075bc952d.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "990px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6234eeb88322.jpg",
+      "caption": "Bright hospital reception area with floral wall murals, white curved counter, and green \"Surgical Oncology\" sign hanging above.",
+      "source": "Justdial",
+      "original_width": "1728px",
+      "original_height": "1152px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a92d6191fe4f.jpeg",
+      "caption": "",
+      "source": "Reedley Rotary",
+      "original_width": "900px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b816b1bb955c.jpg",
+      "caption": "Four smiling students in purple \"New Student Orientation\" polo shirts posing on a university campus with stone walls and buildings.",
+      "source": "Royal News - University of Scranton",
+      "original_width": "1800px",
+      "original_height": "1021px"
+    }
+  ]
+}

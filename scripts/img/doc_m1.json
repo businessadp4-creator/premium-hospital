@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "query": "professional headshot portrait of Indian male doctor in white coat smiling",
+  "count": 8,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/77a42383df8d.jpg",
+      "caption": "A smiling young female doctor in a white coat with stethoscope; contains Dreamstime watermarks and ID text, so not suitable for background use.",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1157px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3f5d087da530.jpg",
+      "caption": "",
+      "source": "123RF",
+      "original_width": "1300px",
+      "original_height": "867px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/176511dc7a55.jpg",
+      "caption": "",
+      "source": "Men's Health",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c0e195a9bdcf.png",
+      "caption": "A poster of a man in glasses, white shirt, and red tie against purple background, hung with binder clips.",
+      "source": "DFTBA",
+      "original_width": "1060px",
+      "original_height": "1260px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f147cd994da5.jpg",
+      "caption": "",
+      "source": "Casad Health & Wellness",
+      "original_width": "800px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f9290ee527bc.jpg",
+      "caption": "A smiling woman with long dark hair wearing a white lab coat, arms crossed, against a plain light background. Text on coat is embroidered name, partially legible.",
+      "source": "sjidermatology.com",
+      "original_width": "976px",
+      "original_height": "1464px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5f95ae127781.jpg",
+      "caption": "Professional headshot of a smiling bearded doctor in white coat, dark blue background; text: \"Adam R. Blumer, III, DMD,\" \"Carolinas Center for Oral & Facial Surgery.\"",
+      "source": "Carolinas Center for Oral & Facial Surgery",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/298e91169132.jpg",
+      "caption": "",
+      "source": "PR Newswire",
+      "original_width": "1200px",
+      "original_height": "800px"
+    }
+  ]
+}

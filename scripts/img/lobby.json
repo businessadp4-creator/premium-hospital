@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "modern hospital reception lobby interior bright clean design",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 3,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5c74d051cd3c.jpg",
+      "caption": "A bright, modern hospital lobby with medical staff and visitors near a curved reception desk and digital screen.",
+      "source": "StockCake",
+      "original_width": "1344px",
+      "original_height": "768px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ad60dd336d6e.jpg",
+      "caption": "",
+      "source": "StockCake",
+      "original_width": "1664px",
+      "original_height": "936px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9b161e0e9a0a.jpeg",
+      "caption": "Medical centre reception desk with wooden wall, PMC logo, \"PULPATTA MEDICAL CENTRE\" text, monitor, and chair.",
+      "source": "Pexels",
+      "original_width": "3072px",
+      "original_height": "4096px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/12602b7220bd.jpg",
+      "caption": "",
+      "source": "Get It Back Health and Wellness",
+      "original_width": "1620px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/449b60620260.jpg",
+      "caption": "A modern laboratory interior featuring a teal Dastor biosafety cabinet, wooden counters, black office chairs, and a window overlooking a coastal city skyline.",
+      "source": "Goldmine Project Consultant",
+      "original_width": "2048px",
+      "original_height": "1335px"
+    }
+  ]
+}

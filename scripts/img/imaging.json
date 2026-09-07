@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "modern hospital MRI scanner radiology imaging room",
+  "count": 5,
+  "ranked": true,
+  "captioned_count": 3,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/019e01444812.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1181px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b82a1e5ef9fb.jpg",
+      "caption": "Bright clean hospital MRI room with white scanner, patient bed, and medical equipment cart; contains Alamy watermark.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a053038fc056.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1160px",
+      "original_height": "1700px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a204d0bf6848.jpeg",
+      "caption": "A mammography room with Hologic Selenia Dimensions equipment, beach-themed artwork, a fan, air conditioner, and gray wooden-look flooring. Text: \"Hologic,\" \"Selenia Dimensions.\"",
+      "source": "Innovative radiology",
+      "original_width": "1280px",
+      "original_height": "1707px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/917a27182bfc.jpg",
+      "caption": "A clean hospital MRI room featuring a white FUJIFILM machine, patient bed, supply shelves, and nature-themed ceiling light panels.",
+      "source": "LinkedIn",
+      "original_width": "800px",
+      "original_height": "1422px"
+    }
+  ]
+}
