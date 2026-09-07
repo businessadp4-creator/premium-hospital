@@ -15,17 +15,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 /* ═════════════════ SERVICES ═════════════════ */
 export function ServicesView() {
   usePageMeta({
-    title: `Medical Services — Diagnostics, Surgery, Emergency & Preventive Care`,
-    description: `Clinical, diagnostic, emergency, surgical and preventive healthcare services at ${siteConfig.name}, ${siteConfig.city} — laboratory, imaging, operation theatres, ICU, pharmacy and health check-ups under one roof.`,
+    title: `వైద్య సేవలు — పరీక్షలు, శస్త్రచికిత్స, అత్యవసరం & నివారణ సంరక్షణ`,
+    description: `${siteConfig.name}, ${siteConfig.cityTe}లో క్లినికల్, డయాగ్నస్టిక్, అత్యవసర, శస్త్రచికిత్సా మరియు నివారణ ఆరోగ్య సేవలు — ల్యాబ్, ఇమేజింగ్, ఆపరేషన్ థియేటర్లు, ICU, ఫార్మసీ మరియు ఆరోగ్య పరీక్షలు ఒకే పైకప్పు కింద.`,
   });
 
   return (
     <>
       <PageHero
-        eyebrow="What We Offer"
-        title="Medical services, organised around you"
-        description="From your first consultation to diagnostics, treatment, surgery and recovery — every service below is delivered in-house by our own team, so nothing about your care is outsourced to chance."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
+        eyebrow="మా సేవలు"
+        title="మీ చుట్టూ రూపొందించిన వైద్య సేవలు"
+        description="మీ మొదటి కన్సల్టేషన్ నుంచి పరీక్షలు, చికిత్స, శస్త్రచికిత్స మరియు కోలుకోవడం వరకు — క్రింది ప్రతి సేవా మా స్వంత బృందంతో అదే భవనంలో అందిస్తాము; మీ సంరక్షణలో భాగాన్ని యాదృచ్ఛికంగా బయటకు ఇవ్వము."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "సేవలు" }]}
       />
 
       <section className="bg-cream py-16 md:py-20">
@@ -58,7 +58,7 @@ export function ServicesView() {
                     <p className="mt-3 leading-relaxed text-muted-foreground">{g.description}</p>
                     <Link to="/appointments">
                       <Button className="mt-6 h-11 rounded-full px-6 font-semibold">
-                        Book a Service
+                        సేవ బుక్ చేయండి
                         <CIcon name="arrow-right" className="size-4" />
                       </Button>
                     </Link>
@@ -84,9 +84,9 @@ export function ServicesView() {
       <section className="bg-white pb-16 md:pb-20">
         <Container className="grid gap-5 md:grid-cols-3">
           {[
-            { title: "See our facilities", text: "Operation theatres, ICU, lab and rooms", href: "/facilities", icon: "building" },
-            { title: "Health packages", text: "Preventive check-ups for every age", href: "/health-packages", icon: "clipboard" },
-            { title: "Emergency care", text: "What to do in an urgent situation", href: "/emergency", icon: "siren" },
+            { title: "మా సౌకర్యాలు చూడండి", text: "ఆపరేషన్ థియేటర్లు, ICU, ల్యాబ్ మరియు గదులు", href: "/facilities", icon: "building" },
+            { title: "ఆరోగ్య ప్యాకేజీలు", text: "ప్రతి వయసు కోసం నివారణ పరీక్షలు", href: "/health-packages", icon: "clipboard" },
+            { title: "అత్యవసర సంరక్షణ", text: "తీవ్ర పరిస్థితిలో ఏం చేయాలి", href: "/emergency", icon: "siren" },
           ].map((c, i) => (
             <Reveal key={c.href} delay={i * 0.07}>
               <Link
@@ -114,24 +114,24 @@ export function ServicesView() {
 /* ═════════════════ FACILITIES ═════════════════ */
 export function FacilitiesView() {
   usePageMeta({
-    title: `Facilities & Infrastructure — ICU, Operation Theatres, Lab, Pharmacy`,
-    description: `Tour ${siteConfig.name}'s infrastructure: comfortable patient rooms, ICU, modular operation theatres, clinical laboratory, imaging centre, 24-hour pharmacy and emergency department in ${siteConfig.city}.`,
+    title: `సౌకర్యాలు & మౌలిక సదుపాయాలు — ICU, ఆపరేషన్ థియేటర్లు, ల్యాబ్, ఫార్మసీ`,
+    description: `${siteConfig.name} మౌలిక సదుపాయాలు: సౌకర్యవంతమైన రోగి గదులు, ICU, మాడ్యులర్ ఆపరేషన్ థియేటర్లు, క్లినికల్ ల్యాబొరేటరీ, ఇమేజింగ్ కేంద్రం, 24 గంటల ఫార్మసీ మరియు అత్యవసర విభాగం — ${siteConfig.cityTe}లో.`,
   });
 
   const amenities = [
-    { icon: "car", title: "On-site Parking", text: "Dedicated two & four-wheeler parking with step-free access to the lobby." },
-    { icon: "pill", title: "In-house Pharmacy", text: "Prescriptions filled on-site with pharmacist counselling before you leave." },
-    { icon: "users", title: "Attendant Comfort", text: "Waiting lounges, drinking water, restrooms and attendant seating in every ward." },
-    { icon: "heart", title: "Wheelchair Access", text: "Ramps, lifts and assistance for elderly and differently-abled patients." },
+    { icon: "car", title: "అదే ప్రాంగణంలో పార్కింగ్", text: "రెండు & నాలుగు చక్రాల ప్రత్యేక పార్కింగ్ — లాబీకి మెట్లు లేకుండా చేరుకునే సౌలభ్యం." },
+    { icon: "pill", title: "ఇన్-హౌస్ ఫార్మసీ", text: "ప్రిస్క్రిప్షన్లు అదే చోట పూర్తి — వెళ్లే ముందు ఫార్మసిస్ట్ సలహాతో." },
+    { icon: "users", title: "పరిచారకుల సౌకర్యం", text: "వెయిటింగ్ లాంజ్‌లు, తాగునీరు, విశ్రాంతి గదులు మరియు ప్రతి వార్డులో పరిచారకుల కూర్చోవడానికి సీట్లు." },
+    { icon: "heart", title: "చక్రాల కుర్చీ అందుబాటు", text: "రాంప్‌లు, లిఫ్ట్‌లు మరియు పెద్దలు, వికలాంగుల కోసం సహాయక సేవలు." },
   ];
 
   return (
     <>
       <PageHero
-        eyebrow="Our Infrastructure"
-        title="Facilities designed for healing"
-        description="A hospital stay is stressful enough — our spaces are built to lower that stress. Take a look at where you or your family would be cared for."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Facilities" }]}
+        eyebrow="మా మౌలిక సదుపాయాలు"
+        title="కోలుకోవడం కోసం రూపొందించిన సౌకర్యాలు"
+        description="ఆసుపత్రి సందర్శన/చేరిక ఇప్పటికే ఒత్తిడిని తెస్తుంది — మా స్థలాలు ఆ ఒత్తిడిని తగ్గించేలా రూపొందించాము. మీరు లేదా మీ కుటుంబం సంరక్షణ పొందే చోట్లను చూడండి."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "సౌకర్యాలు" }]}
       />
 
       {/* Editorial gallery */}
@@ -146,8 +146,7 @@ export function FacilitiesView() {
           </div>
           <Reveal className="mt-8">
             <p className="text-center text-xs text-muted-foreground">
-              Representative photography. Facility photographs of the actual hospital premises will replace
-              these before launch. [PLACEHOLDER]
+              ప్రాతినిధ్య ఫోటోగ్రఫీ. ప్రారంభానికి ముందు అసలు ఆసుపత్రి ప్రాంగణ ఫోటోలతో వీటిని భర్తీ చేయాలి. [PLACEHOLDER]
             </p>
           </Reveal>
         </Container>
@@ -156,7 +155,7 @@ export function FacilitiesView() {
       {/* Amenities */}
       <section className="bg-cream py-16 md:py-20">
         <Container>
-          <SectionHeading align="center" eyebrow="Patient Amenities" title="Thoughtful touches that make visits easier" />
+          <SectionHeading align="center" eyebrow="రోగి సౌకర్యాలు" title="సందర్శనలను సులభతరం చేసే ఆలోచనాత్మక అంశాలు" />
           <RevealGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {amenities.map((a) => (
               <RevealItem key={a.title} className="h-full">
@@ -185,24 +184,24 @@ function cn2(i: number) {
 /* ═════════════════ HEALTH PACKAGES ═════════════════ */
 export function PackagesView() {
   usePageMeta({
-    title: `Health Check-up Packages in ${siteConfig.city} — Master, Executive, Women's, Senior Citizen`,
-    description: `Preventive health check-up packages at ${siteConfig.name}, ${siteConfig.city}: master health check, executive check, women's wellness, senior citizen and diabetes & heart screening. Pricing on request.`,
+    title: `${siteConfig.cityTe}లో ఆరోగ్య పరీక్షల ప్యాకేజీలు — మాస్టర్, ఎగ్జిక్యూటివ్, మహిళల, సీనియర్ సిటిజన్`,
+    description: `${siteConfig.name}, ${siteConfig.cityTe}లో నివారణ ఆరోగ్య పరీక్షల ప్యాకేజీలు: మాస్టర్ హెల్త్ చెక్, ఎగ్జిక్యూటివ్ చెక్, మహిళల వెల్నెస్, సీనియర్ సిటిజన్ మరియు షుగర్ & గుండె పరీక్ష. ధర విచారణపై.`,
   });
 
   return (
     <>
       <PageHero
-        eyebrow="Preventive Care"
-        title="Health packages built for early answers"
-        description="Most serious illnesses whisper before they shout. Our check-up packages are designed to listen early — with same-day tests, a physician review and clear next steps."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Health Packages" }]}
+        eyebrow="నివారణ సంరక్షణ"
+        title="ముందస్తు సమాధానాల కోసం రూపొందించిన ఆరోగ్య ప్యాకేజీలు"
+        description="తీవ్రమైన జబ్బులు అరుపులు మొదలుపెట్టే ముందే గుసగుసలా మొదలవుతాయి. మా పరీక్షల ప్యాకేజీలు ఆ గుసగుసలను ముందుగా వినేలా రూపొందించాము — అదే రోజు పరీక్షలు, వైద్యుడి సమీక్ష మరియు స్పష్టమైన తదుపరి చర్యలతో."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "ఆరోగ్య ప్యాకేజీలు" }]}
       >
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-teal-soft">
           <span className="inline-flex items-center gap-2">
-            <CIcon name="clock" className="size-4 text-gold" /> Most tests finish in one morning
+            <CIcon name="clock" className="size-4 text-gold" /> చాలా పరీక్షలు ఒకే ఉదయంలో పూర్తి
           </span>
           <span className="inline-flex items-center gap-2">
-            <CIcon name="user" className="size-4 text-gold" /> Doctor explains every report
+            <CIcon name="user" className="size-4 text-gold" /> ప్రతి రిపోర్ట్ వైద్యుడు వివరిస్తారు
           </span>
         </div>
       </PageHero>
@@ -219,12 +218,11 @@ export function PackagesView() {
           <Reveal className="mt-10">
             <div className="rounded-2xl border border-border bg-white p-6 text-center shadow-card">
               <p className="text-sm leading-relaxed text-muted-foreground">
-                <span className="font-semibold text-foreground">How pricing works:</span> package
-                pricing is shared transparently at reception and on WhatsApp — it varies with
-                current lab schedules and any doctor-advised additions. We never add tests you
-                don&apos;t need.{" "}
+                <span className="font-semibold text-foreground">ధర విధానం ఎలా:</span> ప్యాకేజీ ధరలు రిసెప్షన్ వద్ద మరియు వాట్సాప్‌లో
+                పారదర్శకంగా తెలియజేస్తాము — ప్రస్తుత ల్యాబ్ షెడ్యూల్ మరియు వైద్యుడు సూచించిన అదనపు పరీక్షలను బట్టి మారవచ్చు. మీకు
+                అవసరం లేని పరీక్షలు మేము చేర్చము.{" "}
                 <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline-offset-4 hover:underline">
-                  Ask for today&apos;s package price →
+                  ఈ రోజు ప్యాకేజీ ధర అడగండి →
                 </a>
               </p>
             </div>
@@ -239,7 +237,7 @@ export function PackagesView() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
               <Image
                 src="/images/lab.jpg"
-                alt="Clinical laboratory at Durga Multi Specialty Hospital"
+                alt="దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్ క్లినికల్ ల్యాబొరేటరీ"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -248,16 +246,16 @@ export function PackagesView() {
           </Reveal>
           <div>
             <SectionHeading
-              eyebrow="Before You Come"
-              title="Preparing for your health check"
+              eyebrow="రాక ముందు"
+              title="మీ ఆరోగ్య పరీక్షకు సిద్ధం కావడం"
             />
             <ul className="mt-5 space-y-3.5">
               {[
-                "Fast for 10–12 hours before morning blood tests — water is fine",
-                "Carry previous reports and prescriptions for comparison",
-                "Wear comfortable clothing if TMT/exercise testing is included",
-                "Diabetics: do NOT take your morning anti-diabetic tablet until after fasting samples are collected — carry it with you",
-                "Plan for about 2–3 hours for the full check and physician review",
+                "ఉదయం రక్త పరీక్షల ముందు 10–12 గంటలు నోరు ముట్టకుండా ఉండండి — నీరు తాగవచ్చు",
+                "పోల్చడానికి గత రిపోర్ట్లు మరియు ప్రిస్క్రిప్షన్లు తీసుకురండి",
+                "టీఎంటీ/వ్యాయామ పరీక్షలు చేర్చి ఉంటే సౌకర్యవంతమైన బట్టలు ధరించండి",
+                "షుగర్ ఉన్నవారు: ఫాస్టింగ్ నమూనాలు తీసే వరకు ఉదయం షుగర్ గుళిక వాడకండి — మీతో తీసుకురండి",
+                "పూర్తి పరీక్ష మరియు వైద్యుడి సమీక్ష కోసం దాదాపు 2–3 గంటలు కేటాయించండి",
               ].map((tip) => (
                 <li key={tip} className="flex gap-3 text-sm leading-relaxed text-foreground/85">
                   <CIcon name="check-circle" className="mt-0.5 size-4 shrink-0 text-primary" strokeWidth={2} />

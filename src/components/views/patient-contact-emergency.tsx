@@ -30,17 +30,17 @@ import {
 /* ═════════════════ PATIENT INFORMATION ═════════════════ */
 export function PatientInfoView() {
   usePageMeta({
-    title: "Patient Information — Admissions, Insurance, Visiting Hours & FAQ",
-    description: `Everything patients need before visiting ${siteConfig.name}: admission process, documents checklist, insurance & TPA support, visiting hours, patient rights and answers to common questions.`,
+    title: "రోగి సమాచారం — చేరిక, ఇన్సూరెన్స్, సందర్శన సమయాలు & సాధారణ ప్రశ్నలు",
+    description: `${siteConfig.name} సందర్శించే ముందు రోగులకు అవసరమైనవన్నీ: చేరిక ప్రక్రియ, పత్రాల చెక్‌లిస్ట్, ఇన్సూరెన్స్ & TPA సహకారం, సందర్శన సమయాలు, రోగి హక్కులు మరియు సాధారణ ప్రశ్నల సమాధానాలు.`,
   });
 
   return (
     <>
       <PageHero
-        eyebrow="Patient Information"
-        title="Everything you need, before you arrive"
-        description="Admissions, documents, insurance, visiting hours and patient rights — explained plainly, so your visit is smooth from the first step."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Patient Information" }]}
+        eyebrow="రోగి సమాచారం"
+        title="మీరు రాకముందే అవసరమైనవన్నీ — ఒకే చోట"
+        description="చేరిక, పత్రాలు, ఇన్సూరెన్స్, సందర్శన సమయాలు మరియు రోగి హక్కులు — సరళంగా వివరించాము, తద్వారా మొదటి అడుగు నుంచే మీ సందర్శన సాఫీగా సాగుతుంది."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "రోగి సమాచారం" }]}
       />
 
       {/* Admission journey */}
@@ -48,9 +48,9 @@ export function PatientInfoView() {
         <Container>
           <SectionHeading
             align="center"
-            eyebrow="Admissions"
-            title="How admission works"
-            description="Five steps from your doctor's advice to a comfortable discharge."
+            eyebrow="చేరికలు"
+            title="చేరిక ఎలా జరుగుతుంది"
+            description="మీ వైద్యుడి సలహా నుంచి సౌకర్యవంతమైన డిశ్చార్జ్ వరకు — ఐదు దశలు."
           />
           <RevealGroup className="mt-12 grid gap-5 md:grid-cols-3 lg:grid-cols-5">
             {admissionSteps.map((step, i) => (
@@ -76,9 +76,9 @@ export function PatientInfoView() {
               <span className="grid size-12 place-items-center rounded-2xl bg-secondary text-primary">
                 <CIcon name="clipboard" className="size-6" />
               </span>
-              <h2 className="mt-5 font-display text-2xl font-bold">What to bring</h2>
+              <h2 className="mt-5 font-display text-2xl font-bold">ఏం తీసుకురావాలి</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                A short checklist that makes admissions and consultations faster:
+                చేరికలు మరియు కన్సల్టేషన్లను వేగవంతం చేసే చిన్న చెక్‌లిస్ట్:
               </p>
               <ul className="mt-5 space-y-3">
                 {admissionChecklist.map((item) => (
@@ -96,10 +96,10 @@ export function PatientInfoView() {
                 <span className="grid size-12 place-items-center rounded-2xl bg-gold-soft text-gold">
                   <CIcon name="clock" className="size-6" />
                 </span>
-                <h2 className="mt-5 font-display text-2xl font-bold">Visiting hours</h2>
+                <h2 className="mt-5 font-display text-2xl font-bold">సందర్శన సమయాలు</h2>
                 <ul className="mt-4 space-y-3 text-sm">
                   <li className="rounded-xl bg-cream/70 px-4 py-3">
-                    <span className="font-semibold text-foreground">General wards: </span>
+                    <span className="font-semibold text-foreground">సాధారణ వార్డులు: </span>
                     <span className="text-muted-foreground">{visitingInfo.general}</span>
                   </li>
                   <li className="rounded-xl bg-cream/70 px-4 py-3">
@@ -107,22 +107,21 @@ export function PatientInfoView() {
                     <span className="text-muted-foreground">{visitingInfo.icu}</span>
                   </li>
                   <li className="rounded-xl bg-cream/70 px-4 py-3">
-                    <span className="font-semibold text-foreground">Attendants: </span>
+                    <span className="font-semibold text-foreground">పరిచారకులు: </span>
                     <span className="text-muted-foreground">{visitingInfo.attendants}</span>
                   </li>
                 </ul>
               </div>
               <div className="rounded-3xl border border-gold/40 bg-gold-soft p-8">
-                <h2 className="font-display text-xl font-bold text-accent-foreground">Insurance & billing</h2>
+                <h2 className="font-display text-xl font-bold text-accent-foreground">ఇన్సూరెన్స్ & బిల్లింగ్</h2>
                 <p className="mt-3 text-sm leading-relaxed text-accent-foreground/85">
-                  We support major health insurers and TPAs for planned and emergency admissions.
-                  For cashless treatment, share your policy details at the admission desk at least
-                  48 hours before a planned hospitalisation so pre-authorisation can begin. The
-                  billing desk will always give you an itemised estimate before treatment and a
-                  detailed bill at discharge.
+                  ప్రణాళికాబద్ధ మరియు అత్యవసర చేరికల కోసం ప్రధాన హెల్త్ ఇన్సూరర్లు మరియు TPAలకు మేము మద్దతు
+                  ఇస్తాము. క్యాష్‌లెస్ చికిత్స కోసం, ప్రీ-ఆథరైజేషన్ మొదలవ్వడానికి ప్రణాళికాబద్ధ చేరికకు కనీసం 48 గంటల
+                  ముందు అడ్మిషన్ డెస్క్‌లో మీ పాలసీ వివరాలు ఇవ్వండి. చికిత్సకు ముందు బిల్లింగ్ డెస్క్ ఎప్పుడూ వివరణాత్మక
+                  అంచనా ఇస్తుంది, డిశ్చార్జ్ సమయంలో వివరణాత్మక బిల్లు ఇస్తుంది.
                 </p>
                 <p className="mt-3 text-xs italic text-accent-foreground/70">
-                  [PLACEHOLDER — confirm current insurer/TPA panel and display the list here.]
+                  [PLACEHOLDER — ప్రస్తుత ఇన్సూరర్/TPA ప్యానెల్‌ను ధృవీకరించి జాబితాను ఇక్కడ చూపించండి.]
                 </p>
               </div>
             </div>
@@ -137,7 +136,7 @@ export function PatientInfoView() {
             <div className="rounded-3xl border border-border bg-cream/60 p-8">
               <h2 className="flex items-center gap-3 font-display text-2xl font-bold">
                 <CIcon name="badge-check" className="size-6 text-primary" />
-                Your rights as a patient
+                రోగిగా మీ హక్కులు
               </h2>
               <ul className="mt-5 space-y-3">
                 {patientRights.map((r) => (
@@ -153,7 +152,7 @@ export function PatientInfoView() {
             <div className="rounded-3xl border border-border bg-cream/60 p-8">
               <h2 className="flex items-center gap-3 font-display text-2xl font-bold">
                 <CIcon name="hand-heart" className="size-6 text-gold" />
-                What we ask of you
+                మేము మిమ్మల్ని అడిగేది
               </h2>
               <ul className="mt-5 space-y-3">
                 {patientResponsibilities.map((r) => (
@@ -185,17 +184,17 @@ export function AppointmentsView({
   presetPackageSlug?: string;
 }) {
   usePageMeta({
-    title: `Book an Appointment — ${siteConfig.city}`,
-    description: `Request an appointment at ${siteConfig.name}, ${siteConfig.city}. Choose your department and doctor, pick a date and time — our care team confirms your slot by phone. Also book by phone or WhatsApp.`,
+    title: `అపాయింట్‌మెంట్ బుక్ చేయండి — ${siteConfig.cityTe}`,
+    description: `${siteConfig.name}, ${siteConfig.cityTe}లో అపాయింట్‌మెంట్ అభ్యర్థించండి. శాఖ మరియు వైద్యుడిని ఎంచుకోండి, తేదీ మరియు సమయం పేర్చండి — మా సంరక్షణ బృందం ఫోన్ ద్వారా మీ స్లాట్‌ను ధృవీకరిస్తుంది. ఫోన్ లేదా వాట్సాప్ ద్వారా కూడా బుక్ చేయవచ్చు.`,
   });
 
   return (
     <>
       <PageHero
-        eyebrow="Book an Appointment"
-        title="Choose your specialist. We'll do the rest."
-        description="Submit the form below and our care team will call you to confirm the exact slot. Prefer to talk now? Call reception or message us on WhatsApp."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Appointments" }]}
+        eyebrow="అపాయింట్‌మెంట్ బుక్ చేయండి"
+        title="మీ నిపుణుడిని ఎంచుకోండి. మిగతాది మేము చూస్తాము."
+        description="క్రింది ఫారం సమర్పించండి — ఖచ్చితమైన స్లాట్‌ను ధృవీకరించడానికి మా సంరక్షణ బృందం మిమ్మల్ని కాల్ చేస్తుంది. ఇప్పుడే మాట్లాడాలంటే? రిసెప్షన్‌కు కాల్ చేయండి లేదా వాట్సాప్‌లో మెసేజ్ చేయండి."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "అపాయింట్‌మెంట్లు" }]}
       />
 
       <section className="bg-cream py-16 md:py-20">
@@ -211,7 +210,7 @@ export function AppointmentsView({
           </Reveal>
           <Reveal delay={0.1} className="space-y-5 lg:sticky lg:top-28">
             <div className="rounded-2xl border border-border bg-white p-6 shadow-card">
-              <h2 className="font-display text-lg font-semibold">Other ways to book</h2>
+              <h2 className="font-display text-lg font-semibold">బుక్ చేసే ఇతర మార్గాలు</h2>
               <ul className="mt-4 space-y-3">
                 <li>
                   <a href={`tel:${siteConfig.phone.tel}`} className="flex items-center gap-3.5 rounded-xl bg-cream/70 p-4 transition-all hover:bg-secondary/60">
@@ -219,7 +218,7 @@ export function AppointmentsView({
                       <CIcon name="phone" className="size-5" />
                     </span>
                     <span>
-                      <span className="block text-sm font-semibold">Call Reception</span>
+                      <span className="block text-sm font-semibold">రిసెప్షన్‌కు కాల్</span>
                       <span className="block text-[13px] text-muted-foreground">{siteConfig.phone.display} · {siteConfig.hours.opd}</span>
                     </span>
                   </a>
@@ -230,8 +229,8 @@ export function AppointmentsView({
                       <CIcon name="whatsapp" className="size-5" />
                     </span>
                     <span>
-                      <span className="block text-sm font-semibold">WhatsApp</span>
-                      <span className="block text-[13px] text-muted-foreground">Send your preferred date & department</span>
+                      <span className="block text-sm font-semibold">వాట్సాప్</span>
+                      <span className="block text-[13px] text-muted-foreground">మీకు అనుకూలమైన తేదీ & శాఖను పంపండి</span>
                     </span>
                   </a>
                 </li>
@@ -241,21 +240,21 @@ export function AppointmentsView({
                       <CIcon name="siren" className="size-5" />
                     </span>
                     <span>
-                      <span className="block text-sm font-semibold text-destructive">Emergency?</span>
-                      <span className="block text-[13px] text-muted-foreground">Do not use this form — call {siteConfig.emergency.display}</span>
+                      <span className="block text-sm font-semibold text-destructive">అత్యవసరమా?</span>
+                      <span className="block text-[13px] text-muted-foreground">ఈ ఫారం వాడకండి — {siteConfig.emergency.display}కి కాల్ చేయండి</span>
                     </span>
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="rounded-2xl border border-border bg-white p-6 shadow-card">
-              <h2 className="font-display text-lg font-semibold">Good to know</h2>
+              <h2 className="font-display text-lg font-semibold">తెలుసుకోవాల్సినవి</h2>
               <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                 {[
-                  "Carry previous prescriptions, reports and your photo ID",
-                  "Arrive 15 minutes early to complete registration",
-                  "Mention all current medicines to your doctor",
-                  "Timings follow the OPD schedule — walk-ins are accommodated between booked slots",
+                  "గత ప్రిస్క్రిప్షన్లు, రిపోర్ట్లు మరియు ఫోటో ఐడీ తీసుకురండి",
+                  "రిజిస్ట్రేషన్ పూర్తి చేసుకోవడానికి 15 నిమిషాల ముందు చేరుకోండి",
+                  "ప్రస్తుతం వాడుతున్న అన్ని మందుల గురించి వైద్యుడికి చెప్పండి",
+                  "OPD షెడ్యూల్ ప్రకారం సమయాలు ఉంటాయి — డైరెక్ట్‌గా వచ్చిన వారిని బుక్ చేసిన స్లాట్ల మధ్య చూస్తాము",
                 ].map((tip) => (
                   <li key={tip} className="flex gap-2.5">
                     <CIcon name="chevron-right" className="mt-0.5 size-4 shrink-0 text-gold" />
@@ -290,27 +289,27 @@ function AppointmentFormWrapper(props: {
 /* ═════════════════ CONTACT PAGE ═════════════════ */
 export function ContactView() {
   usePageMeta({
-    title: `Contact & Directions — ${siteConfig.name}, ${siteConfig.city}`,
-    description: `Contact ${siteConfig.name}: address ${fullAddress}, phone ${siteConfig.phone.display}, emergency line, email and Google Maps directions. Send us a message and we will respond within one working day.`,
+    title: `సంప్రదించండి & దారి — ${siteConfig.name}, ${siteConfig.cityTe}`,
+    description: `${siteConfig.name}ను సంప్రదించండి: చిరునామా ${fullAddress}, ఫోన్ ${siteConfig.phone.display}, అత్యవసర లైన్, ఇమెయిల్ మరియు గూగుల్ మ్యాప్స్ దారి. సందేశం పంపండి — ఒక పని దినంలో స్పందిస్తాము.`,
   });
 
   return (
     <>
       <PageHero
-        eyebrow="Contact Us"
-        title="We're listening"
-        description="Questions about appointments, reports, billing or anything else — reach us however you prefer. For medical emergencies, always call the emergency line directly."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
+        eyebrow="మమ్మల్ని సంప్రదించండి"
+        title="మేము వింటున్నాము"
+        description="అపాయింట్‌మెంట్లు, రిపోర్ట్లు, బిల్లింగ్ లేదా ఏదైనా ఇతర ప్రశ్నలు — మీకు నచ్చిన విధంగా మమ్మల్ని సంప్రదించండి. వైద్య అత్యవసర పరిస్థితులలో ఎప్పుడూ అత్యవసర లైన్‌కు డైరెక్ట్‌గా కాల్ చేయండి."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "సంప్రదింపు" }]}
       />
 
       <section className="bg-white py-16 md:py-20">
         <Container className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-5">
             {[
-              { icon: "map-pin", title: "Visit Us", lines: [siteConfig.name, fullAddress] },
-              { icon: "phone", title: "Reception", lines: [siteConfig.phone.display, siteConfig.hours.opd], href: `tel:${siteConfig.phone.tel}` },
-              { icon: "siren", title: "Emergency & Ambulance", lines: [siteConfig.emergency.display, "Call first — we prepare for your arrival"], href: `tel:${siteConfig.emergency.tel}` },
-              { icon: "mail", title: "Email", lines: [siteConfig.email, "We respond within one working day"], href: `mailto:${siteConfig.email}` },
+              { icon: "map-pin", title: "మా వద్దకు రండి", lines: [siteConfig.name, fullAddress] },
+              { icon: "phone", title: "రిసెప్షన్", lines: [siteConfig.phone.display, siteConfig.hours.opd], href: `tel:${siteConfig.phone.tel}` },
+              { icon: "siren", title: "అత్యవసరం & అంబులెన్స్", lines: [siteConfig.emergency.display, "ముందుగా కాల్ చేయండి — మీరు రావడానికి సిద్ధమవుతాము"], href: `tel:${siteConfig.emergency.tel}` },
+              { icon: "mail", title: "ఇమెయిల్", lines: [siteConfig.email, "ఒక పని దినంలో స్పందిస్తాము"], href: `mailto:${siteConfig.email}` },
             ].map((row, i) => (
               <Reveal key={row.title} delay={i * 0.06}>
                 <div className="flex gap-4 rounded-2xl border border-border bg-cream/60 p-5">
@@ -335,7 +334,7 @@ export function ContactView() {
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer">
                   <Button className="h-11 rounded-full px-6 font-semibold">
-                    <CIcon name="navigation" className="size-4" /> Get Directions
+                    <CIcon name="navigation" className="size-4" /> దారి చూపించు
                   </Button>
                 </a>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -348,9 +347,9 @@ export function ContactView() {
           </div>
           <Reveal delay={0.1}>
             <div className="rounded-3xl border border-border bg-cream/50 p-6 shadow-card md:p-8">
-              <h2 className="font-display text-2xl font-bold">Send us a message</h2>
+              <h2 className="font-display text-2xl font-bold">మాకు సందేశం పంపండి</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                For non-urgent questions. We typically reply within one working day.
+                తక్షణ అవసరం లేని ప్రశ్నల కోసం. సాధారణంగా ఒక పని దినంలో స్పందిస్తాము.
               </p>
               <div className="mt-6">
                 <ContactForm />
@@ -384,8 +383,8 @@ export function ContactView() {
 /* ═════════════════ EMERGENCY PAGE ═════════════════ */
 export function EmergencyView() {
   usePageMeta({
-    title: `Emergency Care — Call ${siteConfig.emergency.display}`,
-    description: `Emergency department at ${siteConfig.name}, ${siteConfig.city}. Call ${siteConfig.emergency.display} for ambulance support. Know the warning signs that need immediate care — chest pain, stroke (FAST), severe bleeding, breathing difficulty and more.`,
+    title: `అత్యవసర సంరక్షణ — ${siteConfig.emergency.display}కి కాల్ చేయండి`,
+    description: `${siteConfig.name}, ${siteConfig.cityTe}లో అత్యవసర విభాగం. అంబులెన్స్ సహకారం కోసం ${siteConfig.emergency.display}కి కాల్ చేయండి. తక్షణ సంరక్షణ అవసరమైన హెచ్చరిక లక్షణాలు — ఛాతీ నొప్పి, స్ట్రోక్ (FAST), తీవ్ర రక్తస్రావం, ఊపిరి ఆడకపోవడం మరియు మరిన్ని.`,
   });
 
   return (
@@ -397,49 +396,48 @@ export function EmergencyView() {
         <Container className="relative">
           <nav aria-label="Breadcrumb" className="text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-1.5">
-              <li><Link to="/" className="transition-colors hover:text-gold">Home</Link></li>
+              <li><Link to="/" className="transition-colors hover:text-gold">హోమ్</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
-              <li aria-current="page" className="font-medium text-white">Emergency Care</li>
+              <li aria-current="page" className="font-medium text-white">అత్యవసర సంరక్షణ</li>
             </ol>
           </nav>
           <div className="mt-8 grid items-center gap-10 lg:grid-cols-2">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-destructive px-4 py-1.5 text-[13px] font-semibold uppercase tracking-wider">
                 <span className="size-2 animate-pulse rounded-full bg-white" aria-hidden />
-                Emergency
+                అత్యవసరం
               </span>
               <h1 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
-                In an emergency, minutes decide outcomes.
+                అత్యవసర పరిస్థితిలో — నిమిషాలే ఫలితాలను నిర్ణయిస్తాయి.
               </h1>
               <p className="mt-4 max-w-lg leading-relaxed text-teal-soft">
-                Call first — our emergency team starts preparing while you travel. Do not drive
-                yourself. Bring previous medical reports and a list of current medicines if quickly
-                available.
+                ముందుగా కాల్ చేయండి — మీరు రావడం వరకు మా అత్యవసర బృందం ఏర్పాట్లు మొదలుపెడుతుంది.
+                మీరే వాహనం నడపకండి. వేగంగా అందగలిగితే — గత వైద్య రిపోర్ట్లు మరియు ప్రస్తుత మందుల
+                జాబితా తీసుకురండి.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href={`tel:${siteConfig.emergency.tel}`}>
                   <Button className="h-14 w-full rounded-2xl bg-destructive px-8 text-lg font-bold shadow-md hover:bg-destructive/90 sm:w-auto">
                     <CIcon name="phone-call" className="size-5" />
-                    Call {siteConfig.emergency.display}
+                    కాల్ {siteConfig.emergency.display}
                   </Button>
                 </a>
                 <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="h-14 w-full rounded-2xl border-white/30 bg-white/5 px-8 font-semibold text-white hover:bg-white/15 hover:text-white sm:w-auto">
                     <CIcon name="navigation" className="size-5" />
-                    Get Directions
+                    దారి చూపించు
                   </Button>
                 </a>
               </div>
               <p className="mt-5 text-xs leading-relaxed text-teal-soft/80">
-                [PLACEHOLDER — publish the 24×7 emergency line only after verifying the hospital&apos;s
-                emergency rota and ambulance availability.]
+                [PLACEHOLDER — ఆసుపత్రి అత్యవసర డ్యూటీ రోస్టర్ మరియు అంబులెన్స్ అందుబాటును ధృవీకరించిన తర్వాతే 24×7 అత్యవసర లైన్‌ను ప్రచురించండి.]
               </p>
             </div>
             <Reveal delay={0.1}>
               <div className="overflow-hidden rounded-3xl shadow-card-hover">
                 <Image
                   src="/images/emergency.jpg"
-                  alt="Emergency department entrance with ambulance bay"
+                  alt="అంబులెన్స్ బేతో అత్యవసర విభాగ ప్రవేశం"
                   width={768}
                   height={440}
                   className="h-auto w-full object-cover"
@@ -455,9 +453,9 @@ export function EmergencyView() {
         <Container>
           <SectionHeading
             align="center"
-            eyebrow="Know the Signs"
-            title="Come to the emergency department immediately if you see"
-            description="This list covers the most common time-critical emergencies. When in doubt, call us — describing symptoms takes one minute and can prevent a tragedy."
+            eyebrow="లక్షణాలు తెలుసుకోండి"
+            title="వీటిలో ఏదైనా కనిపిస్తే వెంటనే అత్యవసర విభాగానికి రండి"
+            description="ఈ జాబితా అత్యంత సాధారణమైన, సమయం కీలకమైన అత్యవసర పరిస్థితులను కవర్ చేస్తుంది. అనుమానం ఉంటే మమ్మల్ని కాల్ చేయండి — లక్షణాలను వివరించడానికి ఒక నిమిషమే పడుతుంది; దానితో విషాదాన్ని నివారించవచ్చు."
           />
           <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {emergencySymptoms.map((s) => (
@@ -484,7 +482,7 @@ export function EmergencyView() {
                 <span className="grid size-10 place-items-center rounded-xl bg-primary/10 text-primary">
                   <CIcon name="check" className="size-5" strokeWidth={2.5} />
                 </span>
-                Do this now
+                ఇప్పుడే ఇవి చేయండి
               </h2>
               <ul className="mt-6 space-y-3.5">
                 {emergencyDos.map((d) => (
@@ -502,7 +500,7 @@ export function EmergencyView() {
                 <span className="grid size-10 place-items-center rounded-xl bg-destructive/10 text-destructive">
                   <CIcon name="x" className="size-5" strokeWidth={2.5} />
                 </span>
-                Avoid these mistakes
+                ఈ తప్పులు చేయకండి
               </h2>
               <ul className="mt-6 space-y-3.5">
                 {emergencyDonts.map((d) => (

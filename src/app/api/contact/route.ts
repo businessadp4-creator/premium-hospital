@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   const rl = rateLimit(clientKey(req, "contact"), { limit: 5 });
   if (!rl.ok) {
     return NextResponse.json(
-      { ok: false, error: "Too many messages. Please call the hospital if urgent." },
+      { ok: false, error: "చాలా ఎక్కువ సందేశాలు. తక్షణ అవసరమైతే దయచేసి ఆసుపత్రికి కాల్ చేయండి." },
       { status: 429 }
     );
   }
@@ -24,13 +24,13 @@ export async function POST(req: Request) {
   try {
     body = await req.json();
   } catch {
-    return NextResponse.json({ ok: false, error: "Invalid request" }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "సరైన అభ్యర్థన కాదు" }, { status: 400 });
   }
 
   const parsed = schema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json(
-      { ok: false, error: "Please check your details and try again." },
+      { ok: false, error: "దయచేసి మీ వివరాలను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి." },
       { status: 400 }
     );
   }
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
   } catch (e) {
     console.error("contact create failed", e);
     return NextResponse.json(
-      { ok: false, error: "We could not save your message right now. Please call the hospital." },
+      { ok: false, error: "మీ సందేశాన్ని ఇప్పుడు సేవ్ చేయలేకపోతున్నాము. దయచేసి ఆసుపత్రికి కాల్ చేయండి." },
       { status: 500 }
     );
   }

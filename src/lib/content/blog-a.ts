@@ -2,249 +2,249 @@ import type { BlogPost } from "./types";
 
 /**
  * Health education library — medically conservative, awareness-oriented
- * articles. Written to standard public-health guidance. Each article carries
- * a disclaimer. Author profiles are sample doctors — see doctors.ts.
+ * articles (Telugu). Written to standard public-health guidance. Each article
+ * carries a disclaimer. Author profiles are sample doctors — see doctors.ts.
  */
 
 export const blogPostsA: BlogPost[] = [
   {
     slug: "heart-attack-warning-signs",
-    title: "Heart Attack Warning Signs You Should Never Ignore",
-    category: "Heart Care",
+    title: "గుండెపోటు ప్రమాదకర లక్షణాలు — ఎప్పుడూ విస్మరించకండి",
+    category: "గుండె ఆరోగ్యం",
     excerpt:
-      "Chest discomfort, unusual sweating, pain that travels to the arm or jaw — recognising a heart attack early can save a life. Here is what to watch for and what to do in the first critical minutes.",
+      "ఛాతీలో అసౌకర్యం, అసాధారణ చెమటలు, చేతికి లేదా దవడకు పాకే నొప్పి — గుండెపోటును ముందుగా గుర్తించడం ఒక ప్రాణాన్ని కాపాడగలదు. ఏమి గమనించాలో మరియు మొదటి కీలక నిమిషాల్లో ఏమి చేయాలో ఇక్కడ ఉంది.",
     coverImage: "/images/heart.jpg",
     authorSlug: "dr-ananya-sharma",
-    authorName: "Dr. Ananya Sharma",
+    authorName: "డా. అనన్య శర్మ",
     publishedAt: "2026-08-18",
     readMinutes: 5,
     sections: [
       {
         paragraphs: [
-          "Every year, many heart attack deaths in India occur not because treatment was impossible, but because help was reached too late. The first hour — sometimes called the golden hour — is when the heart muscle can still be saved. Knowing the warning signs and acting immediately is the single most powerful protection you have.",
-          "A heart attack happens when blood flow to part of the heart muscle is suddenly blocked. The longer the blockage remains, the more damage occurs. That is why doctors repeat one message constantly: when in doubt, get checked. It is always better to reach a hospital with a false alarm than to sit at home with a real one.",
+          "ప్రతి సంవత్సరం భారతదేశంలో గుండెపోటు మరణాలు చాలా వరకు — చికిత్స అసాధ్యం కాబట్టి కాదు, సహాయం ఆలస్యంగా చేరినందుకే జరుగుతాయి. మొదటి గంట — దీన్ని 'గోల్డెన్ అవర్' అని కూడా అంటారు — ఈ గంటలోనే గుండె కండరాన్ని ఇంకా రక్షించగలము. ప్రమాదకర లక్షణాలను తెలుసుకోవడం మరియు వెంటనే స్పందించడం — మీ చేతిలో ఉన్న అత్యంత శక్తివంతమైన రక్షణ ఇదే.",
+          "గుండె కండరానికి రక్త ప్రసరణ హఠాత్తుగా అడ్డుకోబడినప్పుడు గుండెపోటు జరుగుతుంది. అడ్డంకి ఎంత ఎక్కువ ఉంటుందో, నష్టం అంత ఎక్కువ. అందుకే వైద్యులు ఒకే సందేశాన్ని ఎప్పటికప్పుడు చెబుతారు: అనుమానం ఉంటే — పరిశీలించించుకోండి. తప్పు అలారంతో ఆసుపత్రికి చేరడం, నిజమైన ప్రమాదంతో ఇంట్లో కూర్చోవడం కంటే ఎప్పుడూ మెరుసు.",
         ],
       },
       {
-        heading: "The classic warning signs",
+        heading: "సాంప్రదాయిక ప్రమాదకర లక్షణాలు",
         list: {
           items: [
-            "Chest discomfort — pressure, tightness, heaviness or squeezing, often in the centre or left side, lasting more than a few minutes",
-            "Pain spreading to the left arm, right arm, shoulder, back, neck or jaw",
-            "Breaking into a cold sweat without physical exertion",
-            "Breathlessness, sometimes with or without chest discomfort",
-            "Nausea, vomiting or sudden indigestion-like discomfort",
-            "Unusual, overwhelming fatigue in the hours or days before",
-            "Dizziness or light-headedness",
+            "ఛాతీలో అసౌకర్యం — ఒత్తిడి, బిగుతు, భారం లేదా పిసికినట్లుగా; తరచుగా మధ్యలో లేదా ఎడమవైపు, కొన్ని నిమిషాలకు పైగా నిలిచిపోతూ",
+            "ఎడమ చేతికి, కుడి చేతికి, భుజానికి, వీపుకు, మెడకు లేదా దవడకు పాకే నొప్పి",
+            "శ్రమ లేకుండానే చల్లని చెమటలు పట్టడం",
+            "ఊపిరి ఆడకపోవడం — ఛాతీ అసౌకర్యంతో లేదా లేకుండా",
+            "వాక్కులు, వాంతులు లేదా అకస్మాత్తుగా గ్యాస్ట్రిక్ సమస్య వచ్చట్టుగా అనిపించడం",
+            "ముందు గంటల్లో లేదా రోజుల్లో అసాధారణమైన, ఓపిక తీరని అలసట",
+            "తల తిరగడం లేదా కళ్లు తిరిగినట్లు అనిపించడం",
           ],
         },
       },
       {
-        heading: "Heart attacks can look different in women and diabetics",
+        heading: "మహిళల్లో మరియు షుగర్ ఉన్నవారిలో లక్షణాలు వేరుగా కనిపించవచ్చు",
         paragraphs: [
-          "Women and people with diabetes frequently experience less dramatic symptoms — breathlessness, extreme tiredness, jaw or back pain, or simple nausea — rather than the clutch-the-chest pain of films and television. Because the signs are subtle, they are more often dismissed. If something feels seriously wrong with your body, trust that instinct and seek care.",
+          "మహిళలు మరియు మధుమేహం (షుగర్) ఉన్నవారిలో సినిమాల్లో చూపినట్లు ఛాతీ పట్టుకునే తీవ్ర నొప్పి కంటే — ఊపిరి ఆడకపోవడం, అత్యధిక అలసట, దవడ లేదా వీపు నొప్పి, సామాన్య వాంతులు వంటి తక్కువ స్పష్టమైన లక్షణాలు తరచుగా కనిపిస్తాయి. లక్షణాలు సూటిగా లేనందుకే వాటిని విస్మరించే ప్రమాదం ఎక్కువ. శరీరంలో ఏదో గంభీరంగా తప్పుగా ఉన్నట్లు అనిపిస్తే — ఆ తీర్పును నమ్మి, వైద్య సహాయం పొందండి.",
         ],
       },
       {
-        heading: "What to do in the first minutes",
+        heading: "మొదటి నిమిషాల్లో ఏమి చేయాలి",
         list: {
           intro:
-            "If you or someone near you has symptoms lasting more than a few minutes:",
+            "మీకు లేదా మీ దగ్గర ఉన్న వ్యక్తికి కొన్ని నిమిషాలకు పైగా నిలిచిపోయే లక్షణాలు ఉంటే:",
           items: [
-            "Call the hospital emergency number or an ambulance immediately — do not drive yourself",
-            "Sit the person down, loosen tight clothing and keep them calm and still",
-            "Do not let the person walk or exert themselves",
-            "If a doctor has previously prescribed medication for such episodes, use it as directed",
-            "Note the time symptoms started — this information helps the treating team",
+            "వెంటనే ఆసుపత్రి అత్యవసర నంబర్‌కు లేదా అంబులెన్స్‌కు కాల్ చేయండి — మీరే వాహనం నడపకండి",
+            "వ్యక్తిని కూర్చోబెట్టండి, బిగుతైన బట్టలు సడలించండి, ప్రశాంతంగా, కదలకుండా ఉంచండి",
+            "వ్యక్తి నడవడానికి లేదా శ్రమించడానికి అనుమతించకండి",
+            "ఈ రకమైన సందర్భాల కోసం వైద్యుడు గతంలో మందులు సూచించి ఉంటే — సూచించిన విధంగా వాడండి",
+            "లక్షణాలు మొదలైన సమయాన్ని గుర్తుపెట్టుకోండి — చికిత్సా బృందానికి ఇది ఉపయోగపడుతుంది",
           ],
         },
       },
       {
-        heading: "Reduce your risk before it happens",
+        heading: "జరగక ముందే ప్రమాదాన్ని తగ్గించుకోండి",
         paragraphs: [
-          "Most heart attacks are built over years from silent risk factors — high blood pressure, cholesterol, diabetes, smoking, stress and inactivity. An annual preventive heart check-up, especially after the age of 35 or with a family history, can identify these risks while they are still easy to correct.",
-          "Our cardiology team offers preventive screening, echocardiography and stress testing under one roof. If anything in this article feels familiar to you, do not wait — book a consultation and let us assess your heart properly.",
+          "చాలా గుండెపోటులు సంవత్సరాల తరబడి నిశ్శబ్ద ప్రమాద కారకాల నుంచి నిర్మాణమవుతాయి — రక్తపోటు, కొలెస్ట్రాల్, షుగర్, పొగతాగడం, ఒత్తిడి మరియు వ్యాయామం లేకపోవడం. 35 ఏళ్లు దాటిన తర్వాత లేదా కుటుంబంలో గుండె జబ్బుల చరిత్ర ఉన్నవారికి — వార్షిక నివారణ గుండె పరీక్ష ఈ ప్రమాదాలను ఇంకా సులభంగా సరిదిద్దగల దశలోనే గుర్తిస్తుంది.",
+          "మా కార్డియాలజీ బృందం ఒకే చోట నివారణ పరీక్షలు, ఎకోకార్డియోగ్రఫీ మరియు ఒత్తిడి పరీక్షలు అందిస్తుంది. ఈ కథనంలో ఏదైనా మీకు సొంతంగా అనిపిస్తే — వేచి ఉండకండి; కన్సల్టేషన్ బుక్ చేసి, మీ గుండెను సరిగ్గా పరిశీలించనివ్వండి.",
         ],
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. If you are experiencing symptoms now, contact emergency services immediately.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. ఇప్పుడు లక్షణాలు అనుభవిస్తుంటే, వెంటనే అత్యవసర సేవలను సంప్రదించండి.",
   },
   {
     slug: "diabetes-small-daily-habits",
-    title: "Managing Diabetes: Small Daily Habits That Make a Real Difference",
-    category: "Diabetes Care",
+    title: "మధుమేహం (షుగర్) నిర్వహణ: నిజంగా పనిచేసే చిన్న రోజువారీ అలవాట్లు",
+    category: "షుగర్ సంరక్షణ",
     excerpt:
-      "Diabetes control is not one big decision — it is dozens of small daily ones. A physician's practical guide to food, movement, monitoring and medication habits that genuinely lower blood sugar.",
+      "షుగర్ నియంత్రణ ఒక్క పెద్ద నిర్ణయం కాదు — దజన్ల చిన్న రోజువారీ నిర్ణయాలు. ఆహారం, కదలిక, పర్యవేక్షణ మరియు మందుల అలవాట్లపై ఫిజిషియన్ ఆచరణాత్మక మార్గదర్శకం.",
     coverImage: "/images/nutrition.jpg",
     authorSlug: "dr-sanjay-gupta",
-    authorName: "Dr. Sanjay Gupta",
+    authorName: "డా. సంజయ్ గుప్తా",
     publishedAt: "2026-07-30",
     readMinutes: 6,
     sections: [
       {
         paragraphs: [
-          "When patients are newly diagnosed with diabetes, they often expect a dramatic life overhaul. In practice, successful diabetes control is built from small, repeatable habits — the plate you fill at lunch, the ten-minute walk after dinner, the tablets taken at the same time every day. Small habits are easier to keep, and consistency is what lowers HbA1c.",
-          "Diabetes is a long-term relationship with your own body. The goal is not perfection for a week, but steadiness for years — protecting your eyes, kidneys, nerves, heart and feet from silent damage while living a full, normal life.",
+          "కొత్తగా షుగర్ రోగనిర్ధారణ అయినప్పుడు రోగులు తరచుగా జీవితం మొత్తం మలుపు తిరిగేలా అంచనా వేస్తారు. వాస్తవంలో విజయవంతమైన షుగర్ నియంత్రణ — చిన్న, పునరావృతమయ్యే అలవాట్ల నుంచి నిర్మాణమవుతుంది: భోజనానికి నింపుకునే అన్నం, భోజనం తర్వాత పది నిమిషాల నడక, ప్రతిరోజూ ఒకే సమయంలో వేసుకునే గుళికలు. చిన్న అలవాట్లు పాటించడం సులభం — మరియు కొనసాగింపే HbA1cని తగ్గిస్తుంది.",
+          "షుగర్ అంటే మీ శరీరంతో ఒక దీర్ఘకాలిక సంబంధం. లక్ష్యం ఒక వారం పరిపూర్ణత కాదు — ఎన్నో ఏళ్లు స్థిరత్వం: కళ్లు, మూత్రపిండాలు, నరాలు, గుండె మరియు కాళ్లను నిశ్శబ్ద నష్టం నుంచి రక్షిస్తూ, పూర్తి సాధారణ జీవితాన్ని గడపడం.",
         ],
       },
       {
-        heading: "Eat for steady sugar, not for restriction",
+        heading: "ఆహారం — నియంత్రణ కాదు, స్థిరమైన షుగర్ కోసం",
         list: {
           items: [
-            "Fill half your plate with vegetables at lunch and dinner; split the rest between protein (dal, curd, eggs, paneer, fish) and whole grains",
-            "Prefer whole millets, brown rice or chapati made from whole wheat over polished white rice at every meal",
-            "Eat fruit whole — never as juice; the fibre of a whole apple or guava slows sugar absorption",
-            "Keep dinner early and light; late heavy dinners drive morning sugars up",
-            "Watch liquid sugar completely: soft drinks, packaged juices and sweetened chai are the fastest sugar spikes of all",
+            "భోజనం మరియు రాత్రి వంటకంలో ప్లేట్‌లో సగభాగం కూరగాయలతో నింపుకోండి; మిగిలిన సగాన్ని ప్రోటీన్ (పప్పు, పెరుగు, గుడ్లు, పనీర్, చేపలు) మరియు మొత్తం ధాన్యాల మధ్య పంచుకోండి",
+            "ప్రతి భోజనంలో నువ్వులు తీసిన బియ్యం కంటే — సిరిధాన్యాలు, ఉడికించిన బియ్యం ధాన్యం లేదా మొత్తం గోధుమ రోటీలను ఇష్టపడండి",
+            "పండ్లను ముద్దగా తినండి — జ్యూస్‌గా ఎప్పటికీ కాదు; మొత్తం సీతాఫలం/జామ నార షుగర్ శోషణను నెమ్మదింపుతుంది",
+            "రాత్రి భోజనం త్వరగా, తేలికగా; ఆలస్యంగా భారీ భోజనం ఉదయం షుగర్ పెంచుతుంది",
+            "ద్రవ షుగర్‌కు పూర్తిగా దూరంగా ఉండండి: కూల్ డ్రింక్స్, ప్యాకెట్ జ్యూస్‌లు మరియు తీపి టీ — ఇవే వేగంగా షుగర్ పెంచేవి",
           ],
         },
       },
       {
-        heading: "Movement is medicine — literally",
+        heading: "కదలికే మందు — నిజంగానే",
         paragraphs: [
-          "Muscles use sugar for fuel, and a brisk 30-minute walk most days of the week measurably improves insulin sensitivity. You do not need a gym: a morning walk, taking stairs, household work and an after-dinner family stroll all count. If you have been inactive for years or have joint or heart problems, ask your doctor before starting, then build up gradually.",
-          "For many patients, the single most effective habit is the post-meal walk. Ten to fifteen minutes after lunch or dinner helps clear the sugar spike while it is happening — a small effort with a disproportionate reward.",
+          "కండరాలు షుగర్‌ను ఇంధనంగా వాడతాయి — వారంలో చాలా రోజులు 30 నిమిషాల వేగవంతమైన నడక ఇన్సులిన్ సున్నితత్వాన్ని నిజంగా మెరుగుపరుస్తుంది. జిమ్ అవసరం లేదు: ఉదయం నడక, మెట్లు ఎక్కడం, ఇంటి పనులు మరియు భోజనం తర్వాత కుటుంబ నడక — అన్నీ లెక్కింపులోకి వస్తాయి. ఎన్నో ఏళ్లుగా చురుకుగా లేకపోతే, లేదా కీళ్ల/గుండె సమస్యలుంటే ముందు వైద్యుడిని అడగండి; ఆ తర్వాత క్రమంగా పెంచుకోండి.",
+          "చాలామంది రోగులకు అత్యంత ప్రభావవంతమైన ఒకే అలవాటు — భోజనం తర్వాత నడక. భోజనం తర్వాత పది నుంచి పదిహేను నిమిషాల నడక, షుగర్ పెరుగుతున్న క్షణంలోనే దాన్ని తగ్గిస్తుంది — చిన్న కృషి, అసమానమైన ఫలం.",
         ],
       },
       {
-        heading: "Monitor, medicate, review",
+        heading: "పర్యవేక్షించండి, మందులు వాడండి, సమీక్షించండి",
         paragraphs: [
-          "Take your medicines exactly as prescribed — never adjust or stop them because a few readings looked good. Home glucose monitoring, where advised, turns vague feelings into useful data. And keep your quarterly review: HbA1c testing every three to six months tells us whether your overall control is truly on track, not just the reading on one morning.",
-          "Annual screening matters just as much: eyes (fundus exam), kidneys (microalbumin), feet (nerve and circulation check) and lipid profile. Diabetes damage is easiest to prevent — and hardest to reverse — which is why we screen for it before it has symptoms.",
+          "మందులను సూచించిన విధంగానే వాడండి — కొన్ని రీడింగ్లు బాగా వచ్చాయని వాటిని మార్చడం లేదా ఆపడం ఎప్పటికీ చేయకండి. సలహా మేరకు ఇంట్లో గ్లూకోజ్ పర్యవేక్షణ అస్పష్టమైన అనుభూతులను ఉపయోగకరమైన గణాంకాలుగా మారుస్తుంది. మరియు త్రైమాసిక సమీక్షను కొనసాగించండి: ప్రతి మూడు నుంచి ఆరు నెలలకు HbA1c పరీక్ష — ఒక ఉదయం రీడింగ్ కాదు, మొత్తం నియంత్రణ నిజంగా సరైన దారిలో ఉందో చెబుతుంది.",
+          "వార్షిక పరీక్షలు అంతే ముఖ్యం: కళ్లు (రెటీనా పరీక్ష), మూత్రపిండాలు (మైక్రోఅల్బుమిన్), కాళ్లు (నరాలు మరియు రక్త ప్రసరణ పరీక్ష) మరియు లిపిడ్ ప్రొఫైల్. షుగర్ నష్టాన్ని నివారించడం సులభం — తిరిగి దిద్దడం కష్టం; అందుకే లక్షణాలు రాకముందే మేము పరీక్షిస్తాము.",
         ],
       },
       {
-        heading: "When to see your doctor promptly",
+        heading: "వైద్యుడిని వెంటనే కలవాల్సిన పరిస్థితులు",
         list: {
           items: [
-            "Repeated readings consistently above your target range",
-            "Unexplained weight loss, excessive thirst or frequent urination",
-            "Any foot wound, blister or ulcer that is not healing",
-            "Frequent low-sugar episodes (shakiness, sweating, confusion)",
-            "Blurring of vision or numbness in the feet",
+            "మీ లక్ష్య పరిధి దాటి వరుసగా రీడింగ్లు నిలిచిపోవడం",
+            "కారణం తెలియని బరువు తగ్గడం, అధిక దాహం లేదా తరచుగా మూత్రవిసర్జన",
+            "కాలిగాయ, బొబ్బ లేదా పుండు — మానుకోకపోవడం",
+            "తరచుగా షుగర్ తగ్గే సందర్భాలు (చేతులు వణగడం, చెమటలు, తెల్లబోవడం)",
+            "కళ్లు మసకబారడం లేదా కాళ్లలో మత్తు పట్టడం (నంబ్‌నెస్)",
           ],
         },
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. Consult your physician before making changes to diet, exercise or medication.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. ఆహారం, వ్యాయామం లేదా మందులలో మార్పులు చేసే ముందు మీ వైద్యుడిని సంప్రదించండి.",
   },
   {
     slug: "blood-pressure-basics",
-    title: "Blood Pressure Basics: Why the Silent Condition Needs Your Attention",
-    category: "Heart Care",
+    title: "రక్తపోటు పునాదులు: నిశ్శబ్ద జబ్బుకు ఎందుకు మీ శ్రద్ధ అవసరం",
+    category: "గుండె ఆరోగ్యం",
     excerpt:
-      "High blood pressure rarely causes symptoms until it has already damaged the heart, brain or kidneys. Understanding your numbers — and keeping them in range — is one of the simplest gifts you can give your future self.",
+      "రక్తపోటు గుండె, మెదడు లేదా మూత్రపిండాలకు నష్టం చేసేవరకు దాదాపు ఎలాంటి లక్షణాలు చూపదు. మీ సంఖ్యలను అర్థం చేసుకోవడం — మరియు వాటిని పరిధిలో ఉంచుకోవడం — మీ భవిష్యత్తుకు ఇచ్చే సరళమైన కానుకల్లో ఒకటి.",
     coverImage: "/images/checkup.jpg",
     authorSlug: "dr-ananya-sharma",
-    authorName: "Dr. Ananya Sharma",
+    authorName: "డా. అనన్య శర్మ",
     publishedAt: "2026-07-14",
     readMinutes: 5,
     sections: [
       {
         paragraphs: [
-          "High blood pressure (hypertension) is called the silent killer for a precise reason: it produces almost no symptoms while it quietly stiffens arteries, thickens the heart and strains the kidneys and brain. Many patients discover it only at a routine check-up — or unfortunately, during an emergency.",
-          "The encouraging truth is that blood pressure is one of the most manageable health conditions we treat. With periodic monitoring, sensible lifestyle habits and, when needed, one small daily tablet, most people keep it fully in range and live completely normal lives.",
+          "రక్తపోటును (హైపర్‌టెన్షన్) 'నిశ్శబ్ద హంతకుడు' అని ఖచ్చితమైన కారణంతో అంటారు: ధమనులను నిశ్శబ్దంగా గట్టిపరుస్తూ, గుండెను మందం చేస్తూ, మూత్రపిండాలు మరియు మెదడుపై ఒత్తిడి తెస్తూ — దాదాపు ఎలాంటి లక్షణాలూ చూపదు. చాలామంది రోగులకు సాధారణ పరీక్షలో — దురదృష్టవశాత్తూ కొందరికి అత్యవసర పరిస్థితిలో — గుర్తింపు వస్తుంది.",
+          "ఉత్సాహభరితమైన నిజం: రక్తపోటు మాం చికిత్స చేసే జబ్బుల్లో అత్యంత నియంత్రించదగింది. క్రమం తప్పకుండా పర్యవేక్షణ, సమంజసమైన జీవనశైలి అలవాట్లు మరియు అవసరమైతే ఒక్క చిన్న రోజువారీ గుళికతో — చాలామంది దీన్ని పూర్తిగా పరిధిలో ఉంచుకుని సాధారణ జీవితం గడుపుతారు.",
         ],
       },
       {
-        heading: "Understanding your numbers",
+        heading: "మీ సంఖ్యలను అర్థం చేసుకోండి",
         list: {
           items: [
-            "Normal: below 120/80 mmHg — keep up your healthy habits",
-            "Elevated: 120–139 / 80–89 — lifestyle focus now, review with a doctor",
-            "High (hypertension): 140/90 or above on repeated measurements — medical assessment needed",
-            "Crisis level: 180/120 or above, especially with chest pain, severe headache, breathlessness or vision change — seek emergency care immediately",
+            "సాధారణం: 120/80 mmHg కంటే తక్కువ — మంచి అలవాట్లను కొనసాగించండి",
+            "పెరుగుతున్న స్థాయి: 120–139 / 80–89 — ఇప్పుడే జీవనశైలిపై దృష్టి పెట్టండి; వైద్యుడితో సమీక్షించండి",
+            "రక్తపోటు (హైపర్‌టెన్షన్): వరుస కొలతల్లో 140/90 లేదా అంతకు పైనుండి — వైద్య మూల్యాంకనం అవసరం",
+            "ప్రమాద స్థాయి: 180/120 లేదా అంతకు పైగా, ముఖ్యంగా ఛాతీ నొప్పి, తీవ్ర తలనొప్పి, ఊపిరి ఆడకపోవడం లేదా కళ్లలో మార్పులతో — వెంటనే అత్యవసర సంరక్షణ పొందండి",
           ],
         },
       },
       {
-        heading: "Home measurement, done right",
+        heading: "ఇంట్లో కొలత — సరైన విధంగా",
         paragraphs: [
-          "A single high reading in a clinic — white-coat effect, traffic stress, a hurried morning — does not define your blood pressure. What matters is the pattern. If your doctor has advised home monitoring, use a validated upper-arm cuff, rest quietly for five minutes first, keep your back supported and feet flat, and take readings at consistent times (morning and evening). Bring a written log of every reading to your appointment; that log shapes treatment far better than memory.",
+          "క్లినిక్‌లో ఒక్కసారి ఎక్కువ వచ్చిన రీడింగ్ — 'వైట్-కోట్' ప్రభావం, ట్రాఫిక్ ఒత్తిడి, తొందరపడిన ఉదయం — మీ రక్తపోటును నిర్వచించదు. ముఖ్యమైంది నమూనా (పాటర్న్). వైద్యుడు ఇంట్లో పర్యవేక్షణ సూచించిట్లయితే — ధృవీకరించిన ఎగువ చేతి కఫ్ వాడండి, ముందు ఐదు నిమిషాలు ప్రశాంతంగా విశ్రాంతి తీసుకోండి, వీపు ఆధారంతో, కాళ్లు చదునుగా ఉంచి, ఒకేలాంటి సమయాల్లో (ఉదయం మరియు సాయంత్రం) కొలవండి. ప్రతి రీడింగ్ రాతపూర్వక నమోదు అపాయింట్‌మెంట్‌కు తీసుకురండి; జ్ఞాపకం కంటే ఆ నమోదే చికిత్సను బాగా రూపొందిస్తుంది.",
         ],
       },
       {
-        heading: "Habits that lower blood pressure",
+        heading: "రక్తపోటును తగ్గించే అలవాట్లు",
         list: {
           items: [
-            "Reduce salt: pickles, papads, packaged snacks and restaurant food carry most of our hidden salt — taste first, then add",
-            "Walk briskly for 30 minutes on most days; even broken-up bouts of 10 minutes count",
-            "Manage weight gradually — even a 4–5 kg reduction measurably lowers pressure",
-            "Limit alcohol and stop smoking entirely — both injure blood vessels",
-            "Sleep 7 hours; untreated snoring with daytime sleepiness deserves a sleep-apnoea check",
-            "Practise slow breathing or meditation — chronic stress hormones keep pressure elevated",
+            "ఉప్పు తగ్గించండి: ఊరగాయలు, పాపడాలు, ప్యాక్డ్ స్నాక్స్ మరియు రెస్టారెంట్ తిండ్లలో మా నిగనిగలే ఉప్పు ఎక్కువ — ముందు రుచి చూడండి, తర్వాత వేయండి",
+            "చాలా రోజులు 30 నిమిషాలు వేగంగా నడవండి; 10 నిమిషాల చిన్న భాగాలుగా చేసినా లెక్కలోకి వస్తాయి",
+            "బరువును క్రమంగా నియంత్రించండి — 4–5 కిలోల తగ్గుదల కూడా రక్తపోటును నిజంగా తగ్గిస్తుంది",
+            "మద్యాన్ని పరిమితం చేయండి, పొగతాగడం పూర్తిగా మానేయండి — రెండూ రక్తనాళాలను గాయపరుస్తాయి",
+            "7 గంటలు నిద్రపోండి; పగలు నిద్రపోవడంతో కూడిన గురక — స్లీప్ అప్నియా పరీక్ష అవసరమా అని చూడండి",
+            "నెమ్మదిగా శ్వాసక్రియ లేదా ధ్యానం — దీర్ఘకాలిక ఒత్తిడి హార్మోన్లు రక్తపోటును ఎత్తుగా ఉంచుతాయి",
           ],
         },
       },
       {
         paragraphs: [
-          "If you have been prescribed BP medication, take it daily even when readings are normal — the tablet is working precisely because the number is controlled. Stopping medication on your own is the most common reason patients return with complications that could have been prevented.",
-          "A basic hypertension evaluation — examination, ECG, kidney and lipid panel — takes one morning at our hospital. If you have not had your pressure checked in the past year, consider this article your reminder.",
+          "రక్తపోటు మందులు సూచించబడి ఉంటే — రీడింగ్లు సాధారణంగా ఉన్నా ప్రతిరోజూ వాడండి; ఆ గుళిక పనిచేస్తోందంటేనే సంఖ్య నియంత్రణలో ఉంది. మందులు మీ ఇష్టంతో ఆపడం — నివారించగలిగిన సమస్యలతో రోగులు తిరిగి వచ్చే సాధారణమైన కారణం.",
+          "ప్రాథమిక రక్తపోటు మూల్యాంకనం — పరీక్ష, ఈసీజీ, మూత్రపిండాలు మరియు లిపిడ్ ప్యానెల్ — మా ఆసుపత్రిలో ఒకే ఉదయం పూర్తవుతుంది. గత సంవత్సరంలో రక్తపోటు చెక్ చేయించుకోలేదా? ఈ కథనాన్ని మీ రిమైండర్‌గా భావించండి.",
         ],
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. Never start, stop or change BP medication without consulting your doctor.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. వైద్యుడిని సంప్రదించకుండా రక్తపోటు మందులు మొదలుపెట్టడం, ఆపడం లేదా మార్చడం చేయకండి.",
   },
   {
     slug: "monsoon-fever-prevention-family-guide",
-    title: "Monsoon in Bangalore: A Family Guide to Fever Prevention",
-    category: "Family Health",
+    title: "వర్షాకాలంలో జ్వరాల నుంచి కుటుంబాన్ని రక్షించుకోవడం — ఒక ప్రాయోగిక మార్గదర్శకం",
+    category: "కుటుంబ ఆరోగ్యం",
     excerpt:
-      "Dengue, typhoid, viral fevers and leptospirosis rise with the rains. Simple home and surroundings habits protect your family far better than worry — here is your practical monsoon checklist.",
+      "డెంగ్యూ, టైఫాయిడ్, వైరల్ జ్వరాలు వర్షాలతో పెరుగుతాయి. ఆందోళన కంటే సరళమైన ఇంటి మరియు పరిసర అలవాట్లే మీ కుటుంబాన్ని బాగా రక్షిస్తాయి — మీ ఆచరణాత్మక వర్షాకాల చెక్‌లిస్ట్ ఇదిగోండి.",
     coverImage: "/images/hygiene.jpg",
     authorSlug: "dr-kavitha-reddy",
-    authorName: "Dr. Kavitha Reddy",
+    authorName: "డా. కవిత రెడ్డి",
     publishedAt: "2026-06-22",
     readMinutes: 5,
     sections: [
       {
         paragraphs: [
-          "The first heavy rains bring relief from summer heat — and a predictable rise in fevers across Bangalore. Mosquito-borne dengue, waterborne typhoid and hepatitis A, and a parade of viral fevers all peak in the monsoon months. The good news: nearly all of them are preventable with habits that take minutes, not money.",
+          "మొదటి పెద్ద వర్షాలు వేసవి వేడి నుంచి ఉపశమనం ఇస్తాయి — అదే సమయంలో బెంగళూరు మొత్తం జ్వరాల పెరుగుదలను కూడా తెస్తాయి. దోమల ద్వారా వ్యాపించే డెంగ్యూ, నీటి ద్వారా వ్యాపించే టైఫాయిడ్ మరియు హెపటైటిస్ A, మరియు వరుస వైరల్ జ్వరాలు — వర్షాకాల నెలల్లో పీక్ చేస్తాయి. మంచి వార్త: వీటిలో దాదాపు అన్నింటినీ — డబ్బు కాదు, నిమిషాలు తీసుకునే అలవాట్లతో నివారించవచ్చు.",
         ],
       },
       {
-        heading: "Win the fight against mosquitoes at home",
+        heading: "ఇంట్లో దోమలతో యుద్ధం గెలవండి",
         list: {
           items: [
-            "Empty and scrub water storage containers, coolers and flower-pot trays once a week — dengue mosquitoes breed in clean, standing water",
-            "Cover all water storage tanks and drums securely",
-            "Dress children in full-sleeve light clothing at dawn and dusk, when Aedes mosquitoes bite most",
-            "Use mosquito nets for infants and the elderly even during the day",
-            "Do not allow water to collect in tyres, broken pots or construction debris near your home",
+            "నీటి నిల్వ పాత్రలు, కూలర్లు మరియు పూల కుండల ట్రేలను వారానికి ఒకసారి ఖాళీ చేసి రుద్దండి — డెంగ్యూ దోమలు శుభ్రమైన నిల్వ నీటిలోనే పెరుగుతాయి",
+            "నీటి ట్యాంకులు మరియు డ్రమ్ములను గట్టిగా కప్పండి",
+            "తెల్లవారుజాము మరియు సాయంత్రం — ఏడిస్ దోమలు ఎక్కువగా కుట్టే సమయం — పిల్లలకు పొడవాటి, తేలికపాటి బట్టలు ధరింపించండి",
+            "పసిపిల్లలు మరియు పెద్దలకు పగలు కూడా దోమాటలు వాడండి",
+            "ఇంటి పరిసరాల్లో టైర్లలో, పగిలిన కుండల్లో, నిర్మాణ శిథిలాల్లో నీరు నిలిచిపోనివ్వకండి",
           ],
         },
       },
       {
-        heading: "Safe food and water, every meal",
+        heading: "ప్రతి భోజనంలో సురక్షితమైన ఆహారం, నీరు",
         list: {
           items: [
-            "Drink only boiled, filtered or sealed water — especially children and elders",
-            "Wash all raw produce thoroughly; prefer cooked vegetables during peak monsoon weeks",
-            "Avoid street-cut fruits, chutneys and pre-cut salads — the monsoon contamination risk is real",
-            "Reheat stored food properly before eating",
-            "Wash hands with soap before every meal and after using the washroom — the humblest and most effective prevention we have",
+            "ఉడకబెట్టిన, వడపోసిన లేదా సీల్ చేసిన నీరు మాత్రమే తాగండి — ముఖ్యంగా పిల్లలు మరియు పెద్దలు",
+            "అన్ని పచ్చి కూరగాయలు, పండ్లను బాగా కడగండి; వర్షాకాల పీక్ వారాల్లో ఉడికించిన కూరగాయలనే ఇష్టపడండి",
+            "రోడ్డుపై కోసిన పండ్లు, చట్నీలు మరియు ముందుగా కోసిన సలాడ్లు మానేయండి — వర్షాకాల కాలుష్య ప్రమాదం నిజమే",
+            "నిల్వ ఉన్న తిండిని తినే ముందు బాగా వేడి చేయండి",
+            "ప్రతి భోజనానికి ముందు మరియు శౌచాలయం తర్వాత సబ్బుతో చేతులు కడగండి — ఇదే మా అత్యంత సామాన్యమైన, అత్యంత ప్రభావవంతమైన నివారణ",
           ],
         },
       },
       {
-        heading: "When fever means 'see a doctor now'",
+        heading: "జ్వరం — 'వెంటనే వైద్యుడిని కలవండి' అని అర్థం వచ్చే సందర్భాలు",
         paragraphs: [
-          "Most monsoon fevers are viral and settle in three to five days with rest, fluids and paracetamol as advised. But some patterns need professional assessment without delay: fever lasting beyond three days, severe body ache with headache behind the eyes (possible dengue), fever with abdominal pain or persistent vomiting, decreased urine output, bleeding gums or skin spots, breathlessness, or any fever in an infant under three months, an elderly person, or someone with diabetes or kidney disease.",
-          "One important caution: never give aspirin or combination painkillers during a dengue-suspected fever — they can increase bleeding risk. Paracetamol, dosed correctly, is the safer choice while you reach a doctor.",
+          "చాలా వర్షాకాల జ్వరాలు వైరల్‌వి — విశ్రాంతి, ద్రవాలు మరియు సలహా మేరకు పారాసిటమాల్‌తో మూడు నుంచి ఐదు రోజుల్లో సర్దుకుపోతాయి. కానీ కొన్ని నమూనాలు ఆలస్యం లేకుండా వృత్తిపరమైన మూల్యాంకనం కావాలి: మూడు రోజులకు పైగా నిలిచే జ్వరం, కళ్ల వెనుక తలనొప్పితో కూడిన తీవ్ర శరీర నొప్పి (డెంగ్యూ అనుమానం), ఉదర నొప్పి లేదా నిరంతర వాంతులతో జ్వరం, మూత్రం తగ్గడం, చిగుళ్ల రక్తస్రావం లేదా చర్మంపై మచ్చలు, ఊపిరి ఆడకపోవడం — లేదా మూడు నెలల కంటే తక్కువ వయసు పసిబిడ్డలో, పెద్దవారిలో, షుగర్/మూత్రపిండాల జబ్బు ఉన్నవారిలో వచ్చే ఏ జ్వరం అయినా.",
+          "ఒక ముఖ్యమైన హెచ్చరిక: డెంగ్యూ అనుమానిత జ్వరంలో ఆస్పిరిన్ లేదా కలయిక నొప్పి మందులు ఎప్పటికీ ఇవ్వకండి — అవి రక్తస్రావ ప్రమాదాన్ని పెంచగలవు. వైద్యుడిని చేరే వరకు సరైన డోసులో పారాసిటమాల్ సురక్షితమైన ఎంపిక.",
         ],
       },
       {
-        heading: "Testing early saves trouble",
+        heading: "ముందస్తు పరీక్ష — ఇబ్బందిని తగ్గిస్తుంది",
         paragraphs: [
-          "A simple fever panel — CBC with platelet count, dengue NS1, and where suggested by your doctor, typhoid and urine tests — usually gives clear answers within hours at our laboratory. Early identification of dengue or typhoid changes management completely, from watchful hydration at home to timely hospital care.",
-          "If your family has a fever that is not settling, walk in or book a consultation. We would much rather reassure you early than treat late.",
+          "సరళమైన జ్వర ప్యానెల్ — ప్లేట్‌లెట్ గణనతో CBC, డెంగ్యూ NS1, మరియు వైద్యుడి సలహా మేరకు టైఫాయిడ్ మరియు మూత్ర పరీక్షలు — మా ల్యాబ్‌లో సాధారణంగా గంటల్లోనే స్పష్టమైన సమాధానాలిస్తాయి. డెంగ్యూ లేదా టైఫాయిడ్‌ను ముందుగా గుర్తించడం — ఇంట్లో జాగ్రత్తగా ద్రవాలు ఇవ్వడం నుంచి సకాలిక ఆసుపత్రి సంరక్షణ వరకు — నిర్వహణను పూర్తిగా మార్చేస్తుంది.",
+          "మీ కుటుంబంలో ఎవరికైనా సర్దుబాటు కాని జ్వరం ఉంటే — డైరెక్ట్‌గా వచ్చినా లేదా కన్సల్టేషన్ బుక్ చేసినా పరిశీలిస్తాము. ఆలస్యంగా చికిత్స చేయడం కంటే, ముందుగా మిమ్మల్ని ఓదార్చడమే మేము ఇష్టపడేది.",
         ],
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. Consult a doctor for any fever that is severe, persistent or accompanied by warning symptoms.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. తీవ్రమైన, నిలిచిపోయే లేదా ప్రమాదకర లక్షణాలతో కూడిన జ్వరానికి వైద్యుడిని సంప్రదించండి.",
   },
 ];

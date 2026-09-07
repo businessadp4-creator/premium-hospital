@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export function MobileBottomBar() {
   return (
     <nav
-      aria-label="Quick actions"
+      aria-label="త్వరిత చర్యలు"
       className={cn(
         "fixed inset-x-0 bottom-0 z-50 grid grid-cols-3 border-t border-border bg-white/95 backdrop-blur-lg md:hidden",
         "pb-[env(safe-area-inset-bottom)]"
@@ -23,7 +23,7 @@ export function MobileBottomBar() {
         className="flex h-14 flex-col items-center justify-center gap-0.5 text-[11px] font-medium text-foreground/80 transition-colors active:bg-muted"
       >
         <CIcon name="phone" className="size-5 text-primary" />
-        Call
+        కాల్
       </a>
       <a
         href={whatsappSafe()}
@@ -39,7 +39,7 @@ export function MobileBottomBar() {
         className="flex h-14 flex-col items-center justify-center gap-0.5 bg-primary text-[11px] font-semibold text-white transition-colors active:bg-teal-deep"
       >
         <CIcon name="calendar-check" className="size-5" />
-        Book Appointment
+        అపాయింట్‌మెంట్
       </Link>
     </nav>
   );
@@ -47,6 +47,6 @@ export function MobileBottomBar() {
 
 function whatsappSafe() {
   return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-    "Hello, I would like to enquire about an appointment at Durga Multi Specialty Hospital."
+    "నమస్కారం, దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్‌లో అపాయింట్‌మెంట్ గురించి విచారించాలనుకుంటున్నాను."
   )}`;
 }

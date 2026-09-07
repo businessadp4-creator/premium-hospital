@@ -5,137 +5,137 @@ import type { FAQ } from "./types";
 
 export const admissionSteps = [
   {
-    title: "Consultation & Advice",
+    title: "కన్సల్టేషన్ & సలహా",
     description:
-      "Your doctor examines you and, if needed, recommends admission with a clear explanation of why, for how long, and what it will involve.",
+      "మీ వైద్యుడు పరిశీలించి, అవసరమైతే చేరికకు సిఫారసు చేస్తారు — ఎందుకు, ఎంతకాలం, ఏమి జరుగుతుందో స్పష్టంగా వివరిస్తారు.",
   },
   {
-    title: "Admission Desk",
+    title: "అడ్మిషన్ డెస్క్",
     description:
-      "Visit the admission desk with the doctor's advice note. Our team explains room categories and expected costs, and completes your registration.",
+      "వైద్యుడి సలహా నోట్‌తో అడ్మిషన్ డెస్క్ వద్ద సంప్రదించండి. గది రకాలు, అంచనా ఖర్చులు వివరించి, మీ రిజిస్ట్రేషన్ పూర్తి చేస్తాము.",
   },
   {
-    title: "Room & Care Begins",
+    title: "గదికి చేర్పు & సంరక్షణ ప్రారంభం",
     description:
-      "You are escorted to your room, where nursing staff complete the intake assessment and your treating team begins the care plan.",
+      "మిమ్మల్ని మీ గదికి చేర్చుకుంటాము — నర్సింగ్ సిబ్బంది మొదటి మూల్యాంకనం పూర్తి చేసి, మీ చికిత్సా బృందం ప్రణాళిక మొదలుపెడుతుంది.",
   },
   {
-    title: "Daily Rounds & Updates",
+    title: "రోజువారీ రౌండ్లు & అప్‌డేట్‌లు",
     description:
-      "Your consultant reviews you daily, and the team keeps your family informed of progress and any changes to the plan.",
+      "మీ కన్సల్టెంట్ ప్రతిరోజూ పరిశీలిస్తారు; బృందం ముందుకు సాగుతున్న పరిస్థితి మరియు మార్పుల గురించి మీ కుటుంబాన్ని తెలియజేస్తుంది.",
   },
   {
-    title: "Discharge & Summary",
+    title: "డిశ్చార్జ్ & సారాంశం",
     description:
-      "At discharge you receive a written summary, prescriptions, follow-up date and clear home-care instructions before you leave.",
+      "డిశ్చార్జ్ సమయంలో రాతపూర్వక సారాంశం, ప్రిస్క్రిప్షన్లు, ఫాలో-అప్ తేదీ మరియు స్పష్టమైన ఇంటి సంరక్షణ సూచనలతో మిమ్మల్ని పంపుతాము.",
   },
 ];
 
 export const admissionChecklist = [
-  "Photo ID (Aadhaar / driving licence / passport) and a photocopy",
-  "Doctor's admission advice note",
-  "Insurance card / TPA / ECHS / CGHS documents, if applicable",
-  "Previous prescriptions, reports and scan films or CDs",
-  "A list of medicines you currently take, including doses",
-  "Personal items: comfortable clothing, slippers, spectacles, hearing aids, chargers",
-  "One attendant's ID and contact number for our records",
-  "Advance payment as advised by the billing desk (UPI, cards and cash accepted)",
+  "ఫోటో ఐడెంటిటీ (ఆధార్ / డ్రైవింగ్ లైసెన్స్ / పాస్‌పోర్ట్) మరియు ఒక ఫోటో కాపీ",
+  "వైద్యుడి చేరిక (అడ్మిషన్) సలహా నోట్",
+  "ఇన్సూరెన్స్ కార్డు / TPA / ECHS / CGHS పత్రాలు, ఉన్నట్లయితే",
+  "గత ప్రిస్క్రిప్షన్లు, రిపోర్ట్లు మరియు స్కాన్ ఫిల్మ్‌లు/సీడీలు",
+  "ప్రస్తుతం వాడుతున్న మందుల జాబితా — డోసులతో సహా",
+  "వ్యక్తిగత వస్తువులు: సౌకర్యవంతమైన బట్టలు, చెప్పులు, కళ్లద్దాలు, వినికిడి పరికరాలు, చార్జర్లు",
+  "ఒక పరిచారకుడి (అటెండెంట్) ఐడీ మరియు ఫోన్ నంబర్ — మా రికార్డుల కోసం",
+  "బిల్లింగ్ డెస్క్ సూచించిన ముందస్తు చెల్లింపు (UPI, కార్డులు, నగదు అందుబాటులో)",
 ];
 
 export const visitingInfo = {
   /** [PLACEHOLDER] — confirm exact hours with hospital administration */
-  general: "10:00 AM – 12:30 PM and 5:00 PM – 7:00 PM daily [confirm]",
-  icu: "ICU viewing windows follow a separate schedule; our ICU team updates the family attendant each day [confirm]",
-  attendants: "One attendant per patient may stay overnight in most room categories",
+  general: "ప్రతిరోజూ: ఉదయం 10:00 – మధ్యాహ్నం 12:30 మరియు సాయంత్రం 5:00 – 7:00 [ధృవీకరించండి]",
+  icu: "ICU వీక్షణ కిటికీలకు ప్రత్యేక సమయాలు ఉంటాయి; మా ICU బృందం ప్రతిరోజూ కుటుంబ పరిచారకుడిని అప్‌డేట్ చేస్తుంది [ధృవీకరించండి]",
+  attendants: "చాలా గది రకాల్లో ఒక పరిచారకుడు (అటెండెంట్) రాత్రంతా ఉండవచ్చు",
 };
 
 export const patientRights: string[] = [
-  "Receive respectful, unbiased care regardless of age, gender, religion or background",
-  "Be told your diagnosis, the planned treatment, its alternatives and their likely costs in language you understand",
-  "Give — or refuse — consent before any procedure, with a clear explanation of risks",
-  "Privacy during examination, treatment and discussion of your medical details",
-  "Access your medical records and receive a copy of your reports and discharge summary",
-  "Know the expected costs of proposed treatment and receive an itemised bill",
-  "Raise a concern or complaint without fear, and receive a response",
+  "వయసు, లింగం, మతం లేదా నేపథ్యంతో సంబంధం లేకుండా గౌరవప్రాయంగా, పక్షపాతం లేకుండా సంరక్షణ పొందడం",
+  "మీకు అర్థమయ్యే భాషలో — మీ రోగనిర్ధారణ, ప్రణాళిక చేసిన చికిత్స, ప్రత్యామ్నాయాలు మరియు వాటి అంచనా ఖర్చులు తెలుసుకోవడం",
+  "ఏ విధానానికైనా ముందు ప్రమాదాల స్పష్టమైన వివరణతో అంగీకారం (consent) ఇవ్వడం — లేదా నిరాకరించడం",
+  "పరీక్ష, చికిత్స మరియు వైద్య వివరాల చర్చలో గోప్యత పొందడం",
+  "మీ వైద్య రికార్డులను చూడటం మరియు మీ రిపోర్ట్లు, డిశ్చార్జ్ సారాంశం కాపీ పొందడం",
+  "సూచించిన చికిత్సకు అంచనా ఖర్చులు తెలుసుకోవడం మరియు వివరణాత్మక బిల్లు పొందడం",
+  "భయం లేకుండా ఫిర్యాదు లేదా అభిప్రాయం వెలిబుచ్చడం మరియు స్పందన పొందడం",
 ];
 
 export const patientResponsibilities: string[] = [
-  "Share your full medical history, allergies and all medicines you currently take",
-  "Follow the agreed treatment plan, or tell your doctor honestly if you cannot",
-  "Keep your scheduled appointments, or inform us in advance to reschedule",
-  "Respect hospital staff, other patients and our no-tobacco, no-alcohol policy",
-  "Settle bills as per the hospital's billing cycle",
+  "మీ పూర్తి వైద్య చరిత్ర, అలర్జీలు మరియు ప్రస్తుతం వాడుతున్న అన్ని మందుల గురించి చెప్పడం",
+  "అంగీకరించిన చికిత్సా ప్రణాళికను పాటించడం — పాటించలేకపోతే నిజాయితీగా వైద్యుడికి చెప్పడం",
+  "నిర్ణీత అపాయింట్‌మెంట్లకు హాజరు కావడం — మార్చాల్సి వస్తే ముందస్తుగా తెలియజేయడం",
+  "ఆసుపత్రి సిబ్బందిని, ఇతర రోగులను గౌరవించడం; పొగతాగడం/మద్యం నిషేధం పాటించడం",
+  "ఆసుపత్రి బిల్లింగ్ విధానం ప్రకారం బిల్లులు చెల్లించడం",
 ];
 
 export const patientFaqs: FAQ[] = [
   {
-    question: "How do I book an appointment?",
+    question: "అపాయింట్‌మెంట్ ఎలా బుక్ చేసుకోవాలి?",
     answer:
-      "You can request an appointment through the form on this website, call our reception line, or message us on WhatsApp. Our team will confirm your slot by phone. Same-day OPD slots are available for most departments; carrying previous reports helps the doctor help you faster.",
+      "ఈ వెబ్‌సైట్‌లోని ఫారం ద్వారా అభ్యర్థించవచ్చు, రిసెప్షన్ నంబర్‌కు కాల్ చేయవచ్చు, లేదా వాట్సాప్‌లో మెసేజ్ చేయవచ్చు. మా బృందం మీ స్లాట్‌ను ఫోన్ ద్వారా ధృవీకరిస్తుంది. చాలా శాఖలకు అదే రోజు OPD స్లాట్లు అందుబాటులో ఉంటాయి; గత రిపోర్ట్లు తీసుకురావడం వైద్యుడికి వేగంగా సహాయపడుతుంది.",
   },
   {
-    question: "What should I bring to my first consultation?",
+    question: "మొదటి కన్సల్టేషన్‌కు ఏమి తీసుకురావాలి?",
     answer:
-      "Bring a photo ID, any previous prescriptions, lab reports, scan films/CDs and the list of medicines you currently take. If you have insurance, carry the card or policy details. Arriving 15 minutes early helps us complete your registration smoothly.",
+      "ఫోటో ఐడీ, గత ప్రిస్క్రిప్షన్లు, ల్యాబ్ రిపోర్ట్లు, స్కాన్ ఫిల్మ్‌లు/సీడీలు మరియు ప్రస్తుతం వాడుతున్న మందుల జాబితా తీసుకురండి. ఇన్సూరెన్స్ ఉంటే కార్డు లేదా పాలసీ వివరాలు తీసుకురండి. 15 నిమిషాల ముందు వస్తే రిజిస్ట్రేషన్ సులభంగా పూర్తవుతుంది.",
   },
   {
-    question: "Do you accept health insurance and cashless treatment?",
+    question: "హెల్త్ ఇన్సూరెన్స్ మరియు క్యాష్‌లెస్ చికిత్స అందుబాటులో ఉందా?",
     answer:
-      "We work with major insurers and TPAs for planned admissions and emergency care. [PLACEHOLDER — confirm the current insurer/TPA panel with the billing desk and list it here.] For cashless planned admissions, share your policy details at the admission desk at least 48 hours before hospitalisation so pre-authorisation can be initiated.",
+      "ప్రణాళికాబద్ధ చేరికలు మరియు అత్యవసర సంరక్షణ కోసం మేము ప్రధాన ఇన్సూరర్లు మరియు TPAలతో కలిసి పనిచేస్తాము. [PLACEHOLDER — ప్రస్తుత ఇన్సూరర్/TPA ప్యానెల్‌ను బిల్లింగ్ డెస్క్ ద్వారా ధృవీకరించి ఇక్కడ జోడించండి.] క్యాష్‌లెస్ ప్రణాళికాబద్ధ చేరికల కోసం, ప్రీ-ఆథరైజేషన్ మొదలవ్వడానికి చేరికకు కనీసం 48 గంటల ముందు అడ్మిషన్ డెస్క్‌లో పాలసీ వివరాలు ఇవ్వండి.",
   },
   {
-    question: "Can I choose which doctor I see?",
+    question: "నాకు ఇష్టమైన వైద్యుడిని ఎంచుకోవచ్చా?",
     answer:
-      "Yes. Our appointment system lets you request a specific consultant and preferred time. If that doctor is unavailable, we will offer the earliest alternative within the same department — or the next available slot with your chosen doctor, whichever you prefer.",
+      "అవును. మా అపాయింట్‌మెంట్ వ్యవస్థలో నిర్దిష్ట కన్సల్టెంట్ మరియు మీకు అనుకూలమైన సమయాన్ని అభ్యర్థించవచ్చు. ఆ వైద్యుడు అందుబాటులో లేకపోతే, అదే శాఖలో తక్కిన తొలి అందుబాటు — లేదా మీరు ఎంచుకున్న వైద్యుడి తదుపరి స్లాట్ — మీరు ఏది ఇష్టపడితే అది అందిస్తాము.",
   },
   {
-    question: "How long do lab reports take?",
+    question: "ల్యాబ్ రిపోర్ట్లు ఎంత సమయం పడుతుంది?",
     answer:
-      "Most routine blood tests are reported the same day. Specialised tests, cultures and histopathology can take longer; the lab counter will tell you the exact expected time when samples are collected. Digital reports can be collected at the lab counter or sent to you [confirm report-delivery method].",
+      "చాలా సాధారణ రక్త పరీక్షల రిపోర్ట్లు అదే రోజు అందుతాయి. ప్రత్యేక పరీక్షలు, కల్చర్లు మరియు హిస్టోపాథాలజీకి ఎక్కువ సమయం పడవచ్చు; నమూనాలు తీసేటప్పుడు ల్యాబ్ కౌంటర్ ఖచ్చితమైన సమయం చెబుతుంది. డిజిటల్ రిపోర్ట్లు ల్యాబ్ కౌంటర్‌లో తీసుకోవచ్చు లేదా మీకు పంపిస్తాము [రిపోర్ట్ డెలివరీ విధానాన్ని ధృవీకరించండి].",
   },
   {
-    question: "Is an ambulance available?",
+    question: "అంబులెన్స్ అందుబాటులో ఉందా?",
     answer:
-      "Yes, an ambulance can be arranged for transfers to and from the hospital. [PLACEHOLDER — confirm availability hours and coverage area with administration.] Call the hospital's emergency number to request one.",
+      "అవును, ఆసుపత్రికి మరియు ఆసుపత్రి నుంచి తరలింపుల కోసం అంబులెన్స్ ఏర్పాటు చేయవచ్చు. [PLACEHOLDER — అందుబాటు గంటలు మరియు పరిధిని పరిపాలనతో ధృవీకరించండి.] అడగడానికి ఆసుపత్రి అత్యవసర నంబర్‌కు కాల్ చేయండి.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "ఏ చెల్లింపు పద్ధతులు అందుబాటులో ఉన్నాయి?",
     answer:
-      "We accept cash, UPI, and debit/credit cards at our billing counters. For insurance claims, our billing desk will guide you through the documentation required by your insurer or TPA.",
+      "మా బిల్లింగ్ కౌంటర్లలో నగదు, UPI మరియు డెబిట్/క్రెడిట్ కార్డులు అందుబాటులో ఉంటాయి. ఇన్సూరెన్స్ క్లెయిమ్‌ల కోసం మా బిల్లింగ్ డెస్క్ — మీ ఇన్సూరర్ లేదా TPA కావాల్సిన పత్రాల గురించి దారి చూపుతుంది.",
   },
   {
-    question: "Whom do I contact about a concern or feedback?",
+    question: "ఏదైనా సమస్య లేదా అభిప్రాయం ఎవరిని సంప్రదించాలి?",
     answer:
-      "We take patient feedback seriously. You can share feedback at the front office, call the hospital during working hours, or write to us through the contact form on this website. Every complaint is acknowledged and reviewed by hospital management. [PLACEHOLDER — add the dedicated grievance officer's name/extension once assigned.]",
+      "రోగుల అభిప్రాయాన్ని మేము తీవ్రంగా తీసుకుంటాము. ఫ్రంట్ ఆఫీస్‌లో చెప్పవచ్చు, పని గంటల్లో ఆసుపత్రికి కాల్ చేయవచ్చు, లేదా ఈ వెబ్‌సైట్‌లోని కాంటాక్ట్ ఫారం ద్వారా రాయవచ్చు. ప్రతి ఫిర్యాదును ఆసుపత్రి పరిపాలన గుర్తించి పరిశీలిస్తుంది. [PLACEHOLDER — గ్రీవెన్స్ అధికారి పేరు/ఎక్స్‌టెన్షన్ నియమితులయితే జోడించండి.]",
   },
 ];
 
 /** Emergency page content — standard, conservative first-response guidance. */
 export const emergencySymptoms = [
-  { title: "Chest pain or pressure", detail: "Especially if it spreads to the arm, jaw or back, or comes with sweating and breathlessness." },
-  { title: "Stroke signs (think FAST)", detail: "Face drooping, Arm weakness, Speech difficulty — Time to call immediately." },
-  { title: "Severe breathing difficulty", detail: "Gasping, bluish lips, or breathlessness that prevents speaking full sentences." },
-  { title: "Unconsciousness or unresponsiveness", detail: "Any unexplained collapse, fainting with injury, or a person who cannot be woken." },
-  { title: "Seizures", detail: "A first-time fit, a fit lasting over five minutes, or repeated seizures." },
-  { title: "Uncontrolled bleeding", detail: "Bleeding that does not stop with 10 minutes of firm continuous pressure." },
-  { title: "Severe injuries", detail: "Road accidents, falls from height, deep wounds, suspected fractures with deformity." },
-  { title: "Poisoning or overdose", detail: "Swallowed chemicals, snake or scorpion bites, or medication overdose — bring the container/packaging if possible." },
-  { title: "Sudden severe abdominal pain", detail: "Especially with vomiting, rigidity or fainting." },
-  { title: "High fever with danger signs", detail: "Fever with confusion, stiff neck, bleeding, reduced urine or breathlessness." },
+  { title: "ఛాతీ నొప్పి లేదా ఒత్తిడి", detail: "ముఖ్యంగా చేతికి, దవడకు లేదా వీపుకు పాకితే, లేదా చెమటలు మరియు ఊపిరి ఆడకపోవడంతో పాటు వస్తే." },
+  { title: "పక్షవాతం (స్ట్రోక్) లక్షణాలు — FAST గుర్తుంచుకోండి", detail: "ముఖం వంగిపోవడం (Face), చేతి బలహీనత (Arm), మాట స్పష్టంగా రాకపోవడం (Speech) — వెంటనే కాల్ చేయాల్సిన సమయం (Time)." },
+  { title: "తీవ్రమైన ఊపిరి ఆడకపోవడం", detail: "గాలి కొరకోరడం, పెదవులు నీలంగా మారడం, లేదా పూర్తి వాక్యం అన్నింటికీ ఊపిరి సరిపోకపోవడం." },
+  { title: "స్పృహ లేకపోవడం", detail: "ఎటువంటి కారణం లేకుండా కూలిపోవడం, గాయంతో మూర్ఛపోవడం, లేదా మేల్కొల్పలేని స్థితి." },
+  { title: "పిచ్చెట్లు (మూర్ఛపట్టడం)", detail: "మొదటిసారి పిచ్చెట్టు, ఐదు నిమిషాలకు పైగా నిలిచిపోవడం, లేదా వరుసగా వచ్చే పిచ్చెట్లు." },
+  { title: "ఆపుకోని రక్తస్రావం", detail: "10 నిమిషాలు గట్టిగా, నిరంతరం ఒత్తిడి ఇచ్చినా ఆగని రక్తస్రావం." },
+  { title: "తీవ్రమైన గాయాలు", detail: "రోడ్డు ప్రమాదాలు, ఎత్తుల నుంచి పడిపోవడం, లోతైన గాయాలు, వంగిపోయిన ఎముకల అనుమానం." },
+  { title: "విషప్రయోగం లేదా మోతాదు మించిన మందులు", detail: "రసాయనాలు మింగడం, పాము/తేలు కాటు, లేదా మందులు అధికంగా తాగడం — సాధ్యమైతే ప్యాకెట్/డబ్బాను తీసుకురండి." },
+  { title: "తీవ్రమైన ఉదర (కడుపు) నొప్పి", detail: "ముఖ్యంగా వాంతులు, కడుపు గట్టిపడటం లేదా మూర్ఛతో పాటు వస్తే." },
+  { title: "ప్రమాదకర లక్షణాలతో ఎక్కువ జ్వరం", detail: "జ్వరంతో పాటు తెల్లబోవడం, మెడ గట్టిపడటం, రక్తస్రావం, మూత్రం తగ్గడం లేదా ఊపిరి ఆడకపోవడం." },
 ];
 
 export const emergencyDos = [
-  "Call the emergency number first — the team prepares for your arrival while you travel",
-  "Keep the patient calm, still and warm; do not give food or water",
-  "Bring ID, previous medical reports and a list of current medicines if quickly available",
-  "Note the time symptoms began — critical information for stroke and cardiac care",
-  "For poisoning or bites, bring the container, strip or a photo of the substance",
+  "ముందుగా అత్యవసర నంబర్‌కు కాల్ చేయండి — మీరు రావడానికి సిద్ధమవుతూ మా బృందం ఏర్పాట్లు మొదలుపెడుతుంది",
+  "రోగిని ప్రశాంతంగా, ముక్కలుగా కదలకుండా, వేడిగా ఉంచండి; తినడానికి/తాగడానికి ఏమీ ఇవ్వకండి",
+  "వేగంగా అందగలిగితే — ఐడీ, గత వైద్య రిపోర్ట్లు మరియు ప్రస్తుత మందుల జాబితా తీసుకురండి",
+  "లక్షణాలు మొదలైన సమయాన్ని గుర్తుపెట్టుకోండి — స్ట్రోక్ మరియు గుండె సంరక్షణలో ఇది కీలకమైన సమాచారం",
+  "విషప్రయోగం/కాటు సందర్భంలో — ప్యాకెట్, స్ట్రిప్ లేదా పదార్థ ఫోటో తీసుకురండి",
 ];
 
 export const emergencyDonts = [
-  "Do not drive yourself to the hospital if you are the patient",
-  "Do not give the patient water, food or any medicines during an unconscious or seizure episode",
-  "Do not wait to 'see if it settles' when chest pain, stroke signs or heavy bleeding are present",
-  "Do not move a person with a suspected spine injury unless they are in danger",
-  "Do not force your finger or any object into the mouth of a person having a seizure",
+  "రోగి మీరే అయితే — మీరే వాహనం నడిపి ఆసుపత్రికి రావద్దు",
+  "స్పృహ లేని రోగికి లేదా పిచ్చెట్టు వస్తున్న సమయంలో నీరు, తిండి, మందులు ఏమీ ఇవ్వకండి",
+  "ఛాతీ నొప్పి, స్ట్రోక్ లక్షణాలు లేదా పుష్కలంగా రక్తస్రావం ఉంటే — 'సర్దుకుపోతుందేమో' అని వేచి ఉండకండి",
+  "వెన్నెముక గాయం అనుమానం ఉన్న వ్యక్తిని — ప్రాణాంతక ప్రమాదంలో ఉన్నా తప్ప కదలించకండి",
+  "పిచ్చెట్టు వస్తున్న వ్యక్తి నోట్లో వేలు లేదా ఏ వస్తువూ గట్టిగా గుచ్చకండి",
 ];

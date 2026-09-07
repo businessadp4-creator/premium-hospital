@@ -21,18 +21,18 @@ export function getDepartment(slug: string) {
 export function getDepartmentFaqs(dept: Department): FAQ[] {
   return [
     {
-      question: `When should I see a ${dept.name.replace(" & ", " and ")} specialist?`,
-      answer: `If you have symptoms related to ${dept.name.toLowerCase()} that are new, worsening, or affecting your daily life, it is worth a consultation. Bring any previous reports and a list of current medicines. ${dept.highlights[0]}.`,
+      question: `${dept.name} నిపుణుడిని ఎప్పుడు కలవాలి?`,
+      answer: `${dept.name} సంబంధిత లక్షణాలు కొత్తగా మొదలైనా, పెరిగిపోతున్నా లేదా మీ రోజువారీ జీవితాన్ని ప్రభావితం చేస్తున్నా — ఒకసారి కన్సల్టేషన్ చేయించుకోవడం మంచిది. గత రిపోర్ట్లు మరియు ప్రస్తుతం వాడుతున్న మందుల జాబితా తీసుకురండి. ${dept.highlights[0]}.`,
     },
     {
-      question: "Do I need an appointment, or can I walk in?",
+      question: "అపాయింట్‌మెంట్ తీసుకోవాలా, లేదా డైరెక్ట్‌గా వచ్చినా చూస్తారా?",
       answer:
-        "Both work. Walk-ins are seen in order alongside booked slots, so booking ahead usually means shorter waits. You can request an appointment on this website, by phone, or on WhatsApp.",
+        "రెండూ అందుబాటులో ఉంటాయి. డైరెక్ట్‌గా వచ్చిన వారిని బుక్ చేసిన స్లాట్లతో పాటు క్రమంలో చూస్తాము — కాబట్టి ముందుగా బుక్ చేసుకుంటే వేచి ఉండే సమయం సాధారణంగా తక్కువ. ఈ వెబ్‌సైట్‌లో, ఫోన్ ద్వారా లేదా వాట్సాప్‌లో అపాయింట్‌మెంట్ అభ్యర్థించవచ్చు.",
     },
     {
-      question: "What should I bring to my first consultation in this department?",
+      question: "ఈ శాఖలో మొదటి కన్సల్టేషన్‌కు ఏం తీసుకురావాలి?",
       answer:
-        "Please carry a photo ID, previous prescriptions and reports (including scan films or CDs if any), and a list of the medicines you currently take with their doses.",
+        "ఫోటో ఐడీ, గత ప్రిస్క్రిప్షన్లు మరియు రిపోర్ట్లు (స్కాన్ ఫిల్మ్‌లు లేదా సీడీలు ఉంటే వాటితో సహా), మరియు ప్రస్తుతం వాడుతున్న మందుల జాబితా — డోసులతో సహా — తీసుకురండి.",
     },
   ];
 }

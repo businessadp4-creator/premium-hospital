@@ -43,11 +43,11 @@ export function Logo({ light = false, compact = false }: { light?: boolean; comp
         </span>
         <span
           className={cn(
-            "mt-1 text-[9.5px] font-semibold uppercase tracking-[0.18em]",
+            "mt-1.5 text-[10.5px] font-semibold tracking-[0.06em]",
             light ? "text-teal-soft" : "text-muted-foreground"
           )}
         >
-          Multi Specialty Hospital
+          దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్
         </span>
       </span>
     </span>
@@ -89,7 +89,7 @@ export function Header() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CIcon name="clock" className="size-3.5 text-gold" />
-              Mon–Sat: 8 AM – 8 PM
+              సోమ–శని: ఉ. 8 – సా. 8
             </span>
           </div>
           <div className="flex items-center gap-5">
@@ -130,7 +130,7 @@ export function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="Primary" className="hidden items-center gap-0.5 xl:flex">
+          <nav aria-label="ప్రాథమిక నావిగేషన్" className="hidden items-center gap-0.5 xl:flex">
             {siteConfig.nav.map((item) => {
               const active = isActive(path, item.href);
               return (
@@ -138,7 +138,7 @@ export function Header() {
                   key={item.href}
                   to={item.href}
                   className={cn(
-                    "relative rounded-full px-3 py-2 text-[14.5px] font-medium transition-colors",
+                    "relative whitespace-nowrap rounded-full px-2.5 py-2 text-[13.5px] font-medium transition-colors",
                     active ? "text-primary" : "text-foreground/75 hover:bg-secondary hover:text-primary"
                   )}
                 >
@@ -162,7 +162,7 @@ export function Header() {
                 )}
               >
                 <CIcon name="phone-call" className="size-4" />
-                Call Now
+                ఇప్పుడే కాల్
               </Button>
             </a>
             {/* Book */}
@@ -174,7 +174,7 @@ export function Header() {
                 )}
               >
                 <CIcon name="calendar-check" className="size-4" />
-                Book an Appointment
+                అపాయింట్‌మెంట్ బుక్
               </Button>
             </Link>
 
@@ -185,7 +185,7 @@ export function Header() {
                   variant="outline"
                   size="icon"
                   className="size-10 rounded-full border-border xl:hidden"
-                  aria-label="Open navigation menu"
+                  aria-label="నావిగేషన్ మెనూ తెరవండి"
                 >
                   <CIcon name="menu" className="size-5" />
                 </Button>
@@ -196,7 +196,7 @@ export function Header() {
                     <Logo />
                   </SheetTitle>
                 </SheetHeader>
-                <nav aria-label="Mobile" className="flex flex-col gap-1 px-3 py-4">
+                <nav aria-label="మొబైల్ నావిగేషన్" className="flex flex-col gap-1 px-3 py-4">
                   {siteConfig.nav.map((item) => (
                     <Link
                       key={item.href}
@@ -214,8 +214,8 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto space-y-3 border-t bg-muted/50 p-5">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Popular specialities
+                  <p className="text-xs font-semibold tracking-wide text-muted-foreground">
+                    ప్రసిద్ధ స్పెషాలిటీలు
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {departments.slice(0, 6).map((d) => (
@@ -232,11 +232,11 @@ export function Header() {
                   <div className="grid grid-cols-2 gap-2 pt-2">
                     <a href={`tel:${siteConfig.phone.tel}`}>
                       <Button variant="outline" className="h-11 w-full rounded-xl">
-                        <CIcon name="phone-call" className="size-4" /> Call
+                        <CIcon name="phone-call" className="size-4" /> కాల్
                       </Button>
                     </a>
                     <Link to="/appointments" onClick={() => setOpen(false)}>
-                      <Button className="h-11 w-full rounded-xl">Book Now</Button>
+                      <Button className="h-11 w-full rounded-xl">ఇప్పుడే బుక్</Button>
                     </Link>
                   </div>
                 </div>

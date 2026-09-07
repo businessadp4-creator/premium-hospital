@@ -4,237 +4,237 @@ import { blogPostsA } from "./blog-a";
 export const blogPostsB: BlogPost[] = [
   {
     slug: "protecting-knees-as-you-age",
-    title: "Protecting Your Knees as You Age: An Orthopaedic Surgeon's Guide",
-    category: "Bone & Joint Health",
+    title: "వయసు పెరిగే కొద్దీ మోకాళ్లను కాపాడుకోవడం — ఆర్తోపెడిక్ సర్జన్ మార్గదర్శకం",
+    category: "ఎముకల & కీళ్ల ఆరోగ్యం",
     excerpt:
-      "Knee pain is common after 50 — but it is not something to simply accept. From stair technique to squatting habits, weight and footwear, here is how to keep your knees moving for decades.",
+      "50 తర్వాత మోకాలి నొప్పి సాధారణం — కానీ దాన్ని ఓర్పుకుని సహించాల్సిన అవసరం లేదు. మెట్లు ఎక్కే పద్ధతి నుంచి బరువు, చెప్పుల వరకు — దశాబ్దాలు మోకాళ్లు కదిలేలా ఉంచుకునే విధానం ఇక్కడ ఉంది.",
     coverImage: "/images/bones.jpg",
     authorSlug: "dr-ramesh-iyer",
-    authorName: "Dr. Ramesh Iyer",
+    authorName: "డా. రమేష్ అయ్యర్",
     publishedAt: "2026-08-05",
     readMinutes: 5,
     sections: [
       {
         paragraphs: [
-          "The knee is the hardest-working joint in the body — every step loads it with several times your body weight, and a lifetime of stairs, squats and traffic jams adds up. By the age of sixty, most people have some degree of knee wear-and-tear visible on an X-ray. Yet plenty of them walk pain-free. The difference between painful and pain-free knees usually lies in habits, not luck.",
-          "Arthritis pain is not a signal to stop moving. In fact, carefully chosen movement is the single best-proven treatment for early knee arthritis — stronger thigh muscles act as natural shock absorbers and take load off the joint.",
+          "మోకాలి కీలు శరీరంలో అత్యంత కష్టపడి పనిచేసే కీలు — ప్రతి అడుగులో శరీర బరువుకు చాలా రెట్లు భారం వేస్తుంది; జీవితకాలం మెట్లు, గుంజుకోవడం, ట్రాఫిక్‌లో నిలబడడం — అన్నీ కూడుకుంటాయి. అరవై ఏళ్ల వయసు నాటికి ఎక్స్-రేలో చాలామందిలో కొంత మోకాలి అరిగిపోవడం కనిపిస్తుంది. అయినా వారిలో చాలామంది నొప్పి లేకుండా నడుస్తుంటారు. నొప్పిగల మోకాళ్లు, నొప్పి లేని మోకాళ్ల మధ్య తేడా — అదృష్టం కాదు, అలవాట్లలో ఉంటుంది.",
+          "కీళ్లవాతం నొప్పి 'కదలకు' అనే సంకేతం కాదు. నిజానికి, జాగ్రత్తగా ఎంచుకున్న కదలికే మొదటి దశ కీళ్లవాతానికి శాస్త్రీయంగా రుజువైన అత్యుత్తమ చికిత్స — బలమైన తొడ కండరాలు సహజ షాక్ అబ్జార్బర్‌ల లాగా కీలు మీద భారాన్ని తగ్గిస్తాయి.",
         ],
       },
       {
-        heading: "Everyday habits your knees will thank you for",
+        heading: "మోకాళ్లు కృతజ్ఞత చెబుతాయి — ఈ రోజువారీ అలవాట్లకు",
         list: {
           items: [
-            "Manage your weight — every extra kilo adds roughly four kilos of load on the knees with each step",
-            "Switch repeated deep squats and full cross-legged sitting for chair sitting with feet flat, or use a high firm cushion",
-            "Take the stairs down slowly or use the rail — descending loads the knee more than climbing",
-            "Choose cushioned, well-fitting footwear; replace worn-out walking shoes every 500–700 km",
-            "Warm up for five minutes before exercise and walking; cold muscles strain joints",
-            "Build thigh strength — straight-leg raises, wall-supported partial squats and gentle cycling are knee-friendly",
-            "Swim or cycle rather than run if your knees already ache — same fitness, a fraction of the impact",
+            "బరువు నియంత్రణ — ప్రతి అదనపు కిలో, ప్రతి అడుగులో మోకాళ్లపై దాదాపు నాలుగు కిలోల భారాన్ని చేరుస్తుంది",
+            "వారం వారం లోతైన గుంజుకోవడం (స్క్వాట్స్) మరియు నేలమీద కాళ్లు కప్పేసుకోవడం — కాళ్లు చదునుగా ఉంచి కుర్చీలో కూర్చోవడానికి, లేదా ఎత్తైన గట్టి దిద్దుబాకు మారండి",
+            "మెట్లు దిగేటప్పుడు నెమ్మదిగా దిగండి లేదా గడ్డాను పట్టుకోండి — దిగేటప్పుడు మోకాలి మీద భారం ఎక్కేటప్పటికంటే ఎక్కువ",
+            "మెత్తటి, సరిపోయే చెప్పులు ఎంచుకోండి; అరిగిపోయిన నడక షూలను ప్రతి 500–700 కి.మీ.లకు మార్చండి",
+            "వ్యాయామం/నడక ముందు ఐదు నిమిషాలు వేడెక్కించుకోండి (వార్మ్-అప్); చల్లని కండరాలు కీళ్లపై ఒత్తిడి తెస్తాయి",
+            "తొడ బలాన్ని పెంచండి — నిటారుగా కాళ్లు పైకి లేపడం, గోడకు ఆనించి పాక్షిక గుంజుకోవడం, తేలికపాటి సైక్లింగ్ మోకాళ్లకు అనుకూలం",
+            "మోకాళ్లు నొప్పి చేస్తున్నా అయితే పరుగు కంటే ఈత లేదా సైక్లింగ్ — అంతే ఫిట్‌నెస్, నాలుగో వంతు ఒత్తిడి",
           ],
         },
       },
       {
-        heading: "When knee pain needs a doctor, not just home care",
+        heading: "మోకాలి నొప్పికి ఇంటి సంరక్షణ కాదు, వైద్యుడు కావాల్సిన సందర్భాలు",
         list: {
           items: [
-            "Pain that wakes you at night or disturbs sleep",
-            "Swelling, warmth or redness around the joint",
-            "The knee locking, catching or giving way",
-            "Pain persisting beyond two to three weeks despite rest",
-            "Difficulty performing your daily activities — stairs, squatting to the toilet, market walks",
+            "రాత్రి నిద్రలో మేల్కొల్పే నొప్పి",
+            "కీలు చుట్టూ వాపు, వేడి లేదా ఎర్రదనం",
+            "మోకాలి బంధించడం (లాకింగ్), అడుగులో జారడం లేదా వంగిపోవడం",
+            "విశ్రాంతి తీసుకున్నా రెండు-మూడు వారాలకు పైగా నొప్పి నిలిచిపోవడం",
+            "రోజువారీ పనుల్లో ఇబ్బంది — మెట్లు, శౌచాలయంలో గుంజుకోవడం, మార్కెట్ నడక",
           ],
         },
       },
       {
         paragraphs: [
-          "At the hospital we assess knees with clinical examination and digital X-ray, then build a staged plan: physiotherapy and muscle strengthening first, medication for flare-ups when needed, injections for selected patients, and surgical options — including joint replacement — reserved for when conservative care is genuinely exhausted.",
-          "Most patients who reach us with 'bone-on-bone' fears leave with a structured exercise plan and considerably less pain. The earlier you come, the more we can do without surgery.",
+          "మా ఆసుపత్రిలో క్లినికల్ పరీక్ష మరియు డిజిటల్ ఎక్స్-రేతో మోకాళ్లను మూల్యాంకనం చేసి, దశలవారీ ప్రణాళిక రూపొందిస్తాము: ముందు ఫిజియోథెరపీ మరియు కండరాల బలపరచడం, ఫ్లేర్-అప్‌లకు అవసరమైతే మందులు, ఎంపిక చేసిన రోగులకు ఇంజెక్షన్లు — శస్త్రచికిత్సా ఎంపికలు (కీలు మార్పిడి సహా) — శస్త్రచికిత్స లేని సంరక్షణ నిజంగా పూర్తి అయిన తర్వాతే ఉంచుతాము.",
+          "'ఎముక అంతమై ఎముక తాకింది' అని భయపడి వచ్చే చాలామంది రోగులు — నిర్మాణాత్మక వ్యాయామ ప్రణాళికతో, బాగా తగ్గిన నొప్పితో ఇంటికి వెళ్తారు. ముందుగా వస్తే — శస్త్రచికిత్స లేకుండా చేయగలిగేది ఎక్కువ.",
         ],
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. Consult an orthopaedic specialist for persistent joint pain.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. నిలిచిపోయే కీళ్ల నొప్పికి ఆర్తోపెడిక్ నిపుణుడిని సంప్రదించండి.",
   },
   {
     slug: "first-prenatal-visit-guide",
-    title: "Your First Prenatal Visit: What to Expect and How to Prepare",
-    category: "Mother & Child",
+    title: "మీ మొదటి గర్భ సంరక్షణ (యాంటీనేటల్) సందర్శన — ఏం జరుగుతుంది, ఎలా సిద్ధం కావాలి",
+    category: "మాతృ & శిశు ఆరోగ్యం",
     excerpt:
-      "A positive pregnancy test brings joy — and a dozen questions. Here is exactly what happens at the first antenatal appointment, which scans to expect, and what to ask your doctor.",
+      "పాజిటివ్ పరీక్ష ఆనందాన్ని తెస్తుంది — అయినా డజన్ల ప్రశ్నలతో పాటు. మొదటి గర్భ అపాయింట్‌మెంట్‌లో ఖచ్చితంగా ఏం జరుగుతుంది, ఏ స్కాన్లు అంచనా వేయాలి, వైద్యుడిని ఏమి అడగాలో ఇక్కడ ఉంది.",
     coverImage: "/images/momcare.jpg",
     authorSlug: "dr-priya-nair",
-    authorName: "Dr. Priya Nair",
+    authorName: "డా. ప్రియ నాయర్",
     publishedAt: "2026-09-01",
     readMinutes: 5,
     sections: [
       {
         paragraphs: [
-          "Congratulations — and welcome to one of the most closely supported journeys in medicine. The first antenatal visit usually happens between weeks 6 and 10 of pregnancy, and its purpose is simple: confirm the pregnancy's location and health, establish a baseline of your own health, and build the plan that will carry you safely to delivery.",
-          "Come prepared with the date of your last menstrual period, details of previous pregnancies, any regular medicines or supplements, and your family's medical history. If you have prior scan reports or blood reports, bring those too.",
+          "శుభాకాంక్షలు — మరియు వైద్యరంగంలో అత్యంత సన్నిహితంగా సంరక్షణ పొందే ప్రయాణాలలో ఒకదానికి స్వాగతం. మొదటి యాంటీనేటల్ సందర్శన సాధారణంగా గర్భం 6 నుంచి 10 వారాల మధ్య జరుగుతుంది; దాని లక్ష్యం సరళం: గర్భం సరైన చోట ఉందో, ఆరోగ్యంగా ఉందో ధృవీకరించడం, మీ స్వంత ఆరోగ్యానికి పునాది స్థాయిలను నెలకొల్పడం మరియు మిమ్మల్ని సురక్షితంగా ప్రసవం వరకు మోసే ప్రణాళికను రూపొందించడం.",
+          "చివరి ఋతుస్రావం తేదీ, గత గర్భధారణల వివరాలు, నిత్యం వాడే మందులు/పోషకాలు మరియు కుటుంబ వైద్య చరిత్ర — తెలుసుకుని రండి. గత స్కాన్ రిపోర్ట్లు లేదా రక్త రిపోర్ట్లు ఉంటే వాటిని కూడా తీసుకురండి.",
         ],
       },
       {
-        heading: "What happens at the first visit",
+        heading: "మొదటి సందర్శనలో ఏం జరుగుతుంది",
         list: {
           items: [
-            "A detailed conversation about your health, cycles, previous pregnancies and any medical conditions",
-            "Physical examination including weight and blood pressure — your baseline for all future visits",
-            "Confirmation of pregnancy location and viability, usually by ultrasound",
-            "Baseline blood tests: blood group, haemoglobin, thyroid, sugars, HIV/hepatitis screening and more",
-            "Prescription of folic acid (and other supplements as needed)",
-            "Time for your questions — write them down and ask every one",
+            "మీ ఆరోగ్యం, ఋతుచక్రాలు, గత గర్భధారణలు మరియు ఏవైనా వైద్య సమస్యల గురించి వివరణాత్మక చర్చ",
+            "శరీర పరీక్ష — బరువు మరియు రక్తపోటు సహా; ఇవే ముందు సందర్శనలన్నిటికీ పునాది స్థాయి",
+            "గర్భం సరైన చోటున ఉందో, జీవనత్వం ఉందో ధృవీకరణ — సాధారణంగా అల్ట్రాసౌండ్ ద్వారా",
+            "పునాది రక్త పరీక్షలు: రక్తపు గుంపు, హీమోగ్లోబిన్, థైరాయిడ్, షుగర్, HIV/హెపటైటిస్ స్క్రీనింగ్ మరియు మరిన్ని",
+            "ఫోలిక్ యాసిడ్ (మరియు అవసరమైన ఇతర పోషకాలు) ప్రిస్క్రిప్షన్",
+            "మీ ప్రశ్నలకు సమయం — వాటిని రాసుకుని, ఒక్కొక్కటీ అడగండి",
           ],
         },
       },
       {
-        heading: "The scans and visits ahead",
+        heading: "ముందున్న స్కాన్లు మరియు సందర్శనలు",
         paragraphs: [
-          "Standard antenatal care is well-organised: a dating scan in the first trimester, the important anomaly scan around weeks 18–22, and a growth scan in the third trimester. Between them, monthly visits early on become fortnightly and then weekly near your due date. Each visit tracks your blood pressure, weight, the baby's growth and your questions.",
-          "Do not be overwhelmed by the schedule — that is what your care team is for. Our antenatal programme gives every mother a written visit calendar, diet guidance and a direct point of contact for worries between appointments.",
+          "ప్రమాణీకృత గర్భ సంరక్షణ బాగా సువ్యవస్థీకృతం: మొదటి త్రైమాసికంలో డేటింగ్ స్కాన్, 18–22 వారాల చుట్టూ ముఖ్యమైన అసాధారణత (అనామలీ) స్కాన్ మరియు మూడో త్రైమాసికంలో పెరుగుదల (గ్రోత్) స్కాన్. వీటి మధ్య మొదట నెలకోసారి సందర్శనలు — ప్రసవ తేదీ వచ్చేకొద్ది పదిహేను రోజులకోసారి, ఆపై వారానికోసారి మారతాయి. ప్రతి సందర్శనలో రక్తపోటు, బరువు, శిశువు పెరుగుదల మరియు మీ ప్రశ్నలను పరిశీలిస్తాము.",
+          "ఈ షెడ్యూల్‌తో ఆందోళన పడకండి — అందుకే మీ సంరక్షణ బృందం ఉంది. మా గర్భ కార్యక్రమంలో ప్రతి తల్లికి రాతపూర్వక సందర్శనల క్యాలెండర్, ఆహార మార్గదర్శకం మరియు అపాయింట్‌మెంట్ల మధ్య ఆందోళనల కోసం డైరెక్ట్ సంప్రదింపు మార్గం ఇస్తాము.",
         ],
       },
       {
-        heading: "Ask us anything — but start with these",
+        heading: "ఏదైనా అడగండి — కానీ వీటితో మొదలుపెట్టండి",
         list: {
           items: [
-            "Which medicines and supplements should I take, and which should I stop?",
-            "What foods should I avoid during pregnancy?",
-            "How much weight gain is healthy for me?",
-            "What symptoms should make me call the hospital immediately?",
-            "What are my options and plan for delivery?",
+            "ఏ మందులు, పోషకాలు వాడాలి — ఏవి ఆపాలి?",
+            "గర్భధారణలో ఏ తిండ్లను దూరంగా ఉంచాలి?",
+            "నాకు ఎంత బరువు పెరగడం ఆరోగ్యకరం?",
+            "ఏ లక్షణాలు వస్తే వెంటనే ఆసుపత్రికి కాల్ చేయాలి?",
+            "ప్రసవానికి నా ఎంపికలు మరియు ప్రణాళిక ఏమిటి?",
           ],
         },
       },
       {
-        heading: "Warning signs — call us without waiting",
+        heading: "హెచ్చరిక లక్షణాలు — వేచి ఉండకుండా కాల్ చేయండి",
         list: {
           items: [
-            "Bleeding or fluid leakage from the vagina",
-            "Severe abdominal pain",
-            "Severe headache with blurred vision or swelling of face and hands",
-            "Vomiting so persistent that you cannot keep fluids down",
-            "The baby moving noticeably less than usual (once movements are established)",
+            "యోని నుంచి రక్తస్రావం లేదా ద్రవం కారడం",
+            "తీవ్రమైన ఉదర (కడుపు) నొప్పి",
+            "కళ్లు మసకబారడం లేదా ముఖం-చేతుల వాపుతో కూడిన తీవ్ర తలనొప్పి",
+            "ద్రవాలు సహించలేనంత నిరంతర వాంతులు",
+            "సాధారణం కంటే శిశువు కదలికలు స్పష్టంగా తగ్గడం (కదలికలు నెలకొన్న తర్వాత)",
           ],
         },
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. For your individual pregnancy, follow your obstetrician's guidance.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. మీ వ్యక్తిగత గర్భధారణ కోసం మీ ప్రసూతి నిపుణుడి సూచనలను పాటించండి.",
   },
   {
     slug: "child-nutrition-myths",
-    title: "Child Nutrition Myths Every Parent Should Stop Believing",
-    category: "Child Health",
+    title: "ప్రతి తల్లిదండ్రులు నమ్మడం మానేయాల్సిన పిల్లల పోషకాహార అపోహలు",
+    category: "శిశు ఆరోగ్యం",
     excerpt:
-      "Ghee for brain power, milk at every meal, force-feeding the last bite — paediatric diet advice is full of inherited myths. A paediatrician separates tradition from evidence.",
+      "మెదడు బలానికి నెయ్యి, ప్రతి భోజనానికి పాలు, చివరి మెతుకు తడరిస్తూ తినిపించడం — పిల్లల ఆహార సలహా తరతరాల అపోహలతో నిండి ఉంది. సంప్రదాయాన్ని, శాస్త్రీయ ఆధారాలను వేరు చేస్తున్నాను.",
     coverImage: "/images/child.jpg",
     authorSlug: "dr-kavitha-reddy",
-    authorName: "Dr. Kavitha Reddy",
+    authorName: "డా. కవిత రెడ్డి",
     publishedAt: "2026-08-25",
     readMinutes: 6,
     sections: [
       {
         paragraphs: [
-          "Few topics generate more family debate than what a child should eat. Much of the advice handed down across generations is sound — home cooking, fresh food, regular meal times. But several stubborn myths cause real problems: force-feeding, unbalanced diets and unnecessary supplements. Here are the ones I correct most often in clinic.",
+          "పిల్లలు ఏం తినాలి అనే విషయంలో కుటుంబాల్లో ఇంత చర్చ మరే అంశంలోనూ జరగదు. తరతరాలుగా సాగుతున్న సలహాల్లో ఎంతో భాగం సరైనదే — ఇంట్లో వండిన తిండి, తాజా ఆహారం, క్రమబద్ధమైన భోజన సమయాలు. కానీ కొన్ని గట్టి అపోహలు నిజమైన సమస్యలకు కారణమవుతాయి: తడరిస్తూ తినిపించడం, అసమతుల్య ఆహారం మరియు అనవసర పోషకాలు. క్లినిక్‌లో నేను ఎక్కువగా సరిచేసే అపోహలు ఇవే.",
         ],
       },
       {
-        heading: "Myth 1: 'A fat child is a healthy child'",
+        heading: "అపోహ 1: 'లావుపాటి పిల్లాడు ఆరోగ్యంగా ఉన్నాడు'",
         paragraphs: [
-          "Chubby cheeks are adorable, but childhood obesity is one of the fastest-growing health problems in urban India, setting children up for diabetes and fatty liver in their twenties. Growth should be tracked on standard growth charts — steady progression along their own curve matters far more than comparing your child with the neighbour's. If weight is jumping across percentiles, that deserves a conversation, not celebration.",
+          "గుండ్రని బుగ్గలు ఆప్యాయత కలిగిస్తాయి — కానీ పట్టణ భారతంలో బాల్య ఊబకాయం (చైల్డ్ ఒబెసిటీ) అత్యంత వేగంగా పెరుగుతున్న ఆరోగ్య సమస్యల్లో ఒకటి; ఇరవైల వయసులో షుగర్ మరియు కాలేయంపై కొవ్వుకు దారితీస్తుంది. పెరుగుదలను ప్రమాణీకృత పెరుగుదల చార్టులపై పర్యవేక్షించాలి — పక్కింటి పిల్లాడితో పోల్చడం కంటే, పిల్లాడి స్వంత వక్రరేఖ వెంట స్థిరమైన పురోగతి ఎంతో ముఖ్యం. బరువు శాతాలను దాటుకుంటూ గంపుతుంటే — దానికి సంబరం కాదు, సంభాషణ కావాలి.",
         ],
       },
       {
-        heading: "Myth 2: 'Force one more bite — the child has eaten nothing'",
+        heading: "అపోహ 2: 'ఒక్క మెతుకు ఇంకా — పిల్లాడు ఏం తినలేదు'",
         paragraphs: [
-          "Children are remarkably good at self-regulating intake across a day, even when single meals look tiny to anxious adults. Force-feeding teaches children to ignore their own hunger cues and turns meals into battlegrounds. The parent decides what, when and where food is served; the child decides how much. A child who is growing well, active and playful is almost never 'eating too little'.",
+          "ఒక్క భోజనం ఆందోళన చెందుతున్న పెద్దలకు చిన్నదిగా కనిపించినా — పిల్లలు రోజంతా ఆహార తీసుకోవడాన్ని విశ్చేషణాత్మకంగా నియంత్రించుకోవడంలో అద్భుతమైన నైపుణ్యం కలిగి ఉంటారు. తడరిస్తూ తినిపించడం — పిల్లలకు వారి స్వంత ఆకలి సంకేతాలను విస్మరించడం నేర్పిస్తుంది; భోజనాలను యుద్ధభూములుగా మార్చేస్తుంది. ఏం తినిపించాలి, ఎప్పుడు, ఎక్కడ అనేది తల్లిదండ్రుల నిర్ణయం; ఎంత తినాలో పిల్లాడిదే. బాగా పెరుగుతున్న, చురుకైన, ఆటస్థుడైన పిల్లాడు — దాదాపు ఎప్పుడూ 'తక్కువ తింటున్నాడు' కాదు.",
         ],
       },
       {
-        heading: "Myth 3: 'Milk should be the main food even for school-age children'",
+        heading: "అపోహ 3: 'పాఠశాల వయసు పిల్లలకు కూడా పాలే ప్రధాన ఆహారం'",
         paragraphs: [
-          "Milk is a good food — but it is not a complete one, and more than about 400–500 ml a day actually works against good nutrition by crowding out iron-rich foods and causing constipation. A balanced plate for a school-going child includes dal, vegetables, whole grains, fruit, eggs or other protein, with milk as one part of the day, not the whole of it.",
+          "పాలు మంచి ఆహారం — కానీ పూర్తి ఆహారం కాదు; రోజుకు దాదాపు 400–500 మి.లీ.కు పైగా తాగడం వల్ల — ఇనుము (ఐరన్) నింపుకునే ఆహారాలు పక్కన పడి, మలబద్ధకం కలిగించడం ద్వారా — మంచి పోషకాహారానికి వ్యతిరేకంగానే పనిచేస్తుంది. పాఠశాల వయసు పిల్లాడికి సమతుల్య ప్లేట్‌లో పప్పు, కూరగాయలు, మొత్తం ధాన్యాలు, పండ్లు, గుడ్లు లేదా ఇతర ప్రోటీన్ ఉండాలి — పాలు రోజులో ఒక భాగంగా ఉండాలి, రోజంతా కాదు.",
         ],
       },
       {
-        heading: "Myth 4: 'Packaged health drinks make children grow taller'",
+        heading: "అపోహ 4: 'ప్యాక్డ్ హెల్త్ డ్రింక్స్ పిల్లలను పొడవుగా పెంచుతాయి'",
         paragraphs: [
-          "Most commercial 'growth' drinks are largely sugar with added vitamins that a balanced diet already provides. No powder makes a child taller — genetics and overall nutrition do that. The money is far better spent on eggs, fruits, dal, nuts and vegetables. If you are worried about growth, bring the child in; we measure accurately against standards and investigate only when the numbers genuinely say so.",
+          "చాలా వాణిజ్య 'గ్రోత్' డ్రింక్స్ — ఎక్కువగా షుగర్; సమతుల్య ఆహారం ఇప్పటికే అందించే విటమిన్లు చేర్చి ఉంటాయి. ఏ పౌడరూ పిల్లాడిని పొడవుగా పెంచదు — జన్యువులు మరియు మొత్తం పోషకాహారమే అది చేస్తాయి. ఆ డబ్బు గుడ్లు, పండ్లు, పప్పు, నట్స్ మరియు కూరగాయలపై ఖర్చు చేయడమే ఎంతో మెరుసు. పెరుగుదల గురించి ఆందోళన ఉంటే — పిల్లాడిని తీసుకురండి; ప్రమాణాల మీదుగా ఖచ్చితంగా కొలిచి, సంఖ్యలు నిజంగా సూచించినప్పుడు మాత్రమే పరీక్షలు చేస్తాము.",
         ],
       },
       {
-        heading: "What actually works",
+        heading: "నిజంగా పనిచేసేవి ఏవి",
         list: {
           items: [
-            "Regular family meal times, with everyone eating the same balanced food",
-            "At least one serving each of vegetable and fruit at lunch and dinner",
-            "Protein at every meal — dal, egg, curd, paneer, fish or chicken",
-            "Water as the default drink; sugary drinks as rare exceptions",
-            "Deworming and micronutrient supplementation as per your paediatrician's advice",
-            "Annual growth review with your paediatrician",
+            "కుటుంబం మొత్తం ఒకే సమతుల్య తిండిని తినే క్రమబద్ధమైన భోజన సమయాలు",
+            "భోజనం మరియు రాత్రి వంటకంలో ఒక్కో సర్వింగ్ కూరగాయలు మరియు పండ్లు",
+            "ప్రతి భోజనంలో ప్రోటీన్ — పప్పు, గుడ్డు, పెరుగు, పనీర్, చేపలు లేదా కోడి",
+            "మద్యాహ్నాలు/రాత్రులకు మెత్తని పండ్లు లేదా ఇంట్లో వేసిన స్నాక్స్; ప్యాక్డ్ స్వీట్లు వారానికి ఒకటికి పరిమితం",
+            "మీ శిశువైద్యుడి సలహా మేరకు పురుగుల మందు (డీవార్మింగ్) మరియు సూక్ష్మపోషకాలు",
+            "శిశువైద్యుడితో వార్షిక పెరుగుదల సమీక్ష",
           ],
         },
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. For concerns about your child's growth or eating, consult a paediatrician.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. మీ పిల్లాడి పెరుగుదల లేదా తినడం గురించి ఆందోళన ఉంటే శిశువైద్యుడిని సంప్రదించండి.",
   },
   {
     slug: "active-ageing-fitness-guide-seniors",
-    title: "Active Ageing: A Practical Fitness Guide for Senior Citizens",
-    category: "Healthy Ageing",
+    title: "చురుకైన వృద్ధాప్యం: సీనియర్ సిటిజన్ల కోసం ఆచరణాత్మక ఫిట్‌నెస్ మార్గదర్శకం",
+    category: "ఆరోగ్యకరమైన వృద్ధాప్యం",
     excerpt:
-      "After 60, the fitness goal shifts from performance to independence — being able to walk to the market, climb the bus step and live without fear of falling. Here is a safe, realistic way to stay strong.",
+      "60 తర్వాత ఫిట్‌నెస్ లక్ష్యం పనితీరు నుంచి స్వాతంత్ర్యం వైపు మారుతుంది — మార్కెట్లో నడవగలగడం, బస్సు ఎక్కగలగడం, పడిపోతానేమో భయం లేకుండా జీవించగలగడం. బలంగా ఉండిపోవడానికి సురక్షితమైన, వాస్తవిక మార్గం ఇది.",
     coverImage: "/images/seniors.jpg",
     authorSlug: "dr-sanjay-gupta",
-    authorName: "Dr. Sanjay Gupta",
+    authorName: "డా. సంజయ్ గుప్తా",
     publishedAt: "2026-06-05",
     readMinutes: 5,
     sections: [
       {
         paragraphs: [
-          "The most important fitness question after sixty is not 'How fast can I walk?' but 'Can I live independently and safely?' Muscle strength, balance and stamina are what keep you shopping, cooking, travelling and playing with grandchildren — and all three are trainable at any age. Every decade of activity pays you back in independence.",
+          "అరవై దాటిన తర్వాత అత్యంత ముఖ్యమైన ఫిట్‌నెస్ ప్రశ్న 'ఎంత వేగంగా నడవగలను?' కాదు — 'స్వతంత్రంగా, సురక్షితంగా జీవించగలనా?' కండర బలం, సమతుల్యత మరియు ఓర్పు — వీటే మిమ్మల్ని షాపింగ్, వంట, ప్రయాణాలు, మనవరాళ్లతో ఆటలు కొనసాగించేవి; ఈ మూడింటినీ ఏ వయసులోనైనా శిక్షణ ఇచ్చి పెంచుకోవచ్చు. చురుకుగా గడిపిన ప్రతి దశాబ్దం — స్వాతంత్ర్యం రూపంలో మిమ్మల్ని తిరిగి చెల్లిస్తుంది.",
         ],
       },
       {
-        heading: "The weekly formula after 60",
+        heading: "60 తర్వాత వారపు సూత్రం",
         list: {
           items: [
-            "150 minutes a week of gentle aerobic activity — brisk walking, cycling or swimming, broken into 10-minute bouts if needed",
-            "Strength work twice a week — sit-to-stand from a chair, wall push-ups, light resistance bands",
-            "Balance practice daily — standing on one foot near a support, heel-to-toe walking",
-            "Flexibility — five minutes of gentle stretching after walks, when muscles are warm",
+            "వారానికి 150 నిమిషాలు మెత్తటి ఏరోబిక్ కార్యకలాపం — వేగవంతమైన నడక, సైక్లింగ్ లేదా ఈత; అవసరమైతే 10 నిమిషాల భాగాలుగా చీల్చుకోవచ్చు",
+            "వారానికి రెండుసార్లు బల వ్యాయామాలు — కుర్చీ నుంచి లేవడం-కూర్చోవడం, గోడకు ఆనించి పుష్-అప్‌లు, తేలికపాటి రెసిస్టెన్స్ బ్యాండ్లు",
+            "ప్రతిరోజూ సమతుల్యత ప్రాక్టీస్ — ఆధారం దగ్గర ఒక్క కాలి మీద నిలబడటం, కాలివేలు తాకించుకుంటూ నడవడం",
+            "సౌలభ్యం (ఫ్లెక్సిబిలిటీ) — నడకల తర్వాత, కండరాలు వేడెక్కినప్పుడు ఐదు నిమిషాలు మృదువైన సాగదీత",
           ],
         },
       },
       {
-        heading: "Start safe, stay safe",
+        heading: "సురక్షితంగా మొదలుపెట్టండి, సురక్షితంగా కొనసాగించండి",
         list: {
           items: [
-            "Get a medical review first if you have heart disease, uncontrolled BP, joint problems or have been inactive for years",
-            "Start with half the target and build over six to eight weeks",
-            "The talk test: you should be able to talk (but not sing) while exercising — that is the right intensity",
-            "Stop and rest for any chest pain, severe breathlessness, dizziness or joint pain",
-            "Wear proper footwear and walk in daylight or well-lit areas — falls are the great enemy of independence",
-            "Get your vision, hearing, BP, sugars and bone health checked annually",
+            "గుండె జబ్బు, నియంత్రణ లేని రక్తపోటు, కీళ్ల సమస్యలు ఉంటే లేదా ఎన్నో ఏళ్లుగా చురుకుగా లేకపోతే — ముందు వైద్య సమీక్ష చేయించుకోండి",
+            "లక్ష్యంలో సగభాగంతో మొదలుపెట్టి, ఆరు నుంచి ఎనిమిది వారాల్లో క్రమంగా పెంచుకోండి",
+            "'మాట్లాడే పరీక్ష': వ్యాయామం చేస్తూ మాట్లాడగలగాలి (పాడగలగక్కర్లేదు) — అదే సరైన తీవ్రత",
+            "ఛాతీ నొప్పి, తీవ్ర ఊపిరి ఆడకపోవడం, తల తిరగడం లేదా కీలు నొప్పి వస్తే — ఆపి విశ్రాంతి తీసుకోండి",
+            "సరైన చెప్పులు ధరించి, పగటిపులపు లేదా వెలుగున్న ప్రాంతాల్లో నడవండి — పడిపోవడమే స్వాతంత్ర్యానికి గొప్ప శత్రువు",
+            "కళ్లు, వినికిడి, రక్తపోటు, షుగర్ మరియు ఎముకల ఆరోగ్యాన్ని వార్షికంగా పరిశీలించించుకోండి",
           ],
         },
       },
       {
-        heading: "Falls are preventable — treat them seriously",
+        heading: "పడిపోవడం నివారించగలదు — దీన్ని గంభీరంగా తీసుకోండి",
         paragraphs: [
-          "One in three seniors falls each year, and fractures from falls change lives. Alongside balance exercises, make the home fall-proof: clear loose wires and rugs, ensure bathroom grab bars and non-slip mats, keep night lamps within reach, and get cataracts checked. If you have fallen once, tell your doctor — we assess walking stability, bone density and medications (some BP and sleep medicines increase fall risk) and build a prevention plan.",
+          "ప్రతి మూడో పెద్దాయన సంవత్సరానికి పడిపోతారు, పడిపోవడం వల్ల వచ్చే ఎముకల విరిగిపోవడం — జీవితాలను మార్చేస్తుంది. సమతుల్యత వ్యాయామాలతో పాటు, ఇంటిని పడిపోకుండా రక్షించండి: వదులుగా పడే వైర్లు, తడిపాయలు తొలగించండి; బాత్రూంలో పట్టుకోవడానికి బార్లు మరియు జారని మ్యాట్లు ఏర్పాటు చేయండి; రాత్రి దీపాలు చేతికి అందుబాటులో ఉంచండి; కంటిశుక్లం పరీక్ష చేయించుకోండి. ఒకసారి పడిపోయారు అయితే — వైద్యుడికి చెప్పండి; నడక స్థిరత్వం, ఎముకల సాంద్రత మరియు మందులను (కొన్ని రక్తపోటు, నిద్ర మందులు పడిపోవడం ప్రమాదాన్ని పెంచుతాయి) మూల్యాంకనం చేసి, నివారణ ప్రణాళిక రూపొందిస్తాము.",
         ],
       },
       {
         paragraphs: [
-          "Ageing is not a diagnosis. In our senior citizen clinics, the most rewarding patients are not the youngest but the most consistent — the 70-year-old who walks every evening and does her chair exercises, usually outpacing patients twenty years younger. Start where you are, with what you have. If you would like a structured, safe start, book our senior health check and we will build your programme together.",
+          "వయసు ఒక రోగనిర్ధారణ కాదు. మా సీనియర్ సిటిజన్ క్లినిక్లలో అత్యంత ఆనందం కలిగించే రోగులు — చిన్నవాళ్లు కాదు, అత్యంత క్రమశిక్షణ ఉన్నవాళ్లు: ప్రతి సాయంత్రం నడిచి, కుర్చీ వ్యాయామాలు చేసే ఆ ఎప్పటిస్త్రీ — సాధారణంగా ఇరవై ఏళ్లు చిన్న రోగులను కూడా అధిగమిస్తుంటారు. ఉన్న చోటునుంచి, ఉన్నవి ఉపయోగించుకుని మొదలుపెట్టండి. నిర్మాణాత్మకమైన, సురక్షితమైన మొదలు కావాలంటే — మా సీనియర్ హెల్త్ చెక్ బుక్ చేయండి; మీ కార్యక్రమాన్ని కలిసి రూపొందిస్తాము.",
         ],
       },
     ],
     disclaimer:
-      "This article is for general health awareness and does not replace personal medical advice. Consult a physician before beginning any new exercise programme.",
+      "ఈ కథనం సాధారణ ఆరోగ్య అవగాహన కోసం మాత్రమే; వ్యక్తిగత వైద్య సలహాకు ప్రత్యామ్నాయం కాదు. కొత్త వ్యాయామ కార్యక్రమం మొదలుపెట్టే ముందు వైద్యుడిని సంప్రదించండి.",
   },
 ];
 

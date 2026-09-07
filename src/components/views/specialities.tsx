@@ -15,17 +15,17 @@ import { usePageMeta } from "@/lib/router";
 /* ═════════════════ SPECIALITIES LIST ═════════════════ */
 export function SpecialitiesView() {
   usePageMeta({
-    title: `Specialities — Multi-Speciality Departments in ${siteConfig.city}`,
-    description: `Explore 12+ specialities at ${siteConfig.name}, ${siteConfig.city}: cardiology, orthopaedics, neurology, obstetrics & gynaecology, paediatrics, general medicine, ENT, dermatology, urology, pulmonology and radiology.`,
+    title: `స్పెషాలిటీలు — ${siteConfig.cityTe}లో మల్టీ-స్పెషాలిటీ శాఖలు`,
+    description: `${siteConfig.name}, ${siteConfig.cityTe}లో 12కి పైగా స్పెషాలిటీలు: కార్డియాలజీ, ఆర్తోపెడిక్స్, న్యూరాలజీ, ప్రసూతి & గైనకాలజీ, పీడియాట్రిక్స్, జనరల్ మెడిసిన్, ఈఎన్‌టీ, డెర్మటాలజీ, యూరాలజీ, పల్మనాలజీ మరియు రేడియాలజీ.`,
   });
 
   return (
     <>
       <PageHero
-        eyebrow="Centres of Care"
-        title="Specialities & Departments"
-        description="Twelve coordinated clinical departments — each led by senior consultants and supported by in-house diagnostics, so your answers and treatment live under one roof."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Specialities" }]}
+        eyebrow="సంరక్షణ కేంద్రాలు"
+        title="స్పెషాలిటీలు & శాఖలు"
+        description="పన్నెండు సమన్వయ క్లినికల్ శాఖలు — ప్రతి దానికి సీనియర్ కన్సల్టెంట్ నాయకత్వం మరియు అదే భవనంలో పరీక్షల మద్దతు — మీ సమాధానాలు మరియు చికిత్స ఒకే చోట."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "స్పెషాలిటీలు" }]}
       />
       <section className="bg-cream py-16 md:py-20">
         <Container>
@@ -46,12 +46,12 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
   const dept = getDepartment(slug);
   usePageMeta({
     title: dept
-      ? `${dept.name} Hospital in ${siteConfig.city} — ${dept.tagline}`
-      : "Speciality not found",
+      ? `${dept.name} — ${siteConfig.cityTe} | ${dept.tagline}`
+      : "స్పెషాలిటీ కనబడలేదు",
     description: dept?.cardDescription,
   });
 
-  if (!dept) return <NotFoundInline label="speciality" />;
+  if (!dept) return <NotFoundInline label="స్పెషాలిటీ" />;
 
   const deptDoctors = getDoctorsByDepartment(dept.slug);
   const faqs = getDepartmentFaqs(dept);
@@ -65,9 +65,9 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
         <Container className="relative">
           <nav aria-label="Breadcrumb" className="text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-1.5">
-              <li><Link to="/" className="transition-colors hover:text-gold">Home</Link></li>
+              <li><Link to="/" className="transition-colors hover:text-gold">హోమ్</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
-              <li><Link to="/specialities" className="transition-colors hover:text-gold">Specialities</Link></li>
+              <li><Link to="/specialities" className="transition-colors hover:text-gold">స్పెషాలిటీలు</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
               <li aria-current="page" className="font-medium text-white">{dept.name}</li>
             </ol>
@@ -78,7 +78,7 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
                 <span className="grid size-9 place-items-center rounded-lg bg-gold/15">
                   <CIcon name={dept.icon} className="size-5" />
                 </span>
-                Department
+                శాఖ
               </span>
               <h1 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">{dept.name}</h1>
               <p className="mt-3 font-display text-lg text-gold-soft">{dept.tagline}</p>
@@ -88,7 +88,7 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
               <Link to={`/appointments?department=${dept.slug}`}>
                 <Button className="h-12 w-full rounded-full bg-gold px-7 font-semibold text-white hover:bg-gold/90 md:w-auto">
                   <CIcon name="calendar-check" className="size-4" />
-                  Book {dept.shortName ?? dept.name} Appointment
+                  {dept.shortName ?? dept.name} అపాయింట్‌మెంట్ బుక్ చేయండి
                 </Button>
               </Link>
               <a href={`tel:${siteConfig.phone.tel}`}>
@@ -106,7 +106,7 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
       <section className="bg-white py-16 md:py-20">
         <Container className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
-            <SectionHeading eyebrow="Overview" title={`Care approach in ${dept.name}`} />
+            <SectionHeading eyebrow="అవలోకనం" title={`${dept.name}లో మా సంరక్షణ విధానం`} />
             <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               {dept.overview.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -115,7 +115,7 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
 
             {/* Conditions */}
             <Reveal className="mt-10">
-              <h3 className="font-display text-xl font-semibold text-foreground">Conditions we treat</h3>
+              <h3 className="font-display text-xl font-semibold text-foreground">మేము చికిత్స చేసే సమస్యలు</h3>
               <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
                 {dept.conditions.map((c) => (
                   <li key={c} className="flex gap-2.5 text-sm text-foreground/85">
@@ -128,7 +128,7 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
 
             {/* Treatments */}
             <Reveal className="mt-10">
-              <h3 className="font-display text-xl font-semibold text-foreground">Services &amp; treatments</h3>
+              <h3 className="font-display text-xl font-semibold text-foreground">సేవలు & చికిత్సలు</h3>
               <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
                 {dept.treatments.map((t) => (
                   <li key={t} className="flex gap-2.5 text-sm text-foreground/85">
@@ -144,7 +144,7 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
           <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
             <Reveal>
               <div className="rounded-2xl border border-border bg-cream/70 p-6 shadow-card">
-                <h3 className="font-display text-lg font-semibold">Why patients choose us for {dept.shortName ?? dept.name}</h3>
+                <h3 className="font-display text-lg font-semibold">{dept.shortName ?? dept.name} కోసం రోగులు మన్నించి మన్నించి మాకు ఎందుకు వస్తారు</h3>
                 <ul className="mt-4 space-y-3.5">
                   {dept.highlights.map((h) => (
                     <li key={h} className="flex gap-3 text-sm leading-relaxed text-foreground/85">
@@ -159,13 +159,13 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
             </Reveal>
             <Reveal delay={0.08}>
               <div className="rounded-2xl border border-gold/40 bg-gold-soft p-6">
-                <h3 className="font-display text-lg font-semibold text-accent-foreground">Not sure if you need this department?</h3>
+                <h3 className="font-display text-lg font-semibold text-accent-foreground">ఈ శాఖ అవసరమా అని నిశ్చయించుకోలేకపోతున్నారా?</h3>
                 <p className="mt-2 text-sm leading-relaxed text-accent-foreground/80">
-                  Start with a general medicine consultation — our physicians will examine you and
-                  route you to the right specialist without unnecessary tests.
+                  జనరల్ మెడిసిన్ కన్సల్టేషన్‌తో మొదలుపెట్టండి — మా వైద్యులు పరిశీలించి, అనవసర
+                  పరీక్షలు లేకుండా సరైన నిపుణుడి వద్దకు దారి చూపుతారు.
                 </p>
                 <Link to="/appointments?department=general-medicine">
-                  <Button className="mt-4 h-10 w-full rounded-full">Consult General Medicine</Button>
+                  <Button className="mt-4 h-10 w-full rounded-full">జనరల్ మెడిసిన్ కన్సల్టేషన్</Button>
                 </Link>
               </div>
             </Reveal>
@@ -179,12 +179,12 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
           <Container>
             <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
               <SectionHeading
-                eyebrow="Consultants"
-                title={`${dept.name} doctors`}
+                eyebrow="కన్సల్టెంట్‌లు"
+                title={`${dept.name} వైద్యులు`}
               />
               <Link to="/doctors" className="shrink-0">
                 <Button variant="outline" className="h-10 rounded-full border-primary/25 font-semibold text-primary hover:bg-secondary">
-                  All Doctors
+                  అన్ని వైద్యులు
                 </Button>
               </Link>
             </div>
@@ -207,8 +207,8 @@ export function SpecialityDetailView({ slug }: { slug: string }) {
 
 export function NotFoundInline({ label }: { label: string }) {
   usePageMeta({
-    title: "Page Not Found",
-    description: `The page you are looking for could not be found. Explore specialities, doctors and services at ${siteConfig.name}, ${siteConfig.city}.`,
+    title: "పేజీ కనబడలేదు",
+    description: `మీరు వెతుకుతున్న పేజీ కనబడలేదు. ${siteConfig.name}, ${siteConfig.cityTe}లో స్పెషాలిటీలు, వైద్యులు మరియు సేవలను చూడండి.`,
   });
   return (
     <section className="bg-cream pb-24 pt-[140px]">
@@ -216,17 +216,16 @@ export function NotFoundInline({ label }: { label: string }) {
         <span className="mx-auto grid size-16 place-items-center rounded-2xl bg-secondary text-primary">
           <CIcon name="file-text" className="size-7" />
         </span>
-        <h1 className="mt-6 font-display text-3xl font-bold">We couldn&apos;t find that {label}</h1>
+        <h1 className="mt-6 font-display text-3xl font-bold">ఆ {label} మాకు కనబడలేదు</h1>
         <p className="mt-3 text-muted-foreground">
-          The page you are looking for may have moved. Browse our specialities, doctors, or call
-          reception and we will guide you.
+          మీరు వెతుకుతున్న పేజీ మారి ఉండవచ్చు. మా స్పెషాలిటీలు, వైద్యులను చూడండి లేదా రిసెప్షన్‌కు కాల్ చేయండి — మేము దారి చూపుతాము.
         </p>
         <div className="mt-8 flex justify-center gap-3">
           <Link to="/specialities">
-            <Button className="h-11 rounded-full px-6">View Specialities</Button>
+            <Button className="h-11 rounded-full px-6">స్పెషాలిటీలు చూడండి</Button>
           </Link>
           <Link to="/">
-            <Button variant="outline" className="h-11 rounded-full px-6">Back to Home</Button>
+            <Button variant="outline" className="h-11 rounded-full px-6">హోమ్‌కు వెళ్లండి</Button>
           </Link>
         </div>
       </Container>

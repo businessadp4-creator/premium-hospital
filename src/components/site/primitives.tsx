@@ -80,7 +80,7 @@ export function Breadcrumbs({
     })),
   };
   return (
-    <nav aria-label="Breadcrumb" className={cn("text-sm", light ? "text-white/70" : "text-muted-foreground")}>
+    <nav aria-label="బ్రెడ్‌క్రంబ్" className={cn("text-sm", light ? "text-white/70" : "text-muted-foreground")}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ol className="flex flex-wrap items-center gap-1.5">
         {items.map((item, i) => (

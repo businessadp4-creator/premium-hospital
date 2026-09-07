@@ -18,8 +18,8 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
   const [activeDept, setActiveDept] = useState<string>(presetDept ?? "all");
 
   usePageMeta({
-    title: `Doctors in ${siteConfig.city} — Find a Specialist`,
-    description: `Browse consultant profiles at ${siteConfig.name}, ${siteConfig.city}: qualifications, specialities, experience and consultation timings. Book an appointment online, by phone or WhatsApp.`,
+    title: `${siteConfig.cityTe} వైద్యులు — సరైన నిపుణుడిని కనుగొనండి`,
+    description: `${siteConfig.name}, ${siteConfig.cityTe}లోని కన్సల్టెంట్ ప్రొఫైల్స్: అర్హతలు, స్పెషాలిటీలు, అనుభవం మరియు కన్సల్టేషన్ సమయాలు. ఆన్‌లైన్‌లో, ఫోన్ లేదా వాట్సాప్ ద్వారా అపాయింట్‌మెంట్ బుక్ చేయండి.`,
   });
 
   const visible = activeDept === "all" ? doctors : getDoctorsByDepartment(activeDept);
@@ -27,22 +27,22 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
   return (
     <>
       <PageHero
-        eyebrow="Our Doctors"
-        title="Find the right doctor for you"
-        description="Every consultant profile lists qualifications, special interests, languages spoken and consultation timings — so you can choose with confidence."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Doctors" }]}
+        eyebrow="మా వైద్యులు"
+        title="మీకు సరిపోయే సరైన వైద్యుడిని కనుగొనండి"
+        description="ప్రతి కన్సల్టెంట్ ప్రొఫైల్‌లో అర్హతలు, ప్రత్యేక ఆసక్తులు, మాట్లాడే భాషలు మరియు కన్సల్టేషన్ సమయాలు ఉంటాయి — ధైర్యంగా ఎంచుకోవడానికి."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "వైద్యులు" }]}
       >
         <div className="flex flex-wrap gap-2">
           <a href={`tel:${siteConfig.phone.tel}`}>
             <Button variant="outline" className="h-11 rounded-full border-white/30 bg-white/5 px-5 font-semibold text-white hover:bg-white/15 hover:text-white">
               <CIcon name="phone-call" className="size-4" />
-              Call for Help Choosing
+              ఎంచుకోవడంలో సహాయానికి కాల్
             </Button>
           </a>
           <Link to="/appointments">
             <Button className="h-11 rounded-full bg-gold px-5 font-semibold text-white hover:bg-gold/90">
               <CIcon name="calendar-check" className="size-4" />
-              Book an Appointment
+              అపాయింట్‌మెంట్ బుక్ చేయండి
             </Button>
           </Link>
         </div>
@@ -54,7 +54,7 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
           <Reveal>
             <div
               role="tablist"
-              aria-label="Filter doctors by department"
+              aria-label="శాఖ ప్రకారం వైద్యులను ఫిల్టర్ చేయండి"
               className="scroll-slim -mx-4 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0"
             >
               <button
@@ -68,7 +68,7 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
                     : "border-border bg-white text-foreground/75 hover:border-primary/30 hover:text-primary"
                 )}
               >
-                All Departments
+                అన్ని శాఖలు
               </button>
               {departments.map((d) => (
                 <button
@@ -101,9 +101,9 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
           ) : (
             <div className="mt-10 rounded-2xl border border-dashed border-border bg-white p-10 text-center">
               <CIcon name="user-search" className="mx-auto size-8 text-muted-foreground" />
-              <p className="mt-3 font-medium">No consultant profiles published for this department yet.</p>
+              <p className="mt-3 font-medium">ఈ శాఖ కోసం ఇంకా కన్సల్టెంట్ ప్రొఫైల్స్ ప్రచురించబడలేదు.</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Our OPD runs daily — call {siteConfig.phone.display} and reception will connect you to the duty consultant.
+                మా OPD ప్రతిరోజూ నడుస్తుంది — {siteConfig.phone.display}కి కాల్ చేయండి; రిసెప్షన్ డ్యూటీ కన్సల్టెంట్‌ను కలిపిస్తుంది.
               </p>
             </div>
           )}
@@ -120,13 +120,13 @@ export function DoctorProfileView({ slug }: { slug: string }) {
   const dept = doctor ? departments.find((d) => d.slug === doctor.departmentSlug) : undefined;
 
   usePageMeta({
-    title: doctor ? `${doctor.name} — ${doctor.designation}` : "Doctor not found",
+    title: doctor ? `${doctor.name} — ${doctor.designation}` : "వైద్యుడు కనబడలేదు",
     description: doctor
-      ? `${doctor.name}, ${doctor.qualifications}. ${doctor.designation} at ${siteConfig.name}, ${siteConfig.city}. ${doctor.experienceYears}+ years' experience. Book an appointment.`
+      ? `${doctor.name}, ${doctor.qualifications}. ${doctor.designation} — ${siteConfig.name}, ${siteConfig.cityTe}. ${doctor.experienceYears}+ ఏళ్ల అనుభవం. అపాయింట్‌మెంట్ బుక్ చేయండి.`
       : undefined,
   });
 
-  if (!doctor) return <NotFoundInline label="doctor profile" />;
+  if (!doctor) return <NotFoundInline label="వైద్యుడి ప్రొఫైల్" />;
 
   return (
     <>
@@ -135,11 +135,11 @@ export function DoctorProfileView({ slug }: { slug: string }) {
         <div className="absolute inset-0 bg-dots-light" aria-hidden />
         <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-primary/60 blur-[120px]" aria-hidden />
         <Container className="relative">
-          <nav aria-label="Breadcrumb" className="text-sm text-white/70">
+          <nav aria-label="బ్రెడ్‌క్రంబ్" className="text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-1.5">
-              <li><Link to="/" className="transition-colors hover:text-gold">Home</Link></li>
+              <li><Link to="/" className="transition-colors hover:text-gold">హోమ్</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
-              <li><Link to="/doctors" className="transition-colors hover:text-gold">Doctors</Link></li>
+              <li><Link to="/doctors" className="transition-colors hover:text-gold">వైద్యులు</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
               <li aria-current="page" className="font-medium text-white">{doctor.name}</li>
             </ol>
@@ -166,13 +166,13 @@ export function DoctorProfileView({ slug }: { slug: string }) {
                   className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm font-medium text-teal-soft transition-all hover:border-gold hover:text-gold"
                 >
                   <CIcon name={dept.icon} className="size-4" />
-                  {dept.name} Department
+                  {dept.name} శాఖ
                 </Link>
               )}
               <div className="mt-5 flex flex-wrap gap-2 text-[13px]">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5">
                   <CIcon name="award" className="size-3.5 text-gold" />
-                  {doctor.experienceYears}+ years experience
+                  {doctor.experienceYears}+ ఏళ్ల అనుభవం
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5">
                   <CIcon name="languages" className="size-3.5 text-gold" />
@@ -184,13 +184,13 @@ export function DoctorProfileView({ slug }: { slug: string }) {
               <Link to={`/appointments?doctor=${doctor.slug}`}>
                 <Button className="h-12 w-full rounded-full bg-gold font-semibold text-white hover:bg-gold/90">
                   <CIcon name="calendar-check" className="size-4" />
-                  Book Appointment
+                  అపాయింట్‌మెంట్ బుక్ చేయండి
                 </Button>
               </Link>
               <a href={`tel:${siteConfig.phone.tel}`}>
                 <Button variant="outline" className="h-12 w-full rounded-full border-white/30 bg-white/5 font-semibold text-white hover:bg-white/15 hover:text-white">
                   <CIcon name="phone-call" className="size-4" />
-                  Call Reception
+                  రిసెప్షన్‌కు కాల్
                 </Button>
               </a>
             </div>
@@ -202,7 +202,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
       <section className="bg-white py-16 md:py-20">
         <Container className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
-            <SectionHeading eyebrow="Profile" title={`About ${doctor.name}`} />
+            <SectionHeading eyebrow="ప్రొఫైల్" title={`${doctor.name} గురించి`} />
             <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               {doctor.bio.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -210,7 +210,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
             </div>
 
             <Reveal className="mt-10">
-              <h3 className="font-display text-xl font-semibold">Areas of expertise</h3>
+              <h3 className="font-display text-xl font-semibold">నైపుణ్య రంగాలు</h3>
               <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
                 {doctor.expertise.map((e) => (
                   <li key={e} className="flex gap-2.5 text-sm text-foreground/85">
@@ -222,7 +222,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
             </Reveal>
 
             <Reveal className="mt-10">
-              <h3 className="font-display text-xl font-semibold">Qualifications</h3>
+              <h3 className="font-display text-xl font-semibold">అర్హతలు</h3>
               <p className="mt-3 flex items-start gap-2.5 text-sm text-foreground/85">
                 <CIcon name="graduation-cap" className="mt-0.5 size-4 shrink-0 text-gold" />
                 {doctor.qualifications}
@@ -236,7 +236,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
               <div className="rounded-2xl border border-border bg-cream/70 p-6 shadow-card">
                 <h3 className="flex items-center gap-2.5 font-display text-lg font-semibold">
                   <CIcon name="calendar-clock" className="size-5 text-primary" />
-                  Consultation Timings
+                  కన్సల్టేషన్ సమయాలు
                 </h3>
                 <ul className="mt-4 space-y-3">
                   {doctor.timings.map((slot) => (
@@ -250,10 +250,10 @@ export function DoctorProfileView({ slug }: { slug: string }) {
                   <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">{doctor.consultationNote}</p>
                 )}
                 <Link to={`/appointments?doctor=${doctor.slug}`} className="mt-5 block">
-                  <Button className="h-11 w-full rounded-full font-semibold">Request a Slot</Button>
+                  <Button className="h-11 w-full rounded-full font-semibold">స్లాట్ అభ్యర్థించండి</Button>
                 </Link>
                 <p className="mt-3 text-center text-xs text-muted-foreground">
-                  Timings may vary on public holidays — please confirm at reception.
+                  పబ్లిక్ సెలవుల్లో సమయాలు మారవచ్చు — దయచేసి రిసెప్షన్ వద్ద ధృవీకరించండి.
                 </p>
               </div>
             </Reveal>

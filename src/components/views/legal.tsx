@@ -23,18 +23,18 @@ function LegalShell({
   return (
     <>
       <PageHero
-        eyebrow="Legal"
+        eyebrow="చట్టపరమైనవి"
         title={title}
         description={description}
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: breadcrumbsLabel }]}
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: breadcrumbsLabel }]}
       />
       <section className="bg-white py-16 md:py-20">
         <Container className="max-w-3xl">
           <Reveal>
             <p className="mb-8 inline-flex items-center gap-2 rounded-full bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
-              Last updated: {updated}
+              చివరిగా నవీకరించినది: {updated}
             </p>
-            <div className="space-y-10 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-foreground [&_p]:mt-3 [&_p]:text-[15px] [&_p]:leading-[1.8] [&_p]:text-foreground/80 [&_li]:mt-2 [&_li]:text-[15px] [&_li]:leading-[1.75] [&_li]:text-foreground/80 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5">
+            <div className="space-y-10 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-foreground [&_p]:mt-3 [&_p]:text-[15px] [&_p]:leading-[1.85] [&_p]:text-foreground/80 [&_li]:mt-2 [&_li]:text-[15px] [&_li]:leading-[1.8] [&_li]:text-foreground/80 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5">
               {children}
             </div>
           </Reveal>
@@ -48,94 +48,93 @@ function LegalShell({
 /* ═════════════════ PRIVACY POLICY ═════════════════ */
 export function PrivacyView() {
   usePageMeta({
-    title: "Privacy Policy",
-    description: `How ${siteConfig.name} collects, uses and protects your personal and health information submitted through this website.`,
+    title: "గోప్యతా విధానం",
+    description: `${siteConfig.name} ఈ వెబ్‌సైట్ ద్వారా మీరు అందించే వ్యక్తిగత మరియు ఆరోగ్య సమాచారాన్ని ఎలా సేకరిస్తుంది, ఉపయోగిస్తుంది, రక్షిస్తుందో వివరిస్తుంది.`,
   });
 
   return (
     <LegalShell
-      title="Privacy Policy"
-      description="Your privacy matters to us. This policy explains — in plain language — what information this website collects, why, and how it is protected."
-      updated="September 2026"
-      breadcrumbsLabel="Privacy Policy"
+      title="గోప్యతా విధానం"
+      description="మీ గోప్యత మాకు ముఖ్యం. ఈ విధానం — సరళ భాషలో — ఈ వెబ్‌సైట్ ఏ సమాచారాన్ని సేకరిస్తుందో, ఎందుకు, ఎలా రక్షిస్తుందో వివరిస్తుంది."
+      updated="సెప్టెంబర్ 2026"
+      breadcrumbsLabel="గోప్యతా విధానం"
     >
       <div>
-        <h2>1. Information we collect</h2>
+        <h2>1. మేము సేకరించే సమాచారం</h2>
         <p>
-          When you use the appointment request or contact forms on this website, we collect the
-          details you provide: your name, phone number, email address (optional), preferred
-          department/doctor, preferred date and time, and any message you choose to include. We do
-          not collect payment information through this website.
+          ఈ వెబ్‌సైట్‌లోని అపాయింట్‌మెంట్ అభ్యర్థన లేదా కాంటాక్ట్ ఫారమ్‌లను ఉపయోగించినప్పుడు, మీరు
+          అందించే వివరాలను మేము సేకరిస్తాము: మీ పేరు, ఫోన్ నంబర్, ఇమెయిల్ చిరునామా (ఐచ్ఛికం),
+          ఇష్టపడిన శాఖ/వైద్యుడు, ఇష్టపడిన తేదీ మరియు సమయం, మరియు మీరు చేర్చాలనుకున్న ఏ సందేశం. ఈ
+          వెబ్‌సైట్ ద్వారా మేము చెల్లింపు సమాచారాన్ని సేకరించము.
         </p>
         <p>
-          Like most websites, our servers may also record standard technical information such as
-          browser type, device type and pages visited, used solely to keep the site secure and
-          improve its performance.
+          చాలా వెబ్‌సైట్‌ల మాదిరిగానే, సైట్ భద్రత కోసం మరియు పనితీరు మెరుగుదల కోసం మాత్రమే — బ్రౌజర్
+          రకం, పరికర రకం మరియు సందర్శించిన పేజీల వంటి ప్రామాణిక సాంకేతిక సమాచారాన్ని మా సర్వర్లు
+          నమోదు చేయవచ్చు.
         </p>
       </div>
       <div>
-        <h2>2. How we use your information</h2>
+        <h2>2. మీ సమాచారాన్ని మేము ఎలా ఉపయోగిస్తాము</h2>
         <ul>
-          <li>To contact you and confirm your appointment request by phone</li>
-          <li>To respond to your enquiries sent through the contact form</li>
-          <li>To coordinate your care with the relevant department or doctor</li>
-          <li>To maintain required hospital records, in line with applicable Indian law</li>
+          <li>మిమ్మల్ని సంప్రదించి, మీ అపాయింట్‌మెంట్ అభ్యర్థనను ఫోన్ ద్వారా ధృవీకరించడానికి</li>
+          <li>కాంటాక్ట్ ఫారం ద్వారా పంపిన మీ విచారణలకు స్పందించడానికి</li>
+          <li>సంబంధిత శాఖ లేదా వైద్యుడితో మీ సంరక్షణను సమన్వయం చేయడానికి</li>
+          <li>అమలులో ఉన్న భారతీయ చట్టాల ప్రకారం అవసరమైన ఆసుపత్రి రికార్డులను నిర్వహించడానికి</li>
         </ul>
         <p>
-          We do not sell, rent or trade your personal information with any third party for
-          marketing purposes.
+          మార్కెటింగ్ ప్రయోజనాల కోసం మీ వ్యక్తిగత సమాచారాన్ని ఏ మూడో పక్షానికీ విక్రయించము, అద్దెకు
+          ఇవ్వము లేదా వర్తకం చేయము.
         </p>
       </div>
       <div>
-        <h2>3. Health information sensitivity</h2>
+        <h2>3. ఆరోగ్య సమాచార సున్నిహతత</h2>
         <p>
-          Health-related information is treated as sensitive personal data. Access within the
-          hospital is restricted to staff involved in your care or appointment coordination, and
-          all staff are bound by confidentiality obligations. Clinical records created during
-          actual treatment are maintained under the hospital&apos;s medical records policy and
-          applicable regulations.
+          ఆరోగ్య-సంబంధిత సమాచారాన్ని సున్నిహతమైన వ్యక్తిగత గణాంకాలుగా పరిగణిస్తాము. ఆసుపత్రిలో
+          దీనికి ప్రవేశం — మీ సంరక్షణ లేదా అపాయింట్‌మెంట్ సమన్వయంలో పాల్గొనే సిబ్బందికి మాత్రమే
+          పరిమితం; అందరు సిబ్బంది గోప్యతా బాధ్యతలతో బద్ధులు. వాస్తవ చికిత్సలో రూపొందిన క్లినికల్
+          రికార్డులు ఆసుపత్రి వైద్య రికార్డుల విధానం మరియు అమలులో ఉన్న నిబంధనల ప్రకారం నిర్వహించబడతాయి.
         </p>
       </div>
       <div>
-        <h2>4. Data security</h2>
+        <h2>4. గణాంక భద్రత</h2>
         <p>
-          Form submissions are transmitted over encrypted connections (HTTPS) and stored in
-          access-controlled hospital systems. We apply reasonable technical and organisational
-          safeguards appropriate to the sensitivity of the data. No method of transmission over
-          the internet is absolutely secure; please avoid including highly sensitive clinical
-          details in free-text message fields when a phone call would serve.
+          ఫారం సమర్పణలు గూఢీకృత కనెక్షన్ల (HTTPS) ద్వారా ప్రసారమవుతాయి మరియు ప్రవేశ-నియంత్రిత ఆసుపత్రి
+          వ్యవస్థలలో నిల్వ ఉంచుతాము. గణాంకాల సున్నిహతతకు తగినట్లుగా సహేతుకమైన సాంకేతిక మరియు
+          సంస్థాగత భద్రతా చర్యలను అనుసరిస్తాము. ఇంటర్నెట్ ద్వారా సమాచార ప్రసారం యొక్క ఏ పద్ధతీ
+          పూర్తిగా సురక్షితం కాదు; ఫోన్ కాల్‌తో పని సాగించగలిగినప్పుడు — అత్యంత సున్నిహతమైన క్లినికల్
+          వివరాలను స్వేచ్ఛా-పాఠ్య సందేశ ఫీల్డ్‌లలో రాయకుండా ఉండమని వినయపూర్వకంగా కోరుతాము.
         </p>
       </div>
       <div>
-        <h2>5. Cookies & analytics</h2>
+        <h2>5. కుకీలు & విశ్లేషణలు</h2>
         <p>
-          This website uses only essential technical storage needed to function. If analytics tools
-          (such as Google Analytics) are enabled in future, this policy will be updated to describe
-          them, and a consent notice will be shown where required.
+          ఈ వెబ్‌సైట్ పనిచేయడానికి అవసరమైన సాంకేతిక నిల్వను మాత్రమే ఉపయోగిస్తుంది. భవిష్యత్తులో విశ్లేషణ
+          సాధనాలు (గూగుల్ అనాలిటిక్స్ వంటివి) ప్రారంభిస్తే, ఈ విధానాన్ని వాటిని వివరించేలా
+          నవీకరిస్తాము; అవసరమైన చోట అంగీకార నోటీసు చూపిస్తాము.
         </p>
       </div>
       <div>
-        <h2>6. Your choices</h2>
+        <h2>6. మీ ఎంపికలు</h2>
         <p>
-          You may ask us what contact information of yours we hold from website submissions, request
-          corrections, or ask us to stop contacting you, by writing to{" "}
+          వెబ్‌సైట్ సమర్పణల నుంచి మేము నిల్వ చేసిన మీ సంప్రదింపు సమాచారం ఏమిటో అడగవచ్చు, సరిదిద్దమని
+          కోరవచ్చు, లేదా మిమ్మల్ని సంప్రదించడం ఆపమని కోరవచ్చు —{" "}
           <a href={`mailto:${siteConfig.email}`} className="font-medium text-primary underline-offset-4 hover:underline">
             {siteConfig.email}
-          </a>
-          . Medical records requests are handled through the hospital&apos;s medical records desk as
-          per policy.
+          </a>{" "}
+          కు రాయడం ద్వారా. వైద్య రికార్డుల అభ్యర్థనలు విధానం ప్రకారం ఆసుపత్రి వైద్య రికార్డుల డెస్క్ ద్వారా
+          నిర్వహించబడతాయి.
         </p>
       </div>
       <div>
-        <h2>7. Policy updates</h2>
+        <h2>7. విధాన నవీకరణలు</h2>
         <p>
-          This policy may be updated from time to time. The &quot;last updated&quot; date above
-          shows the current version. Continued use of the website after changes constitutes
-          acceptance of the updated policy.
+          ఈ విధానాన్ని అప్పుడప్పుడు నవీకరించవచ్చు. పైన ఉన్న &quot;చివరిగా నవీకరించినది&quot; తేదీ
+          ప్రస్తుత రూపాన్ని చూపిస్తుంది. మార్పుల తర్వాత వెబ్‌సైట్‌ను కొనసాగించి ఉపయోగించడం — నవీకరించిన
+          విధానాన్ని అంగీకరించడమే.
         </p>
         <p className="text-xs italic text-muted-foreground">
-          [PLACEHOLDER — have this policy reviewed against the Digital Personal Data Protection Act,
-          2023 and applicable clinical establishment requirements before launch.]
+          [PLACEHOLDER — ప్రారంభానికి ముందు ఈ విధానాన్ని డిజిటల్ పర్సనల్ డేటా ప్రొటెక్షన్ యాక్ట్, 2023
+          మరియు అమలులో ఉన్న క్లినికల్ ఎస్టాబ్లిష్‌మెంట్ నిబంధనల దృష్టితో సమీక్షించించండి.]
         </p>
       </div>
     </LegalShell>
@@ -145,73 +144,73 @@ export function PrivacyView() {
 /* ═════════════════ TERMS & CONDITIONS ═════════════════ */
 export function TermsView() {
   usePageMeta({
-    title: "Terms & Conditions",
-    description: `Terms governing the use of the ${siteConfig.name} website, including appointment requests, content ownership and limitations of liability.`,
+    title: "నిబంధనలు & షరతులు",
+    description: `${siteConfig.name} వెబ్‌సైట్ వినియోగాన్ని నియంత్రించే నిబంధనలు — అపాయింట్‌మెంట్ అభ్యర్థనలు, కంటెంట్ యాజమాన్యం మరియు బాధ్యత పరిమితులు సహా.`,
   });
 
   return (
     <LegalShell
-      title="Terms & Conditions"
-      description="These terms govern your use of this website. Please read them — they explain what this website is, and what it is not."
-      updated="September 2026"
-      breadcrumbsLabel="Terms & Conditions"
+      title="నిబంధనలు & షరతులు"
+      description="ఈ నిబంధనలు ఈ వెబ్‌సైట్ వినియోగాన్ని నియంత్రిస్తాయి. దయచేసి వీటిని చదవండి — ఈ వెబ్‌సైట్ ఏమిటో, ఏమి కాదో వీటిలో వివరించాము."
+      updated="సెప్టెంబర్ 2026"
+      breadcrumbsLabel="నిబంధనలు & షరతులు"
     >
       <div>
-        <h2>1. About this website</h2>
+        <h2>1. ఈ వెబ్‌సైట్ గురించి</h2>
         <p>
-          This website is operated by {siteConfig.name} (&quot;the hospital&quot;, &quot;we&quot;).
-          Its purpose is to provide information about our departments, doctors and services, and to
-          allow you to request appointments or send enquiries.
+          ఈ వెబ్‌సైట్ {siteConfig.name} (&quot;ఆసుపత్రి&quot;, &quot;మేము&quot;) నిర్వహణలో ఉంటుంది.
+          దీని ఉద్దేశం — మా శాఖలు, వైద్యులు మరియు సేవల గురించి సమాచారం అందించడం, మరియు అపాయింట్‌మెంట్లు
+          అభ్యర్థించడానికి లేదా విచారణలు పంపడానికి వీలు కల్పించడం.
         </p>
       </div>
       <div>
-        <h2>2. Appointment requests</h2>
+        <h2>2. అపాయింట్‌మెంట్ అభ్యర్థనలు</h2>
         <p>
-          Submitting the appointment form creates a <strong>request</strong>, not a confirmed
-          booking. An appointment exists only after our staff confirm the date and time with you by
-          phone or in person. Requested slots are subject to consultant availability and OPD
-          schedules, which may change without prior notice.
+          అపాయింట్‌మెంట్ ఫారం సమర్పించడం <strong>అభ్యర్థన</strong>ను సృష్టిస్తుంది — ధృవీకరించిన
+          బుకింగ్ కాదు. మా సిబ్బంది మీతో ఫోన్ ద్వారా లేదా వ్యక్తిగతంగా తేదీ మరియు సమయాన్ని ధృవీకరించిన
+          తర్వాతే అపాయింట్‌మెంట్ ఉంటుంది. అభ్యర్థించిన స్లాట్లు కన్సల్టెంట్ అందుబాటు మరియు OPD షెడ్యూల్లకు
+          లోబడి ఉంటాయి — అవి ముందస్తు తెలియజేత లేకుండా మారవచ్చు.
         </p>
       </div>
       <div>
-        <h2>3. No doctor-patient relationship through the website</h2>
+        <h2>3. వెబ్‌సైట్ ద్వారా వైద్యుడు-రోగి సంబంధం ఏర్పడదు</h2>
         <p>
-          Content on this website — including health library articles — is general information for
-          awareness only. It does not constitute medical advice and does not create a
-          doctor-patient relationship. Always consult a qualified doctor about your specific
-          condition before acting on any general information.
+          ఈ వెబ్‌సైట్‌లోని కంటెంట్ — ఆరోగ్య గ్రంథాలయ కథనాలతో సహా — అవగాహన కోసమే ఉండే సాధారణ సమాచారం.
+          అది వైద్య సలహా కాదు మరియు వైద్యుడు-రోగి సంబంధాన్ని ఏర్పరచదు. ఏదైనా సాధారణ సమాచారం ఆధారంగా
+          చర్య తీసుకునే ముందు — మీ నిర్దిష్ట పరిస్థితి గురించి ఎప్పుడూ అర్హత కలిగిన వైద్యుడిని
+          సంప్రదించండి.
         </p>
       </div>
       <div>
-        <h2>4. Acceptable use</h2>
+        <h2>4. అంగీకార వినియోగం</h2>
         <ul>
-          <li>Do not submit false, misleading or third-party personal information without consent</li>
-          <li>Do not use the forms for spam, solicitation or unlawful purposes</li>
-          <li>Do not attempt to interfere with the website&apos;s operation or security</li>
-          <li>In a medical emergency, call our emergency line — do not rely on website forms</li>
+          <li>సత్యం కాని, తప్పుడు లేదా మూడో వ్యక్తి వ్యక్తిగత సమాచారాన్ని అంగీకారం లేకుండా సమర్పించకండి</li>
+          <li>ఫారమ్‌లను స్పామ్, విచ్ఛిన్నం లేదా చట్టవిరుద్ధ ప్రయోజనాల కోసం వాడకండి</li>
+          <li>వెబ్‌సైట్ పనితీరు లేదా భద్రతకు అంతరాయం కలిగించడానికి ప్రయత్నించకండి</li>
+          <li>వైద్య అత్యవసర పరిస్థితిలో మా అత్యవసర లైన్‌కు కాల్ చేయండి — వెబ్‌సైట్ ఫారమ్‌లపై ఆధారపడకండి</li>
         </ul>
       </div>
       <div>
-        <h2>5. Intellectual property</h2>
+        <h2>5. మేధో సంపత్తి</h2>
         <p>
-          The hospital&apos;s name, logo, website design and written content are the property of the
-          hospital and may not be reproduced without written permission. Health library articles
-          may be shared for personal, non-commercial awareness purposes with attribution.
+          ఆసుపత్రి పేరు, లోగో, వెబ్‌సైట్ రూపకల్పన మరియు రాతపూర్వక కంటెంట్ — ఆసుపత్రి స్వత్తు; రాతపూర్వక
+          అనుమతి లేకుండా పునరుత్పత్తి చేయరాదు. ఆరోగ్య గ్రంథాలయ కథనాలను ఆపాదింపుతో — వ్యక్తిగత,
+          వాణిజ్యేతర అవగాహన ప్రయోజనాల కోసం పంచవచ్చు.
         </p>
       </div>
       <div>
-        <h2>6. Limitation of liability</h2>
+        <h2>6. బాధ్యత పరిమితి</h2>
         <p>
-          While we keep the website accurate and current, we make no warranties about completeness
-          or availability and are not liable for decisions made based on website content alone, or
-          for temporary unavailability of online services.
+          వెబ్‌సైట్‌ను ఖచ్చితంగా, తాజాగా ఉంచేలా చూసుకుంటాము; అయినా పూర్తితనం లేదా అందుబాటుపై వారంటీలు
+          ఇవ్వము మరియు — వెబ్‌సైట్ కంటెంట్ మాత్రమే ఆధారంగా చేసుకున్న నిర్ణయాలకు లేదా ఆన్‌లైన్ సేవల
+          తాత్కాలిక అందుబాటు లేకపోవడానికి — బాధ్యత వహించము.
         </p>
       </div>
       <div>
-        <h2>7. Governing law</h2>
+        <h2>7. పాలక చట్టం</h2>
         <p>
-          These terms are governed by the laws of India, and disputes arising from website use are
-          subject to the jurisdiction of the courts of {siteConfig.address.city}, Karnataka.
+          ఈ నిబంధనలు భారత చట్టాలకు లోబడి ఉంటాయి; వెబ్‌సైట్ వినియోగం నుంచి పుట్టే వివాదాలకు{" "}
+          {siteConfig.address.city}, కర్ణాటక కోర్టుల అధికార పరిధి వర్తిస్తుంది.
         </p>
       </div>
     </LegalShell>
@@ -221,60 +220,60 @@ export function TermsView() {
 /* ═════════════════ MEDICAL DISCLAIMER ═════════════════ */
 export function DisclaimerView() {
   usePageMeta({
-    title: "Medical Disclaimer",
-    description: `Important medical disclaimer for the ${siteConfig.name} website — website content is general awareness information, not medical advice.`,
+    title: "వైద్య నిరాకరణ",
+    description: `${siteConfig.name} వెబ్‌సైట్ కోసం ముఖ్యమైన వైద్య నిరాకరణ — వెబ్‌సైట్ కంటెంట్ సాధారణ అవగాహన సమాచారం మాత్రమే; వైద్య సలహా కాదు.`,
   });
 
   return (
     <LegalShell
-      title="Medical Disclaimer"
-      description="The information on this website can help you understand your health — but it can never replace a doctor who has examined you."
-      updated="September 2026"
-      breadcrumbsLabel="Medical Disclaimer"
+      title="వైద్య నిరాకరణ"
+      description="ఈ వెబ్‌సైట్‌లోని సమాచారం మీ ఆరోగ్యాన్ని అర్థం చేసుకోవడంలో సహాయపడుతుంది — కానీ మిమ్మల్ని పరిశీలించిన వైద్యుడి స్థానాన్ని ఎప్పటికీ తీసుకోదు."
+      updated="సెప్టెంబర్ 2026"
+      breadcrumbsLabel="వైద్య నిరాకరణ"
     >
       <div>
-        <h2>General information only</h2>
+        <h2>సాధారణ సమాచారం మాత్రమే</h2>
         <p>
-          All content on this website — including articles in the Health Library, department
-          descriptions and FAQ answers — is published for general awareness and education. It is
-          not medical advice, diagnosis or a treatment plan, and it must not be used as a
-          substitute for professional consultation with a qualified doctor.
+          ఈ వెబ్‌సైట్‌లోని అన్ని కంటెంట్ — ఆరోగ్య గ్రంథాలయ కథనాలు, శాఖల వివరణలు మరియు సాధారణ ప్రశ్నల
+          సమాధానాలతో సహా — సాధారణ అవగాహన మరియు విద్య కోసం ప్రచురించబడింది. అది వైద్య సలహా, రోగనిర్ధారణ
+          లేదా చికిత్సా ప్రణాళిక కాదు; అర్హత కలిగిన వైద్యుడితో వృత్తిపరమైన కన్సల్టేషన్‌కు ప్రత్యామ్నాయంగా
+          వాడరాదు.
         </p>
       </div>
       <div>
-        <h2>Do not delay or self-treat</h2>
+        <h2>ఆలస్యం చేయకండి; స్వయం-చికిత్స చేయకండి</h2>
         <p>
-          Never ignore professional medical advice, or delay seeking it, because of something you
-          read on this website. Symptoms of the same illness can differ greatly between people;
-          only an in-person examination and appropriate tests can establish what is actually wrong
-          in your case. Self-treatment based on general articles can be dangerous.
+          ఈ వెబ్‌సైట్‌లో చదివిన దాని కారణంగా — వృత్తిపరమైన వైద్య సలహాను ఎప్పటికీ విస్మరించకండి లేదా
+          ఆలస్యం చేయకండి. ఒకే జబ్బు లక్షణాలు వ్యక్తుల మధ్య బాగా భిన్నంగా ఉండవచ్చు; మీ కేసులో నిజంగా
+          ఏం జరుగుతోందో — వ్యక్తిగత పరీక్ష మరియు తగిన పరీక్షలే నిర్ధారించగలవు. సాధారణ కథనాల ఆధారంగా
+          స్వయం-చికిత్స ప్రమాదకరం.
         </p>
       </div>
       <div>
-        <h2>Emergencies</h2>
+        <h2>అత్యవసర పరిస్థితులు</h2>
         <p>
-          If you are experiencing a medical emergency — such as chest pain, stroke signs (face
-          drooping, arm weakness, speech difficulty), severe bleeding, breathing difficulty,
-          unconsciousness or seizures — stop reading and call our emergency line{" "}
+          మీకు వైద్య అత్యవసర పరిస్థితి ఉంటే — ఛాతీ నొప్పి, స్ట్రోక్ లక్షణాలు (ముఖం వంగిపోవడం, చేతి
+          బలహీనత, మాట స్పష్టంగా రాకపోవడం), తీవ్ర రక్తస్రావం, ఊపిరి ఆడకపోవడం, స్పృహ లేకపోవడం లేదా
+          పిచ్చెట్లు — చదవడం ఆపి, మా అత్యవసర లైన్{" "}
           <a href={`tel:${siteConfig.emergency.tel}`} className="font-semibold text-destructive">
             {siteConfig.emergency.display}
           </a>{" "}
-          or the nearest emergency service immediately.
+          లేదా సమీప అత్యవసర సేవలను వెంటనే సంప్రదించండి.
         </p>
       </div>
       <div>
-        <h2>No outcome guarantees</h2>
+        <h2>ఫలితాల హామీ లేదు</h2>
         <p>
-          Medicine is a practice, not a promise. Descriptions of treatments and services on this
-          website do not guarantee any particular outcome. Every treatment carries benefits and
-          risks, which your doctor will discuss with you individually before any procedure.
+          వైద్యం ఒక అభ్యాసం — వాగ్దానం కాదు. ఈ వెబ్‌సైట్‌లోని చికిత్సలు మరియు సేవల వివరణలు ఏ
+          నిర్దిష్ట ఫలితానికీ హామీ ఇవ్వవు. ప్రతి చికిత్సకు ప్రయోజనాలు మరియు ప్రమాదాలు ఉంటాయి — ఏ విధానానికైనా
+          ముందు మీ వైద్యుడు వ్యక్తిగతంగా మీతో చర్చిస్తారు.
         </p>
       </div>
       <div>
-        <h2>External links</h2>
+        <h2>బాహ్య లింకులు</h2>
         <p>
-          Where this website links to external sites (such as maps or health resources), we do so
-          for convenience only and take no responsibility for their content or accuracy.
+          ఈ వెబ్‌సైట్ బాహ్య సైట్‌లకు (మ్యాప్స్ లేదా ఆరోగ్య వనరుల వంటివి) లింక్ చేసినప్పుడు — అది
+          సౌలభ్యం కోసం మాత్రమే; వాటి కంటెంట్ లేదా ఖచ్చితత్వానికి మేము బాధ్యత వహించము.
         </p>
       </div>
     </LegalShell>

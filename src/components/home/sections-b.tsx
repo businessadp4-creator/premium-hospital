@@ -18,14 +18,14 @@ export function DoctorsPreview() {
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
-            eyebrow="Our Doctors"
-            title="Meet the specialists behind your care"
-            description="Senior consultants who take the time to listen, explain and plan your treatment with you — never at you."
+            eyebrow="మా వైద్యులు"
+            title="మీ సంరక్షణ వెనుక ఉన్న నిపుణులను కలవండి"
+            description="వినడానికి, వివరించడానికి, మీతో కలిసి చికిత్సా ప్రణాళికను రూపొందించడానికి సమయం వెచ్చించే సీనియర్ కన్సల్టెంట్‌లు."
           />
           <Reveal delay={0.1}>
             <Link to="/doctors">
               <Button variant="outline" className="h-11 shrink-0 rounded-full border-primary/25 px-6 font-semibold text-primary hover:bg-secondary">
-                View All Doctors
+                అన్ని వైద్యులు చూడండి
                 <CIcon name="arrow-right" className="size-4" />
               </Button>
             </Link>
@@ -46,21 +46,21 @@ export function DoctorsPreview() {
 /* ═══════════════════════ PATIENT JOURNEY ═══════════════════════ */
 export function PatientJourney() {
   const steps = [
-    { icon: "user-search", title: "Choose a Speciality", text: "Browse 12+ departments or call our help desk — we will point you to the right one." },
-    { icon: "stethoscope", title: "Select a Doctor", text: "Review consultant profiles, qualifications and timings to find your fit." },
-    { icon: "calendar-check", title: "Book an Appointment", text: "Online, by phone or on WhatsApp — your slot is confirmed by our care team." },
-    { icon: "map-pin", title: "Visit the Hospital", text: "Carry your reports and ID. Our front desk guides you to the right consultation room." },
-    { icon: "hand-heart", title: "Receive Care", text: "Unhurried consultation, in-house diagnostics and a clear, written treatment plan." },
-    { icon: "book-open", title: "Follow Up", text: "Structured reviews and digital reports keep your recovery on track, long after day one." },
+    { icon: "user-search", title: "స్పెషాలిటీ ఎంచుకోండి", text: "12కి పైగా శాఖలను చూడండి లేదా మా హెల్ప్ డెస్క్‌కు కాల్ చేయండి — సరైన శాఖ వైపు దారి చూపుతాము." },
+    { icon: "stethoscope", title: "వైద్యుడిని ఎంచుకోండి", text: "కన్సల్టెంట్ ప్రొఫైల్స్, అర్హతలు మరియు సమయాలను చూసి మీకు సరిపోయేవారిని గుర్తించండి." },
+    { icon: "calendar-check", title: "అపాయింట్‌మెంట్ బుక్ చేయండి", text: "ఆన్‌లైన్‌లో, ఫోన్‌లో లేదా వాట్సాప్‌లో — మీ స్లాట్‌ను మా సంరక్షణ బృందం ధృవీకరిస్తుంది." },
+    { icon: "map-pin", title: "ఆసుపత్రికి రండి", text: "మీ రిపోర్ట్లు మరియు ఐడీ తీసుకురండి. మా ఫ్రంట్ డెస్క్ సరైన కన్సల్టేషన్ గదికి దారి చూపుతుంది." },
+    { icon: "hand-heart", title: "సంరక్షణ పొందండి", text: "తొందరపడని కన్సల్టేషన్, అదే భవనంలో పరీక్షలు మరియు స్పష్టమైన, రాతపూర్వక చికిత్సా ప్రణాళిక." },
+    { icon: "book-open", title: "ఫాలో-అప్ చేసుకోండి", text: "నిర్మాణాత్మక సమీక్షలు మరియు డిజిటల్ రిపోర్ట్లు — మొదటి రోజు తర్వాత కూడా మీ కోలుకోవడం సరైన దారిలో ఉంటుంది." },
   ];
   return (
     <section className="bg-cream py-20 md:py-24">
       <Container>
         <SectionHeading
           align="center"
-          eyebrow="Your First Visit, Simplified"
-          title="The patient journey in six simple steps"
-          description="New to our hospital? Here is exactly what to expect — no confusion, no running around."
+          eyebrow="మీ మొదటి సందర్శన — సరళీకృతం"
+          title="ఆరు సరళ దశల్లో రోగి ప్రయాణం"
+          description="మా ఆసుపత్రికి కొత్తగా వస్తున్నారా? ఖచ్చితంగా ఏం జరుగుతుందో ఇక్కడ ఉంది — సందేహం లేదు, పరుగులు లేవు."
         />
         <div className="relative mt-16">
           <div className="absolute left-1/2 top-6 hidden h-0.5 w-[82%] -translate-x-1/2 rounded-full bg-gradient-to-r from-secondary via-primary/40 to-secondary lg:block" aria-hidden />
@@ -94,23 +94,23 @@ export function AppointmentSection() {
     <section id="appointment" className="scroll-mt-24 bg-white py-20 md:py-24">
       <Container className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal className="lg:sticky lg:top-28">
-          <span className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-primary">
+          <span className="inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide text-primary">
             <span className="h-[2px] w-6 rounded-full bg-gold" aria-hidden />
-            Book an Appointment
+            అపాయింట్‌మెంట్ బుక్ చేయండి
           </span>
           <h2 className="mt-3 font-display display-md font-bold text-foreground">
-            Request your visit in under two minutes
+            రెండు నిమిషాల కంటే తక్కువలో మీ సందర్శన అభ్యర్థించండి
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Fill in the form and our care team will call you back to confirm the exact date and time.
-            Prefer talking? We are one call or WhatsApp message away.
+            ఫారం నింపండి — ఖచ్చితమైన తేదీ మరియు సమయాన్ని ధృవీకరించడానికి మా సంరక్షణ బృందం మిమ్మల్ని కాల్ చేస్తుంది.
+            మాట్లాడటం ఇష్టమా? ఒక్క కాల్ లేదా వాట్సాప్ మెసేజ్ మాకు సరిపోతుంది.
           </p>
 
           <div className="mt-8 space-y-3.5">
             {[
-              { icon: "phone", title: "Call Reception", sub: siteConfig.phone.display, href: `tel:${siteConfig.phone.tel}` },
-              { icon: "whatsapp", title: "WhatsApp Us", sub: "Quick enquiries & slot requests", href: `https://wa.me/${siteConfig.whatsapp}`, external: true },
-              { icon: "clock", title: "OPD Hours", sub: siteConfig.hours.opd, href: undefined },
+              { icon: "phone", title: "రిసెప్షన్‌కు కాల్", sub: siteConfig.phone.display, href: `tel:${siteConfig.phone.tel}` },
+              { icon: "whatsapp", title: "వాట్సాప్ చేయండి", sub: "త్వరిత విచారణలు & స్లాట్ అభ్యర్థనలు", href: `https://wa.me/${siteConfig.whatsapp}`, external: true },
+              { icon: "clock", title: "OPD సమయాలు", sub: siteConfig.hours.opd, href: undefined },
             ].map((row) => {
               const inner = (
                 <>
@@ -143,7 +143,7 @@ export function AppointmentSection() {
           <div className="relative mt-8 hidden aspect-[16/8] overflow-hidden rounded-2xl shadow-card lg:block">
             <Image
               src="/images/consult.jpg"
-              alt="Care team member reassuring an elderly patient"
+              alt="సంరక్షణ బృంద సభ్యుడు వృద్ధ రోగిని ఓదారుస్తున్న దృశ్యం"
               fill
               sizes="33vw"
               className="object-cover"
@@ -172,9 +172,9 @@ export function EmergencyStrip() {
             <CIcon name="siren" className="size-6" />
           </span>
           <div>
-            <h2 className="font-display text-xl font-bold md:text-2xl">Need urgent medical assistance?</h2>
+            <h2 className="font-display text-xl font-bold md:text-2xl">తక్షణ వైద్య సహాయం కావాలా?</h2>
             <p className="mt-1 text-sm text-white/85">
-              Our emergency team responds around the clock. Call now — do not drive yourself.
+              మా అత్యవసర బృందం రాత్రింబవళ్లూ స్పందిస్తుంది. ఇప్పుడే కాల్ చేయండి — మీరే వాహనం నడపకండి.
             </p>
           </div>
         </div>
@@ -190,7 +190,7 @@ export function EmergencyStrip() {
               variant="outline"
               className="h-12 rounded-full border-white/40 bg-transparent px-6 font-semibold text-white hover:bg-white/10 hover:text-white"
             >
-              Emergency Info
+              అత్యవసర సమాచారం
             </Button>
           </Link>
         </div>

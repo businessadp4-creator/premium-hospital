@@ -27,7 +27,7 @@ export function SpecialityCard({ dept, index = 0 }: { dept: Department; index?: 
           {dept.cardDescription}
         </p>
         <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
-          Explore Department
+          శాఖ వివరాలు చూడండి
           <CIcon name="arrow-right" className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </Link>
@@ -46,13 +46,12 @@ export function DoctorAvatar({
   textClassName?: string;
 }) {
   const initials = name
-    .replace(/^Dr\.?\s+/i, "")
+    .replace(/^(డా\.|Dr\.?)\s*/u, "")
     .split(" ")
     .filter(Boolean)
     .slice(0, 2)
     .map((w) => w[0])
-    .join("")
-    .toUpperCase();
+    .join("");
   return (
     <span
       aria-hidden
@@ -97,21 +96,21 @@ export function DoctorCard({ doctor }: { doctor: Doctor }) {
         <div className="mt-4 flex flex-wrap gap-1.5 text-xs text-muted-foreground">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-2.5 py-1">
             <CIcon name="award" className="size-3.5 text-gold" />
-            {doctor.experienceYears}+ yrs experience
+            {doctor.experienceYears}+ ఏళ్ల అనుభవం
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-2.5 py-1">
             <CIcon name="languages" className="size-3.5 text-gold" />
-            {doctor.languages.length} languages
+            {doctor.languages.length} భాషలు
           </span>
         </div>
         <div className="mt-5 flex gap-2 pt-1">
           <Link to={`/doctors/${doctor.slug}`} className="flex-1">
             <Button variant="outline" className="h-10 w-full rounded-full text-[13px]">
-              View Profile
+              ప్రొఫైల్
             </Button>
           </Link>
           <Link to={`/appointments?doctor=${doctor.slug}`} className="flex-1">
-            <Button className="h-10 w-full rounded-full text-[13px]">Book</Button>
+            <Button className="h-10 w-full rounded-full text-[13px]">బుక్</Button>
           </Link>
         </div>
       </div>
@@ -153,7 +152,7 @@ export function PackageCard({ pkg }: { pkg: HealthPackage }) {
     >
       {pkg.isPopular && (
         <Badge className="absolute -top-3 left-6 rounded-full bg-gold px-3 py-1 text-[11px] font-semibold text-white hover:bg-gold">
-          Most Chosen
+          అత్యధికంగా ఎంచుకున్నది
         </Badge>
       )}
       <h3 className="font-display text-xl font-semibold text-foreground">{pkg.name}</h3>
@@ -167,12 +166,12 @@ export function PackageCard({ pkg }: { pkg: HealthPackage }) {
         ))}
       </ul>
       <div className="mt-6 border-t border-dashed border-border pt-4">
-        <p className="text-xs text-muted-foreground">Recommended for</p>
+        <p className="text-xs text-muted-foreground">ఎవరికి సిఫారసు</p>
         <p className="mt-0.5 text-sm font-medium text-foreground/85">{pkg.recommendedFor}</p>
         <div className="mt-4 flex items-center justify-between gap-3">
-          <span className="font-display text-lg font-semibold text-primary">Price on request</span>
+          <span className="font-display text-lg font-semibold text-primary">ధర విచారణపై</span>
           <Link to={`/appointments?package=${pkg.slug}`}>
-            <Button className="h-10 rounded-full">Enquire Now</Button>
+            <Button className="h-10 rounded-full">ఇప్పుడే విచారించండి</Button>
           </Link>
         </div>
       </div>
@@ -185,7 +184,7 @@ export function TestimonialCard({ t }: { t: Testimonial }) {
   return (
     <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-card">
       <CIcon name="quote" className="size-7 text-gold" />
-      <div className="mt-3 flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
+      <div className="mt-3 flex gap-0.5" aria-label={`5 కి ${t.rating} నక్షత్రాలు`}>
         {Array.from({ length: 5 }).map((_, i) => (
           <CIcon
             key={i}
@@ -229,9 +228,9 @@ export function BlogCard({ post, index = 0 }: { post: BlogPost; index?: number }
         </Link>
         <div className="flex flex-1 flex-col p-6">
           <div className="flex items-center gap-3 text-xs text-muted-foreground">
-            <span>{new Date(post.publishedAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}</span>
+            <span>{new Date(post.publishedAt).toLocaleDateString("te-IN", { day: "numeric", month: "short", year: "numeric" })}</span>
             <span aria-hidden>•</span>
-            <span>{post.readMinutes} min read</span>
+            <span>{post.readMinutes} నిమిషాల పఠనం</span>
           </div>
           <h3 className="mt-2.5 font-display text-[17px] font-semibold leading-snug text-foreground transition-colors group-hover:text-primary">
             <Link to={`/blog/${post.slug}`}>{post.title}</Link>
@@ -246,7 +245,7 @@ export function BlogCard({ post, index = 0 }: { post: BlogPost; index?: number }
               to={`/blog/${post.slug}`}
               className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-gold"
             >
-              Read
+              చదవండి
               <CIcon name="arrow-right" className="size-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>

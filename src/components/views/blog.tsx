@@ -15,8 +15,8 @@ import { Button } from "@/components/ui/button";
 /* ═════════════════ BLOG LIST ═════════════════ */
 export function BlogListView() {
   usePageMeta({
-    title: "Health Library — Doctor-Written Health Articles",
-    description: `Health tips, disease awareness and preventive care articles written by the doctors of ${siteConfig.name}, ${siteConfig.city}. Practical guidance on heart health, diabetes, fevers, child nutrition and healthy ageing.`,
+    title: "ఆరోగ్య గ్రంథాలయం — వైద్యుల ఆరోగ్య కథనాలు",
+    description: `${siteConfig.name}, ${siteConfig.cityTe} వైద్యులు రాసిన ఆరోగ్య సూచనలు, వ్యాధి అవగాహన మరియు నివారణ సంరక్షణ కథనాలు. గుండె ఆరోగ్యం, షుగర్, జ్వరాలు, పిల్లల పోషకాహారం మరియు ఆరోగ్యకరమైన వృద్ధాప్యంపై ఆచరణాత్మక మార్గదర్శకం.`,
   });
 
   const featured = allBlogPosts[0];
@@ -24,10 +24,10 @@ export function BlogListView() {
   return (
     <>
       <PageHero
-        eyebrow="Health Library"
-        title="Doctor-written guidance for everyday health"
-        description="No scare stories, no miracle cures — just practical, honest health education from the doctors you meet in our OPD."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Health Library" }]}
+        eyebrow="ఆరోగ్య గ్రంథాలయం"
+        title="రోజువారీ ఆరోగ్యం కోసం వైద్యుల మార్గదర్శకం"
+        description="భయం చెల్లించే కథనాలు కాదు, అద్భుత చికిత్సల వాగ్దానాలు కాదు — మా OPDలో మీరు కలిసే వైద్యుల ఆచరణాత్మక, నిజాయితీ ఆరోగ్య విద్య మాత్రమే."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "ఆరోగ్య గ్రంథాలయం" }]}
       />
 
       {/* Featured article */}
@@ -54,7 +54,7 @@ export function BlogListView() {
                     {featured.category}
                   </span>
                   <span className="text-muted-foreground">
-                    {new Date(featured.publishedAt).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
+                    {new Date(featured.publishedAt).toLocaleDateString("te-IN", { day: "numeric", month: "long", year: "numeric" })}
                   </span>
                 </div>
                 <h2 className="mt-4 font-display text-2xl font-bold leading-snug text-foreground transition-colors group-hover:text-primary md:text-3xl">
@@ -65,7 +65,7 @@ export function BlogListView() {
                   <DoctorAvatar name={featured.authorName} className="size-10 rounded-full" textClassName="text-sm" />
                   <div className="text-sm">
                     <p className="font-semibold text-foreground">{featured.authorName}</p>
-                    <p className="text-xs text-muted-foreground">{featured.readMinutes} min read</p>
+                    <p className="text-xs text-muted-foreground">{featured.readMinutes} నిమిషాల పఠనం</p>
                   </div>
                 </div>
               </div>
@@ -79,8 +79,8 @@ export function BlogListView() {
         <Container>
           <SectionHeading
             className="pt-14"
-            eyebrow="All Articles"
-            title="Browse by what's on your mind"
+            eyebrow="అన్ని కథనాలు"
+            title="మీ మనసులో ఉన్న దాని ప్రకారం చూడండి"
           />
           <div className="mt-6 flex flex-wrap gap-2">
             {blogCategories.map((cat) => (
@@ -110,11 +110,11 @@ export function BlogDetailView({ slug }: { slug: string }) {
   const author = post ? getDoctor(post.authorSlug) : undefined;
 
   usePageMeta({
-    title: post ? post.title : "Article not found",
+    title: post ? post.title : "కథనం కనబడలేదు",
     description: post?.excerpt,
   });
 
-  if (!post) return <NotFoundInline label="article" />;
+  if (!post) return <NotFoundInline label="కథనం" />;
 
   const related = allBlogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
@@ -139,9 +139,9 @@ export function BlogDetailView({ slug }: { slug: string }) {
         <Container className="relative max-w-4xl">
           <nav aria-label="Breadcrumb" className="text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-1.5">
-              <li><Link to="/" className="transition-colors hover:text-gold">Home</Link></li>
+              <li><Link to="/" className="transition-colors hover:text-gold">హోమ్</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
-              <li><Link to="/blog" className="transition-colors hover:text-gold">Health Library</Link></li>
+              <li><Link to="/blog" className="transition-colors hover:text-gold">ఆరోగ్య గ్రంథాలయం</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
               <li aria-current="page" className="font-medium text-white">{post.category}</li>
             </ol>
@@ -154,16 +154,16 @@ export function BlogDetailView({ slug }: { slug: string }) {
               <DoctorAvatar name={post.authorName} className="size-9 rounded-full" textClassName="text-xs" />
               <span>
                 <span className="block font-semibold text-white">{post.authorName}</span>
-                <span className="block text-xs text-teal-soft">{author?.designation ?? "Consultant"}</span>
+                <span className="block text-xs text-teal-soft">{author?.designation ?? "కన్సల్టెంట్"}</span>
               </span>
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CIcon name="calendar-check" className="size-4 text-gold" />
-              {new Date(post.publishedAt).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
+              {new Date(post.publishedAt).toLocaleDateString("te-IN", { day: "numeric", month: "long", year: "numeric" })}
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CIcon name="clock" className="size-4 text-gold" />
-              {post.readMinutes} min read
+              {post.readMinutes} నిమిషాల పఠనం
             </span>
           </div>
         </Container>
@@ -231,16 +231,16 @@ export function BlogDetailView({ slug }: { slug: string }) {
             <div className="mt-10 flex flex-col items-start gap-5 rounded-3xl border border-border bg-cream/50 p-6 sm:flex-row sm:items-center md:p-8">
               <DoctorAvatar name={author.name} className="size-20 rounded-2xl" textClassName="text-2xl" />
               <div className="flex-1">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Written by</p>
+                <p className="text-xs font-semibold tracking-wide text-muted-foreground">రచయిత</p>
                 <h3 className="mt-1 font-display text-xl font-bold">{author.name}</h3>
                 <p className="text-sm text-muted-foreground">{author.designation} · {author.qualifications}</p>
               </div>
               <div className="flex gap-2">
                 <Link to={`/doctors/${author.slug}`}>
-                  <Button variant="outline" className="h-10 rounded-full">Profile</Button>
+                  <Button variant="outline" className="h-10 rounded-full">ప్రొఫైల్</Button>
                 </Link>
                 <Link to={`/appointments?doctor=${author.slug}`}>
-                  <Button className="h-10 rounded-full">Book</Button>
+                  <Button className="h-10 rounded-full">బుక్</Button>
                 </Link>
               </div>
             </div>
@@ -251,7 +251,7 @@ export function BlogDetailView({ slug }: { slug: string }) {
       {/* Related */}
       <section className="bg-cream py-16">
         <Container>
-          <SectionHeading eyebrow="Keep Reading" title="Related health articles" />
+          <SectionHeading eyebrow="చదువుతూ ఉండండి" title="సంబంధిత ఆరోగ్య కథనాలు" />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {related.map((p, i) => (
               <BlogCard key={p.slug} post={p} index={i} />

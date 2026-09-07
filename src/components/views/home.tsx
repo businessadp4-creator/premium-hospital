@@ -23,7 +23,7 @@ import {
 
 export function HomeView() {
   usePageMeta({
-    title: `${siteConfig.name} | Multi-Speciality Hospital in ${siteConfig.city}`,
+    title: `${siteConfig.name} | ${siteConfig.cityTe} మల్టీ స్పెషాలిటీ హాస్పిటల్`,
     description: siteConfig.description,
   });
 

@@ -71,7 +71,7 @@ function ViewRouter() {
   } else if (path === "/medical-disclaimer") {
     view = <DisclaimerView />;
   } else {
-    view = <NotFoundInline label="page" />;
+    view = <NotFoundInline label="పేజీ" />;
   }
 
   return (

@@ -9,19 +9,19 @@ import { departments } from "@/lib/content";
 import { Separator } from "@/components/ui/separator";
 
 const quickLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Doctors", href: "/doctors" },
-  { label: "Services", href: "/services" },
-  { label: "Facilities", href: "/facilities" },
-  { label: "Health Packages", href: "/health-packages" },
-  { label: "Health Library", href: "/blog" },
+  { label: "మా గురించి", href: "/about" },
+  { label: "వైద్యులు", href: "/doctors" },
+  { label: "సేవలు", href: "/services" },
+  { label: "సౌకర్యాలు", href: "/facilities" },
+  { label: "ఆరోగ్య ప్యాకేజీలు", href: "/health-packages" },
+  { label: "ఆరోగ్య గ్రంథాలయం", href: "/blog" },
 ];
 
 const patientResources = [
-  { label: "Book an Appointment", href: "/appointments" },
-  { label: "Patient Information", href: "/patient-information" },
-  { label: "Emergency Care", href: "/emergency" },
-  { label: "Contact & Directions", href: "/contact" },
+  { label: "అపాయింట్‌మెంట్ బుక్ చేయండి", href: "/appointments" },
+  { label: "రోగి సమాచారం", href: "/patient-information" },
+  { label: "అత్యవసర సంరక్షణ", href: "/emergency" },
+  { label: "సంప్రదించండి & దారి చూపించు", href: "/contact" },
 ];
 
 const socials = [
@@ -42,9 +42,9 @@ export function Footer() {
               <CIcon name="siren" className="size-5 text-gold" />
             </span>
             <div>
-              <p className="font-display text-lg font-semibold">Medical emergency? We are here.</p>
+              <p className="font-display text-lg font-semibold">వైద్య అత్యవసరమా? మేము సిద్ధంగా ఉన్నాము.</p>
               <p className="text-sm text-teal-soft">
-                Call our emergency line for immediate assistance and ambulance support.
+                తక్షణ సహాయం మరియు అంబులెన్స్ సౌకర్యం కోసం మా అత్యవసర లైన్‌కు కాల్ చేయండి.
               </p>
             </div>
           </div>
@@ -63,9 +63,9 @@ export function Footer() {
         <div className="lg:col-span-4">
           <Logo light />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-teal-soft">
-            A multi-specialty hospital in {siteConfig.address.city} combining experienced specialists,
-            modern diagnostics and a patient-first approach — so every family in our care feels
-            informed, supported and safe.
+            {siteConfig.address.cityTe}లోని మల్టీ-స్పెషాలిటీ ఆసుపత్రి — అనుభవజ్ఞులైన నిపుణులు,
+            ఆధునిక పరీక్షలు మరియు రోగి-ప్రథమ విధానం ఒకే చోట. మా సంరక్షణలో ఉన్న ప్రతి కుటుంబం
+            సమాచారంతో, ధైర్యంతో, సురక్షితంగా ఉండాలి.
           </p>
           <div className="mt-6 flex gap-2">
             {socials.map((s) => (
@@ -84,7 +84,7 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-2">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Quick Links</h3>
+          <h3 className="text-sm font-semibold tracking-wide text-white">త్వరిత లింకులు</h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             {quickLinks.map((l) => (
               <li key={l.href}>
@@ -97,7 +97,7 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-2">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Specialities</h3>
+          <h3 className="text-sm font-semibold tracking-wide text-white">స్పెషాలిటీలు</h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             {departments.slice(0, 8).map((d) => (
               <li key={d.slug}>
@@ -108,14 +108,14 @@ export function Footer() {
             ))}
             <li>
               <Link to="/specialities" className="font-medium text-gold transition-colors hover:text-white">
-                View all specialities →
+                అన్ని స్పెషాలిటీలు చూడండి →
               </Link>
             </li>
           </ul>
         </div>
 
         <div className="lg:col-span-2">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Patients</h3>
+          <h3 className="text-sm font-semibold tracking-wide text-white">రోగుల కోసం</h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             {patientResources.map((l) => (
               <li key={l.href}>
@@ -125,16 +125,16 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <h3 className="mt-6 text-sm font-semibold uppercase tracking-wider text-white">Legal</h3>
+          <h3 className="mt-6 text-sm font-semibold tracking-wide text-white">చట్టపరమైనవి</h3>
           <ul className="mt-4 space-y-2.5 text-sm">
-            <li><Link to="/privacy-policy" className="text-teal-soft transition-colors hover:text-gold">Privacy Policy</Link></li>
-            <li><Link to="/terms" className="text-teal-soft transition-colors hover:text-gold">Terms &amp; Conditions</Link></li>
-            <li><Link to="/medical-disclaimer" className="text-teal-soft transition-colors hover:text-gold">Medical Disclaimer</Link></li>
+            <li><Link to="/privacy-policy" className="text-teal-soft transition-colors hover:text-gold">గోప్యతా విధానం</Link></li>
+            <li><Link to="/terms" className="text-teal-soft transition-colors hover:text-gold">నిబంధనలు & షరతులు</Link></li>
+            <li><Link to="/medical-disclaimer" className="text-teal-soft transition-colors hover:text-gold">వైద్య నిరాకరణ</Link></li>
           </ul>
         </div>
 
         <div className="lg:col-span-2">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contact</h3>
+          <h3 className="text-sm font-semibold tracking-wide text-white">సంప్రదింపు</h3>
           <ul className="mt-4 space-y-3.5 text-sm text-teal-soft">
             <li className="flex gap-2.5">
               <CIcon name="map-pin" className="mt-0.5 size-4 shrink-0 text-gold" />
@@ -149,7 +149,7 @@ export function Footer() {
             <li className="flex gap-2.5">
               <CIcon name="siren" className="mt-0.5 size-4 shrink-0 text-gold" />
               <a href={`tel:${siteConfig.emergency.tel}`} className="font-medium text-white transition-colors hover:text-gold">
-                Emergency: {siteConfig.emergency.display}
+                అత్యవసరం: {siteConfig.emergency.display}
               </a>
             </li>
             <li className="flex gap-2.5">
@@ -161,7 +161,7 @@ export function Footer() {
             <li className="flex gap-2.5">
               <CIcon name="whatsapp" className="mt-0.5 size-4 shrink-0 text-gold" />
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold">
-                WhatsApp enquiry
+                వాట్సాప్ విచారణ
               </a>
             </li>
           </ul>
@@ -173,12 +173,11 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-teal-soft sm:flex-row sm:items-center sm:px-6 lg:px-8">
         <p>
-          © {new Date().getFullYear()} {siteConfig.name}, {siteConfig.address.city}. All rights reserved.
+          © {new Date().getFullYear()} {siteConfig.name}, {siteConfig.address.cityTe}. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.
         </p>
         <p className="max-w-xl text-[11px] leading-relaxed text-teal-soft/70">
-          The information on this website is for general awareness only and is not a substitute for
-          professional medical advice, diagnosis or treatment. In an emergency, call our emergency
-          line or the nearest emergency service.
+          ఈ వెబ్‌సైట్‌లోని సమాచారం సాధారణ అవగాహన కోసం మాత్రమే — వృత్తిపరమైన వైద్య సలహా, రోగనిర్ధారణ లేదా
+          చికిత్సకు ప్రత్యామ్నాయం కాదు. అత్యవసర పరిస్థితిలో మా అత్యవసర లైన్‌ను లేదా సమీప అత్యవసర సేవలను సంప్రదించండి.
         </p>
       </div>
     </footer>

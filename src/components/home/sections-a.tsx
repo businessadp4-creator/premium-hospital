@@ -27,29 +27,29 @@ export function HeroSection() {
         {/* Copy */}
         <div>
           <Reveal>
-            <Eyebrow>Multi Specialty Hospital · Bangalore</Eyebrow>
+            <Eyebrow>మల్టీ స్పెషాలిటీ హాస్పిటల్ · బెంగళూరు</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
             <h1 className="mt-4 font-display display-xl font-bold text-foreground">
-              Advanced Healthcare.{" "}
+              అద్భుతమైన వైద్య సేవలు.{" "}
               <span className="relative inline-block text-primary">
-                Compassionate Care.
+                మానవీయమైన సంరక్షణ.
                 <svg
-                  className="absolute -bottom-2 left-0 w-full text-gold"
+                  className="absolute -bottom-3 left-0 w-full text-gold"
                   viewBox="0 0 220 10"
                   fill="none"
                   aria-hidden
                   preserveAspectRatio="none"
                 >
-                  <path d="M2 8C60 2 160 2 218 7" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+                  <path d="M2 8C60 2 160 2 218 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Expert medical care delivered by experienced specialists using modern technology —
-              with your health, comfort and dignity at the centre of everything we do.
+              అనుభవజ్ఞులైన నిపుణులు ఆధునిక సాంకేతికతతో అందించే నిపుణుల వైద్య సేవలు — మీ ఆరోగ్యం,
+              సౌకర్యం మరియు గౌరవం మా ప్రతి కార్యాచరణకు కేంద్రం.
             </p>
           </Reveal>
           <Reveal delay={0.24}>
@@ -57,7 +57,7 @@ export function HeroSection() {
               <Link to="/appointments">
                 <Button className="h-13 w-full rounded-full px-8 py-3.5 text-[15px] font-semibold shadow-md transition-all hover:shadow-lg sm:w-auto">
                   <CIcon name="calendar-check" className="size-4.5" />
-                  Book an Appointment
+                  అపాయింట్‌మెంట్ బుక్ చేయండి
                 </Button>
               </Link>
               <Link to="/specialities">
@@ -65,7 +65,7 @@ export function HeroSection() {
                   variant="outline"
                   className="h-13 w-full rounded-full border-primary/25 px-8 py-3.5 text-[15px] font-semibold text-primary transition-all hover:bg-secondary sm:w-auto"
                 >
-                  Explore Our Specialities
+                  మా స్పెషాలిటీలను చూడండి
                   <CIcon name="arrow-right" className="size-4.5" />
                 </Button>
               </Link>
@@ -75,10 +75,10 @@ export function HeroSection() {
           <Reveal delay={0.32}>
             <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border/70 pt-7 sm:grid-cols-4">
               {[
-                { icon: "stethoscope", label: "Experienced Specialists" },
-                { icon: "microscope", label: "Advanced Facilities" },
-                { icon: "hand-heart", label: "Patient-Centred Care" },
-                { icon: "siren", label: "Emergency Support" },
+                { icon: "stethoscope", label: "అనుభవజ్ఞులైన నిపుణులు" },
+                { icon: "microscope", label: "ఆధునిక సౌకర్యాలు" },
+                { icon: "hand-heart", label: "రోగి-కేంద్రీకృత సంరక్షణ" },
+                { icon: "siren", label: "అత్యవసర సహకారం" },
               ].map((item) => (
                 <li key={item.label} className="flex items-center gap-2.5">
                   <span className="grid size-9 shrink-0 place-items-center rounded-full bg-secondary text-primary">
@@ -99,7 +99,7 @@ export function HeroSection() {
             <div className="relative aspect-[4/3.2] overflow-hidden rounded-[2rem] shadow-card-hover">
               <Image
                 src="/images/hero.jpg"
-                alt="Doctor warmly consulting an elderly patient at Durga Multi Specialty Hospital"
+                alt="దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్‌లో వైద్యుడు వృద్ధ రోగిని సంప్రదించుకుంటున్న దృశ్యం"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -112,13 +112,13 @@ export function HeroSection() {
                 <CIcon name="heart-pulse" className="size-5" />
               </span>
               <div>
-                <p className="text-[13px] font-semibold text-foreground">12+ clinical specialities</p>
-                <p className="text-xs text-muted-foreground">under one roof</p>
+                <p className="text-[13px] font-semibold text-foreground">12కి పైగా క్లినికల్ స్పెషాలిటీలు</p>
+                <p className="text-xs text-muted-foreground">ఒకే పైకప్పు కింద</p>
               </div>
             </div>
             <div className="absolute -top-4 right-4 hidden items-center gap-2.5 rounded-2xl border border-border bg-white/95 px-4 py-3 shadow-card backdrop-blur sm:flex">
               <CIcon name="circle-check" className="size-5 text-primary" strokeWidth={2} />
-              <p className="text-[13px] font-medium text-foreground">In-house diagnostics &amp; pharmacy</p>
+              <p className="text-[13px] font-medium text-foreground">అదే భవనంలో పరీక్షలు & ఫార్మసీ</p>
             </div>
           </div>
         </Reveal>
@@ -130,10 +130,10 @@ export function HeroSection() {
 /* ═══════════════════════ TRUST / CREDIBILITY BAR ═══════════════════════ */
 export function TrustBar() {
   const items = [
-    { icon: "hospital", value: "12+", label: "Clinical Specialities", note: "coordinated under one roof" },
-    { icon: "stethoscope", value: "Senior", label: "Consultant-Led Care", note: "experienced specialists in every department" },
-    { icon: "microscope", value: "In-House", label: "Diagnostics & Lab", note: "same-day reports for most tests" },
-    { icon: "hand-heart", value: "24×7", label: "Emergency & Pharmacy", note: "ready when minutes matter" },
+    { icon: "hospital", value: "12+", label: "క్లినికల్ స్పెషాలిటీలు", note: "ఒకే పైకప్పు కింద సమన్వయం" },
+    { icon: "stethoscope", value: "సీనియర్", label: "కన్సల్టెంట్ నాయకత్వ సంరక్షణ", note: "ప్రతి శాఖలో అనుభవజ్ఞులైన నిపుణులు" },
+    { icon: "microscope", value: "ఇన్-హౌస్", label: "పరీక్షలు & ల్యాబ్", note: "చాలా పరీక్షలకు అదే రోజు రిపోర్ట్లు" },
+    { icon: "hand-heart", value: "24×7", label: "అత్యవసరం & ఫార్మసీ", note: "నిమిషాలు ముఖ్యమైన సమయంలో సిద్ధం" },
   ];
   return (
     <section className="border-y border-border/70 bg-white">
@@ -166,14 +166,14 @@ export function SpecialitiesPreview() {
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
-            eyebrow="Centres of Care"
-            title="Specialities that cover your whole family"
-            description="From everyday fevers to complex cardiac care — twelve coordinated departments, one responsible team, so your care never falls through the cracks."
+            eyebrow="సంరక్షణ కేంద్రాలు"
+            title="మీ కుటుంబం మొత్తానికి సరిపోయే స్పెషాలిటీలు"
+            description="రోజువారీ జ్వరాల నుంచి తీవ్రమైన గుండె సంరక్షణ వరకు — పన్నెండు సమన్వయ శాఖలు, ఒక బాధ్యతాయుత బృందం — మీ సంరక్షణ ఎక్కడా తడారిపోదు."
           />
           <Reveal delay={0.1}>
             <Link to="/specialities">
               <Button variant="outline" className="h-11 shrink-0 rounded-full border-primary/25 px-6 font-semibold text-primary hover:bg-secondary">
-                View All Specialities
+                అన్ని స్పెషాలిటీలు చూడండి
                 <CIcon name="arrow-right" className="size-4" />
               </Button>
             </Link>
@@ -186,13 +186,13 @@ export function SpecialitiesPreview() {
         </div>
         <Reveal className="mt-10 text-center">
           <p className="text-sm text-muted-foreground">
-            Looking for a different speciality?{" "}
+            వేరే స్పెషాలిటీ కావాలా?{" "}
             <Link to="/specialities" className="font-semibold text-primary underline-offset-4 hover:underline">
-              See all 12 departments
+              12 శాఖలను చూడండి
             </Link>{" "}
-            or{" "}
+            లేదా{" "}
             <Link to="/appointments" className="font-semibold text-primary underline-offset-4 hover:underline">
-              ask our team
+              మా బృందాన్ని అడగండి
             </Link>
             .
           </p>
@@ -207,33 +207,33 @@ export function WhyChooseUs() {
   const reasons = [
     {
       icon: "stethoscope",
-      title: "Experienced Specialists",
-      text: "Consultant-led departments where senior doctors personally lead your diagnosis, treatment and follow-up — you are never handed off and forgotten.",
+      title: "అనుభవజ్ఞులైన నిపుణులు",
+      text: "కన్సల్టెంట్ నాయకత్వంలోని శాఖలు — మీ రోగనిర్ధారణ, చికిత్స మరియు ఫాలో-అప్‌ను సీనియర్ వైద్యులే వ్యక్తిగతంగా నడిపిస్తారు; మిమ్మల్ని మరెవరికీ వదలి భ్రమించలేరు.",
     },
     {
       icon: "microscope",
-      title: "Advanced Diagnostic Technology",
-      text: "Digital X-ray, ultrasound, CT, ECHO and a fully automated laboratory under one roof — so answers arrive quickly and treatment starts sooner.",
+      title: "ఆధునిక పరీక్షా సాంకేతికత",
+      text: "డిజిటల్ ఎక్స్-రే, అల్ట్రాసౌండ్, సీటీ, ఎకో మరియు పూర్తి ఆటోమేటెడ్ ల్యాబ్ ఒకే భవనంలో — సమాధానాలు వేగంగా, చికిత్స త్వరగా.",
     },
     {
       icon: "heart-handshake",
-      title: "Comprehensive, Coordinated Care",
-      text: "When your case needs more than one speciality, your doctors talk to each other. One plan, one file, zero running around for you.",
+      title: "పూర్తి, సమన్వయ సంరక్షణ",
+      text: "మీ కేసుకు ఒకటి కంటే ఎక్కువ స్పెషాలిటీలు అవసరమైతే — మీ వైద్యులు ఒకరితో ఒకరు మాట్లాడుకుంటారు. ఒకే ప్రణాళిక, ఒకే ఫైల్; మీరు పరుగులు పెట్టాల్సిన అవసరం లేదు.",
     },
     {
       icon: "building",
-      title: "Modern Infrastructure",
-      text: "Modular operation theatres, comfortable patient rooms and a calm, healing environment designed around safety and dignity.",
+      title: "ఆధునిక మౌలిక సదుపాయాలు",
+      text: "మాడ్యులర్ ఆపరేషన్ థియేటర్లు, సౌకర్యవంతమైన రోగి గదులు మరియు భద్రత, గౌరవం చుట్టూ రూపొందించిన ప్రశాంతమైన సానుకూల వాతావరణం.",
     },
     {
       icon: "siren",
-      title: "Emergency Support",
-      text: "A dedicated emergency department with ambulance support and priority diagnostics, so urgent care starts the moment you arrive.",
+      title: "అత్యవసర సహకారం",
+      text: "ప్రత్యేక అత్యవసర విభాగం — అంబులెన్స్ సహకారం మరియు ప్రాధాన్య పరీక్షలతో; మీరు చేరే క్షణమే అత్యవసర సంరక్షణ మొదలవుతుంది.",
     },
     {
       icon: "hand-heart",
-      title: "Patient-Centred Approach",
-      text: "Unhurried consultations, transparent cost conversations and plain-language explanations — informed patients heal better.",
+      title: "రోగి-కేంద్రీకృత విధానం",
+      text: "తొందరపడని కన్సల్టేషన్లు, పారదర్శక ఖర్చుల చర్చ మరియు సరళ భాషలో వివరణలు — సమాచారం కలిగిన రోగులు వేగంగా కోలుకుంటారు.",
     },
   ];
   return (
@@ -245,9 +245,9 @@ export function WhyChooseUs() {
         <SectionHeading
           light
           align="center"
-          eyebrow="Why Durga Hospital"
-          title="The difference is in how we care, not just what we treat"
-          description="Six commitments that shape every consultation, every admission and every follow-up at our hospital."
+          eyebrow="దుర్గా ఆసుపత్రి ఎందుకు"
+          title="తేడా ఏమి చికిత్స చేస్తామో కాదు — ఎలా చూసుకుంటామో"
+          description="మా ఆసుపత్రిలో ప్రతి కన్సల్టేషన్, ప్రతి చేరిక, ప్రతి ఫాలో-అప్‌ను రూపొందించే ఆరు వాగ్దానాలు."
         />
         <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((r) => (

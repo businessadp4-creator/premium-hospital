@@ -27,7 +27,7 @@ export async function POST(req: Request) {
   const rl = rateLimit(clientKey(req, "appt"), { limit: 5 });
   if (!rl.ok) {
     return NextResponse.json(
-      { ok: false, error: "Too many requests. Please call our reception for assistance." },
+      { ok: false, error: "చాలా ఎక్కువ అభ్యర్థనలు. దయచేసి సహాయం కోసం మా రిసెప్షన్‌కు కాల్ చేయండి." },
       { status: 429 }
     );
   }
@@ -36,13 +36,13 @@ export async function POST(req: Request) {
   try {
     body = await req.json();
   } catch {
-    return NextResponse.json({ ok: false, error: "Invalid request" }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "సరైన అభ్యర్థన కాదు" }, { status: 400 });
   }
 
   const parsed = schema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json(
-      { ok: false, error: "Please check the form fields and try again." },
+      { ok: false, error: "దయచేసి ఫారం ఫీల్డ్‌లను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి." },
       { status: 400 }
     );
   }
@@ -52,12 +52,12 @@ export async function POST(req: Request) {
   // Validate department + doctor relationships against the content registry
   const dept = departments.find((d) => d.slug === data.departmentSlug);
   if (!dept) {
-    return NextResponse.json({ ok: false, error: "Unknown department." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "గుర్తుపెట్టని శాఖ." }, { status: 400 });
   }
   if (data.doctorSlug) {
     const doc = doctors.find((d) => d.slug === data.doctorSlug);
     if (!doc) {
-      return NextResponse.json({ ok: false, error: "Unknown doctor." }, { status: 400 });
+      return NextResponse.json({ ok: false, error: "గుర్తుపెట్టని వైద్యుడు." }, { status: 400 });
     }
   }
 
@@ -66,7 +66,7 @@ export async function POST(req: Request) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   if (Number.isNaN(requested.getTime()) || requested < today) {
-    return NextResponse.json({ ok: false, error: "Preferred date must be today or later." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "అనుకూల తేదీ ఈ రోజు లేదా తర్వాత ఉండాలి." }, { status: 400 });
   }
 
   try {
@@ -93,7 +93,7 @@ export async function POST(req: Request) {
   } catch (e) {
     console.error("appointment create failed", e);
     return NextResponse.json(
-      { ok: false, error: "We could not save your request right now. Please call the hospital." },
+      { ok: false, error: "మీ అభ్యర్థనను ఇప్పుడు సేవ్ చేయలేకపోతున్నాము. దయచేసి ఆసుపత్రికి కాల్ చేయండి." },
       { status: 500 }
     );
   }

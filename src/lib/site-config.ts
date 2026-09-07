@@ -1,28 +1,29 @@
 /**
  * ============================================================================
- * DURGA MULTI SPECIALTY HOSPITAL — CENTRAL SITE CONFIGURATION
+ * DURGA MULTI SPECIALTY HOSPITAL — CENTRAL SITE CONFIGURATION (TELUGU)
  * ============================================================================
  * ⚠️  PLACEHOLDER POLICY ⚠️
  * Every field marked with `// [PLACEHOLDER]` contains SAMPLE data in a
  * realistic format so the site renders gracefully during review.
  * Replace ALL of them with the hospital's verified details before launch.
  * Search for the marker "[PLACEHOLDER]" to find every item at once.
- * No statistics, claims, doctors, or testimonials elsewhere in the codebase
- * are presented as verified facts.
  * ============================================================================
  */
 
 export const siteConfig = {
   name: "Durga Multi Specialty Hospital",
+  nameTe: "దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్",
   shortName: "Durga Hospital",
   legalName: "Durga Multi Specialty Hospital",
 
   city: "Bangalore",
+  cityTe: "బెంగళూరు",
   state: "Karnataka",
+  stateTe: "కర్ణాటక",
 
-  tagline: "Advanced Healthcare. Compassionate Care.",
+  tagline: "అద్భుతమైన వైద్య సేవలు. మానవీయమైన సంరక్షణ.",
   description:
-    "Durga Multi Specialty Hospital in Bangalore offers expert care across 12+ specialities — cardiology, orthopaedics, neurology, mother & child care and more — supported by in-house diagnostics, modern operation theatres and a patient-first care team.",
+    "బెంగళూరులోని దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్ — 12కి పైగా స్పెషాలిటీలలో అనుభవజ్ఞులైన వైద్య నిపుణుల సేవలు: గుండె జబ్బులు, ఎముకల వ్యాధులు, నరాల వ్యాధులు, మాతృ శిశు సంరక్షణ మరియు మరిన్ని. అదే భవనంలో ఆధునిక పరీక్షలు, ఆధునిక ఆపరేషన్ థియేటర్లు మరియు రోగి-కేంద్రీకృత సంరక్షణ బృందం.",
 
   /**
    * [PLACEHOLDER] Official website domain — used for canonical URLs, sitemap
@@ -71,9 +72,9 @@ export const siteConfig = {
    * [PLACEHOLDER] Opening hours. Verify with hospital administration.
    */
   hours: {
-    opd: "Monday – Saturday: 8:00 AM – 8:00 PM",
-    opdSunday: "Sunday: 9:00 AM – 2:00 PM (consultation by appointment)",
-    emergency: "Emergency & Pharmacy: Open 24 hours [verify before launch]",
+    opd: "సోమవారం – శనివారం: ఉదయం 8:00 – సాయంత్రం 8:00",
+    opdSunday: "ఆదివారం: ఉదయం 9:00 – మధ్యాహ్నం 2:00 (అపాయింట్‌మెంట్ ద్వారా మాత్రమే)",
+    emergency: "అత్యవసర వైద్యం & ఫార్మసీ: 24 గంటలూ తెరిచి ఉంటాయి [ప్రారంభానికి ముందు ధృవీకరించండి]",
   },
 
   /**
@@ -91,15 +92,15 @@ export const siteConfig = {
 
   /** Navigation model */
   nav: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Specialities", href: "/specialities" },
-    { label: "Doctors", href: "/doctors" },
-    { label: "Services", href: "/services" },
-    { label: "Facilities", href: "/facilities" },
-    { label: "Health Packages", href: "/health-packages" },
-    { label: "Patient Information", href: "/patient-information" },
-    { label: "Contact", href: "/contact" },
+    { label: "హోమ్", href: "/" },
+    { label: "మా గురించి", href: "/about" },
+    { label: "స్పెషాలిటీలు", href: "/specialities" },
+    { label: "వైద్యులు", href: "/doctors" },
+    { label: "సేవలు", href: "/services" },
+    { label: "సౌకర్యాలు", href: "/facilities" },
+    { label: "ఆరోగ్య ప్యాకేజీలు", href: "/health-packages" },
+    { label: "రోగి సమాచారం", href: "/patient-information" },
+    { label: "సంప్రదించండి", href: "/contact" },
   ],
 } as const;
 
@@ -117,5 +118,5 @@ export const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destina
 )}`;
 
 export const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-  `Hello, I would like to enquire about an appointment at ${siteConfig.name}.`
+  `నమస్కారం, దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్‌లో అపాయింట్‌మెంట్ గురించి విచారించాలనుకుంటున్నాను.`
 )}`;

@@ -23,18 +23,18 @@ export function CtaBand({
           <div className="relative flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-12">
             <div className="max-w-xl">
               <h2 className="font-display text-2xl font-bold text-white md:text-3xl">
-                Need urgent medical assistance?
+                తక్షణ వైద్య సహాయం కావాలా?
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed text-teal-soft">
-                Contact our emergency team directly — quick triage saves lives. For life-threatening
-                symptoms like chest pain, stroke signs or severe bleeding, call immediately.
+                మా అత్యవసర బృందాన్ని డైరెక్ట్‌గా సంప్రదించండి — త్వరిత గుర్తింపే ప్రాణాలను కాపాడుతుంది. ఛాతీ
+                నొప్పి, స్ట్రోక్ లక్షణాలు లేదా తీవ్ర రక్తస్రావం వంటి ప్రాణాంతక లక్షణాలు ఉంటే వెంటనే కాల్ చేయండి.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
               <a href={`tel:${siteConfig.emergency.tel}`}>
                 <Button className="h-12 w-full rounded-full bg-destructive px-7 text-[15px] font-semibold shadow-sm hover:bg-destructive/90 sm:w-auto">
                   <CIcon name="phone-call" className="size-4" />
-                  Call Emergency
+                  అత్యవసర కాల్
                 </Button>
               </a>
               <Link to="/emergency">
@@ -43,7 +43,7 @@ export function CtaBand({
                   className="h-12 w-full rounded-full border-white/30 bg-white/5 px-7 text-[15px] font-semibold text-white hover:bg-white/15 hover:text-white sm:w-auto"
                 >
                   <CIcon name="navigation" className="size-4" />
-                  Emergency Info
+                  అత్యవసర సమాచారం
                 </Button>
               </Link>
             </div>
@@ -61,18 +61,18 @@ export function CtaBand({
         <div className="relative flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-12">
           <div className="max-w-xl">
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">
-              Your health deserves an unhurried consultation.
+              మీ ఆరోగ్యం తగినంత సమయం ఇచ్చిన కన్సల్టేషన్ అర్హమైంది.
             </h2>
             <p className="mt-3 text-[15px] leading-relaxed text-teal-soft">
-              Book an appointment with our specialists — online, on the phone or on WhatsApp. We
-              will find the earliest slot that works for you.
+              మా నిపుణులతో అపాయింట్‌మెంట్ బుక్ చేయండి — ఆన్‌లైన్‌లో, ఫోన్‌లో లేదా వాట్సాప్‌లో. మీకు
+              అనుకూలమైన తొలి స్లాట్‌ను మేము కనుగొని చూస్తాము.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
             <Link to="/appointments">
               <Button className="h-12 w-full rounded-full bg-gold px-7 text-[15px] font-semibold text-white shadow-sm hover:bg-gold/90 sm:w-auto">
                 <CIcon name="calendar-check" className="size-4" />
-                Book an Appointment
+                అపాయింట్‌మెంట్ బుక్ చేయండి
               </Button>
             </Link>
             <a href={`tel:${siteConfig.phone.tel}`}>

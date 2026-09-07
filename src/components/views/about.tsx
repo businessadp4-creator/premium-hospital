@@ -11,19 +11,19 @@ import { departments } from "@/lib/content";
 
 export function AboutView() {
   const values = [
-    { icon: "hand-heart", title: "Compassion first", text: "Illness is stressful. We treat people, not just reports — with kindness, patience and respect in every interaction." },
-    { icon: "badge-check", title: "Clinical integrity", text: "Evidence-based medicine, honest conversations about options and costs, and no unnecessary tests or procedures. Ever." },
-    { icon: "users", title: "Teamwork", text: "Doctors, nurses, technicians and pharmacists work as one coordinated team around every patient's file." },
-    { icon: "shield-check", title: "Safety & hygiene", text: "Strict infection-control protocols, sterile workflows and continuous staff training — safety is a habit here, not a slogan." },
+    { icon: "hand-heart", title: "కరుణ మొదలు", text: "అనారోగ్యం ఒత్తిడిని తెస్తుంది. రిపోర్టులు కాదు — మనుషులను చికిత్స చేస్తాము — ప్రతి సంభాషణలో దయ, ఓపిక మరియు గౌరవంతో." },
+    { icon: "badge-check", title: "క్లినికల్ నిజాయితీ", text: "ఆధారాల ఆధారిత వైద్యం, ఎంపికలు మరియు ఖర్చుల గురించి నిజాయితీ చర్చ, మరియు అనవసర పరీక్షలు లేదా విధానాలు — ఎప్పటికీ." },
+    { icon: "users", title: "బృంద సమన్వయం", text: "వైద్యులు, నర్సులు, టెక్నీషియన్లు మరియు ఫార్మసిస్టులు — ప్రతి రోగి ఫైల్ చుట్టూ ఒకే సమన్వయ బృందంగా పనిచేస్తారు." },
+    { icon: "shield-check", title: "భద్రత & పరిశుభ్రత", text: "కఠినమైన ఇన్ఫెక్షన్-నియంత్రణ విధానాలు, స్టెరైల్ వర్క్‌ఫ్లోలు మరియు నిరంతర సిబ్బంది శిక్షణ — భద్రత ఇక్కడ నినాది కాదు, అలవాటు." },
   ];
 
   return (
     <>
       <PageHero
-        eyebrow="About Us"
-        title="A neighbourhood hospital with specialist-grade capabilities"
-        description="Durga Multi Specialty Hospital exists to make expert, ethical healthcare accessible to every family in Bangalore — under one roof, with one coordinated team."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
+        eyebrow="మా గురించి"
+        title="పరిసర ఆసుపత్రి — స్పెషాలిస్ట్-స్థాయి సామర్థ్యాలతో"
+        description="దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్ — బెంగళూరులోని ప్రతి కుటుంబానికి నిజాయితీ, నిపుణుల వైద్య సేవలను అందుబాటులోకి తీసుకురావడం కోసం ఉంది — ఒకే పైకప్పు కింద, ఒకే సమన్వయ బృందంతో."
+        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "మా గురించి" }]}
       />
 
       {/* Story */}
@@ -33,7 +33,7 @@ export function AboutView() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
               <Image
                 src="/images/team.jpg"
-                alt="Our medical team walking through the hospital corridor"
+                alt="మా వైద్య బృందం ఆసుపత్రి కారిడార్‌లో నడుస్తున్న దృశ్యం"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -42,31 +42,21 @@ export function AboutView() {
           </Reveal>
           <div>
             <SectionHeading
-              eyebrow="Our Story"
-              title="Built around a simple belief: patients deserve unhurried, honest care"
+              eyebrow="మా కథ"
+              title="సరళమైన నమ్మకంతో నిర్మించబడింది: రోగులకు తొందరపడని, నిజాయితీ సంరక్షణ రావాలి"
             />
             <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                In a city of world-class hospitals and 4-minute consultations, we chose a different
-                path. Durga Multi Specialty Hospital was set up to bring specialist-level medicine
-                closer to families in Bangalore — with the technology and clinical depth of a large
-                institution, and the warmth and attention of a family clinic.
+                ప్రపంచ-స్థాయి ఆసుపత్రులు మరియు నాలుగు నిమిషాల కన్సల్టేషన్లు నిండిన ఈ నగరంలో — మేము వేరే దారిని ఎంచుకున్నాము. దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్ — స్పెషాలిస్ట్-స్థాయి వైద్యాన్ని బెంగళూరు కుటుంబాలకు దగ్గరగా తీసుకురావడానికి ఏర్పాటయింది — పెద్ద సంస్థ సాంకేతికత మరియు క్లినికల్ లోతుతో, కుటుంబ క్లినిక్ వెచ్చదనం మరియు శ్రద్ధతో.
               </p>
               <p>
-                Our name reflects our promise. Everything we do — from the way consultations are
-                scheduled to how reports are explained — is designed to leave patients feeling
-                informed, respected and cared for. We measure success not only in outcomes, but in
-                how confidently families understand their own health after every visit.
+                మా పేరు మా వాగ్దానాన్ని ప్రతిబింబిస్తుంది. కన్సల్టేషన్ల షెడ్యూలింగ్ నుంచి రిపోర్ట్ల వివరణ వరకు — మేము చేసే ప్రతిదీ రోగులకు సమాచారం, గౌరవం మరియు సంరక్షణ అనుభవం కలిగించేలా రూపొందించాము. విజయాన్ని ఫలితాలతో మాత్రమే కొలత చేయము — ప్రతి సందర్శన తర్వాత కుటుంబాలు తమ ఆరోగ్యం గురించి ఎంత ధైర్యంగా అర్థం చేసుకున్నారో కూడా.
               </p>
               <p>
-                Today, twelve clinical departments work together under one roof, supported by
-                in-house diagnostics, modern operation theatres and a pharmacy. When your case needs
-                more than one speciality, your doctors coordinate — you should never have to
-                coordinate your own care.
+                ఈ రోజు, పన్నెండు క్లినికల్ శాఖలు ఒకే పైకప్పు కింద కలిసి పనిచేస్తాయి — అదే భవనంలోని పరీక్షలు, ఆధునిక ఆపరేషన్ థియేటర్లు మరియు ఫార్మసీ మద్దతుతో. మీ కేసుకు ఒకటి కంటే ఎక్కువ స్పెషాలిటీలు అవసరమైతే — మీ వైద్యులే సమన్వయం చేస్తారు; మీరు మీ సంరక్షణను మీరే సమన్వయం చేసుకోవాల్సిన అవసరం లేదు.
               </p>
               <p className="text-xs italic text-muted-foreground/80">
-                [Note: institutional history, founding year and milestones to be added with
-                verified details from hospital administration.]
+                [గమనిక: సంస్థ చరిత్ర, స్థాపన సంవత్సరం మరియు మైలురాళ్లను ఆసుపత్రి పరిపాలన ధృవీకరించిన వివరాలతో జోడించాలి.]
               </p>
             </div>
           </div>
@@ -81,11 +71,11 @@ export function AboutView() {
               <span className="grid size-12 place-items-center rounded-2xl bg-secondary text-primary">
                 <CIcon name="heart-pulse" className="size-6" />
               </span>
-              <h2 className="mt-5 font-display text-2xl font-bold">Our Mission</h2>
+              <h2 className="mt-5 font-display text-2xl font-bold">మా ధ్యేయం</h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                To deliver ethical, evidence-based and affordable multi-specialty healthcare to the
-                families of Bangalore — combining senior clinical expertise with modern diagnostics
-                and a patient experience built on clarity, dignity and warmth.
+                బెంగళూరు కుటుంబాలకు నీతిబద్ధమైన, ఆధారాల ఆధారిత మరియు అందుబాటులో ఉండే మల్టీ-స్పెషాలిటీ
+                ఆరోగ్య సేవలను అందించడం — సీనియర్ క్లినికల్ నైపుణ్యాన్ని ఆధునిక పరీక్షలతో కలిపి,
+                స్పష్టత, గౌరవం మరియు వెచ్చదనంపై ఆధారపడిన రోగి అనుభవంతో.
               </p>
             </div>
           </Reveal>
@@ -94,10 +84,10 @@ export function AboutView() {
               <span className="grid size-12 place-items-center rounded-2xl bg-gold-soft text-gold">
                 <CIcon name="navigation" className="size-6" />
               </span>
-              <h2 className="mt-5 font-display text-2xl font-bold">Our Vision</h2>
+              <h2 className="mt-5 font-display text-2xl font-bold">మా దృష్టి</h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                To be the hospital our neighbourhood recommends without hesitation — known for
-                clinical outcomes, honest advice, and care that treats every patient like family.
+                మా పరిసరాల వారు సంకోచం లేకుండా సిఫారసు చేసే ఆసుపత్రిగా నిలవడం — క్లినికల్
+                ఫలితాలకు, నిజాయితీ సలహాకు మరియు ప్రతి రోగిని తమ వాళ్లలా చూసే సంరక్షణకు పేరుగాంచడం.
               </p>
             </div>
           </Reveal>
@@ -109,8 +99,8 @@ export function AboutView() {
         <Container>
           <SectionHeading
             align="center"
-            eyebrow="What We Stand For"
-            title="Four values, practised daily"
+            eyebrow="మా విలువలు"
+            title="ప్రతిరోజూ పాటించే నాలుగు విలువలు"
           />
           <RevealGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
@@ -137,11 +127,11 @@ export function AboutView() {
               <div className="relative grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
                 <div>
                   <h2 className="font-display text-2xl font-bold md:text-3xl">
-                    Twelve departments. One accountable team.
+                    పన్నెండు శాఖలు. ఒక బాధ్యతాయుత బృందం.
                   </h2>
                   <p className="mt-3 max-w-2xl leading-relaxed text-teal-soft">
-                    Cardiology to paediatrics, general medicine to advanced imaging — explore the
-                    specialities available under one roof.
+                    కార్డియాలజీ నుంచి శిశువైద్యం వరకు, జనరల్ మెడిసిన్ నుంచి ఆధునిక ఇమేజింగ్ వరకు —
+                    ఒకే పైకప్పు కింద అందుబాటులో ఉన్న స్పెషాలిటీలను చూడండి.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {departments.map((d) => (
@@ -157,12 +147,12 @@ export function AboutView() {
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link to="/doctors">
                       <Button className="h-11 rounded-full bg-gold px-6 font-semibold text-white hover:bg-gold/90">
-                        Meet Our Doctors
+                        మా వైద్యులను కలవండి
                       </Button>
                     </Link>
                     <Link to="/appointments">
                       <Button variant="outline" className="h-11 rounded-full border-white/30 bg-white/5 px-6 font-semibold text-white hover:bg-white/15 hover:text-white">
-                        Book an Appointment
+                        అపాయింట్‌మెంట్ బుక్ చేయండి
                       </Button>
                     </Link>
                   </div>
@@ -170,7 +160,7 @@ export function AboutView() {
                 <div className="relative hidden aspect-square overflow-hidden rounded-2xl lg:block">
                   <Image
                     src="/images/reception.jpg"
-                    alt="Calm, modern reception and waiting lounge"
+                    alt="ప్రశాంతమైన, ఆధునిక రిసెప్షన్ మరియు వెయిటింగ్ లాంజ్"
                     fill
                     sizes="33vw"
                     className="object-cover"
