@@ -85,3 +85,28 @@ Stage Summary:
 - Deliverable: the five owned files are fully bilingual — t() call sites: about.tsx 31, home.tsx 2 (pre-existing, verified), sections-a.tsx 47, sections-b.tsx 30, sections-c.tsx 22; all card data now flows from the active-language `content` pack so departments/doctors/testimonials/packages/blog previews re-render on language switch.
 - Module-scope restructures: none required (all Telugu constants were already inside components); dateLocale not needed (no date rendering in these files).
 - Uncertainties flagged for review: (1) hero h1 English rendered per-fragment as "Excellent medical care." + "Care with a human touch."; (2) "12కి పైగా క్లినికల్ స్పెషాలిటీలు" → English "12+ clinical specialities" (matches TrustBar's existing "12+" value, same meaning); (3) TestimonialsSection keeps its local map param named `t` (shadows the i18n t only inside that callback, which doesn't use it — eslint no-shadow is not enabled); (4) about.tsx had a pre-existing unused `siteConfig` import, left as-is (no-unused-vars off).
+
+---
+Task ID: 3
+Agent: Super Z (main agent)
+Task: Fix Radix/aria-controls hydration error, add Telugu⇄English bilingual site with conversational Telugu, embed BizMeals.in ad, push to GitHub.
+
+Work Log:
+- Root cause: hash router read window.location.hash during the first client render (useState(parseHash)) — any direct load of a hash URL (e.g. /#/appointments) hydrated a different tree than the server HTML, surfacing as Radix useId/aria-controls mismatches.
+- Rewrote RouterProvider on useSyncExternalStore: getServerSnapshot always "/", client snapshot cached per hash string (stable identity). First render is now isomorphic by construction.
+- Built i18n runtime src/lib/i18n.tsx: LangProvider (default "te" both sides, localStorage restore after hydration with documented eslint-disable, html lang sync), useLang -> {t, content, dateLocale}.
+- SiteContent type added to content/types.ts; contentTe pack exported from content/index.ts.
+- English content pack created at src/lib/content/en (agent 4-a): departments(12), doctors(8), services(6), facilities(8), packages(5), testimonials(3), patient-info, 8 blog articles — slug/order/field parity verified programmatically.
+- All 8 views + 3 home sections converted to t()/content (agents 4-b1 + main agent; two subagent runs timed out, work completed by main agent).
+- Site components (header incl. new LangToggle pill, footer, mobile-bottom-bar, cta-band, cards — TestimonialCard prop renamed t->tm, primitives breadcrumbs, both forms with language-aware zod schemas via ref-resolver pattern) bilingual; Telugu simplified to conversational 2026 style (loanwords: బుక్, కాల్, కన్ఫర్మ్, రిక్వెస్ట్, టీమ్).
+- site-config: bilingual nav {te,en}, taglineEn/descriptionEn/hoursEn, whatsappUrlEn.
+- BizMeals.in: pre-footer partner band (new bizmeals-band.tsx) + footer credit line; copy from bizmeals.in (end-to-end digital marketing, web designing, SEO, lead generation).
+- API routes: bilingual (te+en) error strings.
+- Fixed sitemap.ts changeFrequency widening error (pre-existing) and footer cityTe refs.
+- QA via agent-browser: fresh load + direct /#/appointments load both console-clean (0 hydration warnings); TE->EN toggle switches h1/html lang/localStorage; clear restores te; mobile 390px clean with bottom bar (కాల్|WhatsApp|బుక్); appointment form E2E in Telugu (ref DMH-4I8YH71P, row verified in SQLite); blog + cardiology EN verified; tsc + eslint clean (app code).
+- Pushed to github.com/businessadp4-creator/premium-hospital main (commit 582392a).
+
+Stage Summary:
+- Site is now fully bilingual: default conversational Telugu, one-tap English, preference persisted; hydration error eliminated at the root.
+- BizMeals.in band sits site-wide above the footer with a gold CTA to bizmeals.in.
+- [PLACEHOLDER] markers preserved in both languages — replace with verified hospital data before launch.
