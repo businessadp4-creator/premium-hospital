@@ -9,7 +9,7 @@ export * from "./patient-info";
 
 import { departmentsA } from "./departments-a";
 import { departmentsB } from "./departments-b";
-import type { Department, FAQ } from "./types";
+import type { Department, FAQ, SiteContent } from "./types";
 
 export const departments: Department[] = [...departmentsA, ...departmentsB];
 
@@ -36,3 +36,46 @@ export function getDepartmentFaqs(dept: Department): FAQ[] {
     },
   ];
 }
+
+/* ── Telugu content pack (site default) ─────────────────────────────────
+ * English mirror lives in src/lib/content/en (same slugs, same order).
+ * ─────────────────────────────────────────────────────────────────────── */
+import { doctors, getDoctor, getDoctorsByDepartment } from "./doctors";
+import { serviceGroups, facilities, healthPackages, testimonials } from "./services-facilities";
+import {
+  admissionSteps,
+  admissionChecklist,
+  visitingInfo,
+  patientRights,
+  patientResponsibilities,
+  patientFaqs,
+  emergencySymptoms,
+  emergencyDos,
+  emergencyDonts,
+} from "./patient-info";
+import { allBlogPosts, getPost, blogCategories } from "./blog-b";
+
+export const contentTe: SiteContent = {
+  departments,
+  doctors,
+  serviceGroups,
+  facilities,
+  healthPackages,
+  testimonials,
+  admissionSteps,
+  admissionChecklist,
+  visitingInfo,
+  patientRights,
+  patientResponsibilities,
+  patientFaqs,
+  emergencySymptoms,
+  emergencyDos,
+  emergencyDonts,
+  blogPosts: allBlogPosts,
+  blogCategories,
+  getDepartment,
+  getDoctor,
+  getDoctorsByDepartment,
+  getPost,
+  getDepartmentFaqs,
+};

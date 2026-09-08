@@ -87,3 +87,31 @@ export type Testimonial = {
 };
 
 export type FAQ = { question: string; answer: string };
+
+/** The full localized content surface consumed by views.
+ *  Two packs implement it: `contentTe` (src/lib/content) and
+ *  `contentEn` (src/lib/content/en). Slugs are identical in both. */
+export type SiteContent = {
+  departments: Department[];
+  doctors: Doctor[];
+  serviceGroups: ServiceGroup[];
+  facilities: Facility[];
+  healthPackages: HealthPackage[];
+  testimonials: Testimonial[];
+  admissionSteps: { title: string; description: string }[];
+  admissionChecklist: string[];
+  visitingInfo: { general: string; icu: string; attendants: string };
+  patientRights: string[];
+  patientResponsibilities: string[];
+  patientFaqs: FAQ[];
+  emergencySymptoms: { title: string; detail: string }[];
+  emergencyDos: string[];
+  emergencyDonts: string[];
+  blogPosts: BlogPost[];
+  blogCategories: string[];
+  getDepartment: (slug: string) => Department | undefined;
+  getDoctor: (slug: string) => Doctor | undefined;
+  getDoctorsByDepartment: (deptSlug: string) => Doctor[];
+  getPost: (slug: string) => BlogPost | undefined;
+  getDepartmentFaqs: (dept: Department) => FAQ[];
+};

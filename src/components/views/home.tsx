@@ -2,6 +2,7 @@
 
 import { usePageMeta } from "@/lib/router";
 import { siteConfig } from "@/lib/site-config";
+import { useLang } from "@/lib/i18n";
 import {
   HeroSection,
   TrustBar,
@@ -22,9 +23,13 @@ import {
 } from "@/components/home/sections-c";
 
 export function HomeView() {
+  const { t } = useLang();
   usePageMeta({
-    title: `${siteConfig.name} | ${siteConfig.cityTe} మల్టీ స్పెషాలిటీ హాస్పిటల్`,
-    description: siteConfig.description,
+    title: t(
+      `${siteConfig.name} | ${siteConfig.cityTe} మల్టీ స్పెషాలిటీ హాస్పిటల్`,
+      `${siteConfig.name} | Multi Specialty Hospital in ${siteConfig.city}`
+    ),
+    description: t(siteConfig.description, siteConfig.descriptionEn),
   });
 
   return (

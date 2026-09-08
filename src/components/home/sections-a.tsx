@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
-import { departments } from "@/lib/content";
+import { useLang } from "@/lib/i18n";
 import { CIcon } from "@/components/site/icon";
 import { Link } from "@/lib/router";
 import { Reveal, RevealGroup, RevealItem } from "@/components/site/reveal";
@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 
 /* ═══════════════════════ HERO ═══════════════════════ */
 export function HeroSection() {
+  const { t } = useLang();
   return (
     <section className="relative overflow-hidden bg-cream pt-[104px] md:pt-[132px]">
       <div className="absolute inset-0 bg-dots opacity-60" aria-hidden />
@@ -27,13 +28,13 @@ export function HeroSection() {
         {/* Copy */}
         <div>
           <Reveal>
-            <Eyebrow>మల్టీ స్పెషాలిటీ హాస్పిటల్ · బెంగళూరు</Eyebrow>
+            <Eyebrow>{t("మల్టీ స్పెషాలిటీ హాస్పిటల్ · బెంగళూరు", "Multi Specialty Hospital · Bangalore")}</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
             <h1 className="mt-4 font-display display-xl font-bold text-foreground">
-              అద్భుతమైన వైద్య సేవలు.{" "}
+              {t("అద్భుతమైన వైద్య సేవలు.", "Excellent medical care.")}{" "}
               <span className="relative inline-block text-primary">
-                మానవీయమైన సంరక్షణ.
+                {t("మానవీయమైన సంరక్షణ.", "Care with a human touch.")}
                 <svg
                   className="absolute -bottom-3 left-0 w-full text-gold"
                   viewBox="0 0 220 10"
@@ -48,8 +49,10 @@ export function HeroSection() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              అనుభవజ్ఞులైన నిపుణులు ఆధునిక సాంకేతికతతో అందించే నిపుణుల వైద్య సేవలు — మీ ఆరోగ్యం,
-              సౌకర్యం మరియు గౌరవం మా ప్రతి కార్యాచరణకు కేంద్రం.
+              {t(
+                "అనుభవజ్ఞులైన నిపుణులు, ఆధునిక టెక్నాలజీతో అందించే స్పెషాలిస్ట్ వైద్య సేవలు — మీ ఆరోగ్యం, సౌకర్యం, గౌరవం మా ప్రతి నిర్ణయానికి కేంద్రం.",
+                "Specialist care from experienced doctors, backed by modern technology — your health, comfort and dignity sit at the centre of everything we do."
+              )}
             </p>
           </Reveal>
           <Reveal delay={0.24}>
@@ -57,7 +60,7 @@ export function HeroSection() {
               <Link to="/appointments">
                 <Button className="h-13 w-full rounded-full px-8 py-3.5 text-[15px] font-semibold shadow-md transition-all hover:shadow-lg sm:w-auto">
                   <CIcon name="calendar-check" className="size-4.5" />
-                  అపాయింట్‌మెంట్ బుక్ చేయండి
+                  {t("అపాయింట్‌మెంట్ బుక్ చేయండి", "Book an appointment")}
                 </Button>
               </Link>
               <Link to="/specialities">
@@ -65,7 +68,7 @@ export function HeroSection() {
                   variant="outline"
                   className="h-13 w-full rounded-full border-primary/25 px-8 py-3.5 text-[15px] font-semibold text-primary transition-all hover:bg-secondary sm:w-auto"
                 >
-                  మా స్పెషాలిటీలను చూడండి
+                  {t("మా స్పెషాలిటీలను చూడండి", "Explore our specialities")}
                   <CIcon name="arrow-right" className="size-4.5" />
                 </Button>
               </Link>
@@ -75,10 +78,10 @@ export function HeroSection() {
           <Reveal delay={0.32}>
             <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border/70 pt-7 sm:grid-cols-4">
               {[
-                { icon: "stethoscope", label: "అనుభవజ్ఞులైన నిపుణులు" },
-                { icon: "microscope", label: "ఆధునిక సౌకర్యాలు" },
-                { icon: "hand-heart", label: "రోగి-కేంద్రీకృత సంరక్షణ" },
-                { icon: "siren", label: "అత్యవసర సహకారం" },
+                { icon: "stethoscope", label: t("అనుభవజ్ఞులైన నిపుణులు", "Experienced specialists") },
+                { icon: "microscope", label: t("ఆధునిక సౌకర్యాలు", "Modern facilities") },
+                { icon: "hand-heart", label: t("పేషెంట్-ఫస్ట్ సంరక్షణ", "Patient-first care") },
+                { icon: "siren", label: t("అత్యవసర సపోర్ట్", "Emergency support") },
               ].map((item) => (
                 <li key={item.label} className="flex items-center gap-2.5">
                   <span className="grid size-9 shrink-0 place-items-center rounded-full bg-secondary text-primary">
@@ -99,7 +102,7 @@ export function HeroSection() {
             <div className="relative aspect-[4/3.2] overflow-hidden rounded-[2rem] shadow-card-hover">
               <Image
                 src="/images/hero.jpg"
-                alt="దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్‌లో వైద్యుడు వృద్ధ రోగిని సంప్రదించుకుంటున్న దృశ్యం"
+                alt={t("దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్‌లో వైద్యుడు వృద్ధ రోగిని సంప్రదించుకుంటున్న దృశ్యం", "Doctor consulting an elderly patient at Durga Multi Specialty Hospital")}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -112,13 +115,13 @@ export function HeroSection() {
                 <CIcon name="heart-pulse" className="size-5" />
               </span>
               <div>
-                <p className="text-[13px] font-semibold text-foreground">12కి పైగా క్లినికల్ స్పెషాలిటీలు</p>
-                <p className="text-xs text-muted-foreground">ఒకే పైకప్పు కింద</p>
+                <p className="text-[13px] font-semibold text-foreground">{t("12కి పైగా క్లినికల్ స్పెషాలిటీలు", "12+ clinical specialities")}</p>
+                <p className="text-xs text-muted-foreground">{t("ఒకే పైకప్పు కింద", "Under one roof")}</p>
               </div>
             </div>
             <div className="absolute -top-4 right-4 hidden items-center gap-2.5 rounded-2xl border border-border bg-white/95 px-4 py-3 shadow-card backdrop-blur sm:flex">
               <CIcon name="circle-check" className="size-5 text-primary" strokeWidth={2} />
-              <p className="text-[13px] font-medium text-foreground">అదే భవనంలో పరీక్షలు & ఫార్మసీ</p>
+              <p className="text-[13px] font-medium text-foreground">{t("అదే భవనంలో పరీక్షలు & ఫార్మసీ", "Tests & pharmacy in the same building")}</p>
             </div>
           </div>
         </Reveal>
@@ -129,11 +132,12 @@ export function HeroSection() {
 
 /* ═══════════════════════ TRUST / CREDIBILITY BAR ═══════════════════════ */
 export function TrustBar() {
+  const { t } = useLang();
   const items = [
-    { icon: "hospital", value: "12+", label: "క్లినికల్ స్పెషాలిటీలు", note: "ఒకే పైకప్పు కింద సమన్వయం" },
-    { icon: "stethoscope", value: "సీనియర్", label: "కన్సల్టెంట్ నాయకత్వ సంరక్షణ", note: "ప్రతి శాఖలో అనుభవజ్ఞులైన నిపుణులు" },
-    { icon: "microscope", value: "ఇన్-హౌస్", label: "పరీక్షలు & ల్యాబ్", note: "చాలా పరీక్షలకు అదే రోజు రిపోర్ట్లు" },
-    { icon: "hand-heart", value: "24×7", label: "అత్యవసరం & ఫార్మసీ", note: "నిమిషాలు ముఖ్యమైన సమయంలో సిద్ధం" },
+    { icon: "hospital", value: "12+", label: t("క్లినికల్ స్పెషాలిటీలు", "Clinical specialities"), note: t("ఒకే పైకప్పు కింద సమన్వయం", "Coordinated under one roof") },
+    { icon: "stethoscope", value: t("సీనియర్", "Senior"), label: t("కన్సల్టెంట్ నాయకత్వ సంరక్షణ", "Consultant-led care"), note: t("ప్రతి శాఖలో అనుభవజ్ఞులైన నిపుణులు", "Experienced specialists in every department") },
+    { icon: "microscope", value: t("ఇన్-హౌస్", "In-house"), label: t("పరీక్షలు & ల్యాబ్", "Tests & lab"), note: t("చాలా పరీక్షలకు అదే రోజు రిపోర్ట్లు", "Same-day reports for most tests") },
+    { icon: "hand-heart", value: "24×7", label: t("అత్యవసరం & ఫార్మసీ", "Emergency & pharmacy"), note: t("నిమిషాలు ముఖ్యమైన సమయంలో సిద్ధం", "Ready when every minute counts") },
   ];
   return (
     <section className="border-y border-border/70 bg-white">
@@ -161,38 +165,42 @@ export function TrustBar() {
 
 /* ═══════════════════════ SPECIALITIES PREVIEW ═══════════════════════ */
 export function SpecialitiesPreview() {
+  const { t, content } = useLang();
   return (
     <section id="specialities" className="scroll-mt-24 bg-cream py-20 md:py-24">
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
-            eyebrow="సంరక్షణ కేంద్రాలు"
-            title="మీ కుటుంబం మొత్తానికి సరిపోయే స్పెషాలిటీలు"
-            description="రోజువారీ జ్వరాల నుంచి తీవ్రమైన గుండె సంరక్షణ వరకు — పన్నెండు సమన్వయ శాఖలు, ఒక బాధ్యతాయుత బృందం — మీ సంరక్షణ ఎక్కడా తడారిపోదు."
+            eyebrow={t("సంరక్షణ కేంద్రాలు", "Centres of care")}
+            title={t("మీ కుటుంబం మొత్తానికి సరిపోయే స్పెషాలిటీలు", "Specialities for your whole family")}
+            description={t(
+              "రోజువారీ జ్వరాల నుంచి తీవ్రమైన గుండె సంరక్షణ వరకు — పన్నెండు సమన్వయ శాఖలు, ఒక బాధ్యతాయుత టీమ్ — మీ సంరక్షణ ఎక్కడా తడారిపోదు.",
+              "From everyday fevers to advanced heart care — twelve coordinated departments, one accountable team — so your care never falls through the cracks."
+            )}
           />
           <Reveal delay={0.1}>
             <Link to="/specialities">
               <Button variant="outline" className="h-11 shrink-0 rounded-full border-primary/25 px-6 font-semibold text-primary hover:bg-secondary">
-                అన్ని స్పెషాలిటీలు చూడండి
+                {t("అన్ని స్పెషాలిటీలు చూడండి", "View all specialities")}
                 <CIcon name="arrow-right" className="size-4" />
               </Button>
             </Link>
           </Reveal>
         </div>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {departments.slice(0, 8).map((dept, i) => (
+          {content.departments.slice(0, 8).map((dept, i) => (
             <SpecialityCard key={dept.slug} dept={dept} index={i} />
           ))}
         </div>
         <Reveal className="mt-10 text-center">
           <p className="text-sm text-muted-foreground">
-            వేరే స్పెషాలిటీ కావాలా?{" "}
+            {t("వేరే స్పెషాలిటీ కావాలా?", "Need a different speciality?")}{" "}
             <Link to="/specialities" className="font-semibold text-primary underline-offset-4 hover:underline">
-              12 శాఖలను చూడండి
+              {t("12 శాఖలను చూడండి", "See all 12 departments")}
             </Link>{" "}
-            లేదా{" "}
+            {t("లేదా", "or")}{" "}
             <Link to="/appointments" className="font-semibold text-primary underline-offset-4 hover:underline">
-              మా బృందాన్ని అడగండి
+              {t("మా బృందాన్ని అడగండి", "ask our team")}
             </Link>
             .
           </p>
@@ -204,36 +212,37 @@ export function SpecialitiesPreview() {
 
 /* ═══════════════════════ WHY CHOOSE US ═══════════════════════ */
 export function WhyChooseUs() {
+  const { t } = useLang();
   const reasons = [
     {
       icon: "stethoscope",
-      title: "అనుభవజ్ఞులైన నిపుణులు",
-      text: "కన్సల్టెంట్ నాయకత్వంలోని శాఖలు — మీ రోగనిర్ధారణ, చికిత్స మరియు ఫాలో-అప్‌ను సీనియర్ వైద్యులే వ్యక్తిగతంగా నడిపిస్తారు; మిమ్మల్ని మరెవరికీ వదలి భ్రమించలేరు.",
+      title: t("అనుభవజ్ఞులైన నిపుణులు", "Experienced specialists"),
+      text: t("కన్సల్టెంట్ నాయకత్వంలోని శాఖలు — మీ డయాగ్నోసిస్, చికిత్స, ఫాలో-అప్ అన్నీ సీనియర్ వైద్యులే వ్యక్తిగతంగా చూస్తారు; మిమ్మల్ని మరెవరికీ వదిలి పంపరు.", "Consultant-led departments — a senior doctor personally oversees your diagnosis, treatment and follow-up; you're never handed off to strangers."),
     },
     {
       icon: "microscope",
-      title: "ఆధునిక పరీక్షా సాంకేతికత",
-      text: "డిజిటల్ ఎక్స్-రే, అల్ట్రాసౌండ్, సీటీ, ఎకో మరియు పూర్తి ఆటోమేటెడ్ ల్యాబ్ ఒకే భవనంలో — సమాధానాలు వేగంగా, చికిత్స త్వరగా.",
+      title: t("ఆధునిక పరీక్షల సదుపాయం", "Modern diagnostics"),
+      text: t("డిజిటల్ ఎక్స్-రే, అల్ట్రాసౌండ్, సీటీ, ఎకో, పూర్తి ఆటోమేటెడ్ ల్యాబ్ — అన్నీ ఒకే భవనంలో. రిపోర్ట్లు వేగంగా, చికిత్స త్వరగా.", "Digital X-ray, ultrasound, CT, echo and a fully automated lab — all in one building. Answers come faster, so treatment starts sooner."),
     },
     {
       icon: "heart-handshake",
-      title: "పూర్తి, సమన్వయ సంరక్షణ",
-      text: "మీ కేసుకు ఒకటి కంటే ఎక్కువ స్పెషాలిటీలు అవసరమైతే — మీ వైద్యులు ఒకరితో ఒకరు మాట్లాడుకుంటారు. ఒకే ప్రణాళిక, ఒకే ఫైల్; మీరు పరుగులు పెట్టాల్సిన అవసరం లేదు.",
+      title: t("పూర్తి, సమన్వయ సంరక్షణ", "Complete, coordinated care"),
+      text: t("మీ కేసుకు ఒకటి కంటే ఎక్కువ స్పెషాలిటీలు కావాలంటే — మీ వైద్యులు ఒకరితో ఒకరు మాట్లాడుకుంటారు. ఒకే ప్లాన్, ఒకే ఫైల్; మీరు మధ్యలో పరుగులు పెట్టాల్సిన పని లేదు.", "If your case needs more than one speciality — your doctors talk to each other. One plan, one file; you never have to run between departments."),
     },
     {
       icon: "building",
-      title: "ఆధునిక మౌలిక సదుపాయాలు",
-      text: "మాడ్యులర్ ఆపరేషన్ థియేటర్లు, సౌకర్యవంతమైన రోగి గదులు మరియు భద్రత, గౌరవం చుట్టూ రూపొందించిన ప్రశాంతమైన సానుకూల వాతావరణం.",
+      title: t("ఆధునిక మౌలిక సదుపాయాలు", "Modern infrastructure"),
+      text: t("మాడ్యులర్ ఆపరేషన్ థియేటర్లు, సౌకర్యవంతమైన రోగి గదులు, భద్రత-గౌరవాల చుట్టూ రూపొందించిన ప్రశాంతమైన వాతావరణం.", "Modular operation theatres, comfortable patient rooms, and a calm environment built around safety and respect."),
     },
     {
       icon: "siren",
-      title: "అత్యవసర సహకారం",
-      text: "ప్రత్యేక అత్యవసర విభాగం — అంబులెన్స్ సహకారం మరియు ప్రాధాన్య పరీక్షలతో; మీరు చేరే క్షణమే అత్యవసర సంరక్షణ మొదలవుతుంది.",
+      title: t("అత్యవసర సపోర్ట్", "Emergency support"),
+      text: t("ప్రత్యేక అత్యవసర విభాగం — అంబులెన్స్ సపోర్ట్, ప్రాధాన్య పరీక్షలతో; మీరు చేరగానే సంరక్షణ మొదలవుతుంది.", "A dedicated emergency department — with ambulance support and priority testing; care begins the moment you arrive."),
     },
     {
       icon: "hand-heart",
-      title: "రోగి-కేంద్రీకృత విధానం",
-      text: "తొందరపడని కన్సల్టేషన్లు, పారదర్శక ఖర్చుల చర్చ మరియు సరళ భాషలో వివరణలు — సమాచారం కలిగిన రోగులు వేగంగా కోలుకుంటారు.",
+      title: t("పేషెంట్-ఫస్ట్ విధానం", "Patient-first approach"),
+      text: t("తొందరపడని కన్సల్టేషన్లు, ఖర్చుల గురించి ఓపెన్ చర్చ, సరళమైన భాషలో వివరణలు — సమాచారం ఉన్న రోగి వేగంగా కోలుకుంటారు.", "Unhurried consultations, open conversations about costs and explanations in simple language — informed patients recover faster."),
     },
   ];
   return (
@@ -245,9 +254,9 @@ export function WhyChooseUs() {
         <SectionHeading
           light
           align="center"
-          eyebrow="దుర్గా ఆసుపత్రి ఎందుకు"
-          title="తేడా ఏమి చికిత్స చేస్తామో కాదు — ఎలా చూసుకుంటామో"
-          description="మా ఆసుపత్రిలో ప్రతి కన్సల్టేషన్, ప్రతి చేరిక, ప్రతి ఫాలో-అప్‌ను రూపొందించే ఆరు వాగ్దానాలు."
+          eyebrow={t("దుర్గా ఆసుపత్రి ఎందుకు", "Why Durga Hospital")}
+          title={t("తేడా ఏమి చికిత్స చేస్తామో కాదు — ఎలా చూసుకుంటామో", "The difference isn't just what we treat — it's how we care")}
+          description={t("మా ఆసుపత్రిలో ప్రతి కన్సల్టేషన్, ప్రతి చేరిక, ప్రతి ఫాలో-అప్‌ను రూపొందించే ఆరు వాగ్దానాలు.", "Six promises that shape every consultation, admission and follow-up at our hospital.")}
         />
         <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((r) => (

@@ -14,7 +14,7 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  useSyncExternalStore,
   type ReactNode,
   type MouseEvent,
 } from "react";
@@ -34,14 +34,44 @@ function parseHash(): { path: string; query: URLSearchParams } {
   return { path: path || "/", query: new URLSearchParams(qs || "") };
 }
 
-export function RouterProvider({ children }: { children: ReactNode }) {
-  const [route, setRoute] = useState(parseHash);
+/**
+ * Hydration-safe route state via useSyncExternalStore.
+ *
+ * During hydration React reads getServerSnapshot (always "/"), so the first
+ * client render matches the server HTML EXACTLY no matter what hash the page
+ * was opened with. Immediately after hydration it switches to the real hash —
+ * fixing the Radix useId/aria-controls hydration mismatches that occurred
+ * when loading a hash URL (e.g. /#/appointments) directly.
+ *
+ * getSnapshot caches by hash string: it must return a stable object identity
+ * between hash changes or React would re-render forever.
+ */
+const SERVER_ROUTE = { path: "/", query: new URLSearchParams() };
 
-  useEffect(() => {
-    const onChange = () => setRoute(parseHash());
-    window.addEventListener("hashchange", onChange);
-    return () => window.removeEventListener("hashchange", onChange);
-  }, []);
+let cachedHash: string | null = null;
+let cachedRoute = SERVER_ROUTE;
+
+function getClientRoute() {
+  const hash = window.location.hash;
+  if (cachedHash !== hash) {
+    const { path, query } = parseHash();
+    cachedHash = hash;
+    cachedRoute = { path, query };
+  }
+  return cachedRoute;
+}
+
+function getServerRoute() {
+  return SERVER_ROUTE;
+}
+
+function subscribeHash(onStoreChange: () => void) {
+  window.addEventListener("hashchange", onStoreChange);
+  return () => window.removeEventListener("hashchange", onStoreChange);
+}
+
+export function RouterProvider({ children }: { children: ReactNode }) {
+  const route = useSyncExternalStore(subscribeHash, getClientRoute, getServerRoute);
 
   // Scroll management: top of page, or to a section when ?s=<id> is present
   useEffect(() => {

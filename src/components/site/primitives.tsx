@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { CIcon } from "./icon";
 import { Link } from "@/lib/router";
+import { useLang } from "@/lib/i18n";
 import { Reveal } from "./reveal";
 
 /** Eyebrow label — small caps with gold tick */
@@ -70,6 +71,7 @@ export function Breadcrumbs({
   items: { label: string; href?: string }[];
   light?: boolean;
 }) {
+  const { t } = useLang();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -80,7 +82,7 @@ export function Breadcrumbs({
     })),
   };
   return (
-    <nav aria-label="బ్రెడ్‌క్రంబ్" className={cn("text-sm", light ? "text-white/70" : "text-muted-foreground")}>
+    <nav aria-label={t("బ్రెడ్‌క్రంబ్", "Breadcrumb")} className={cn("text-sm", light ? "text-white/70" : "text-muted-foreground")}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ol className="flex flex-wrap items-center gap-1.5">
         {items.map((item, i) => (

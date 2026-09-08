@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site-config";
 import { Link, useRouter } from "@/lib/router";
+import { useLang } from "@/lib/i18n";
 import { CIcon } from "./icon";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,10 +14,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { departments } from "@/lib/content";
 
 /** Brand logo mark */
 export function Logo({ light = false, compact = false }: { light?: boolean; compact?: boolean }) {
+  const { t } = useLang();
   return (
     <span className="flex items-center gap-2.5">
       <span
@@ -47,10 +48,52 @@ export function Logo({ light = false, compact = false }: { light?: boolean; comp
             light ? "text-teal-soft" : "text-muted-foreground"
           )}
         >
-          దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్
+          {t("దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్", "Multi Specialty Hospital")}
         </span>
       </span>
     </span>
+  );
+}
+
+/** Telugu ⇄ English language toggle (segmented pill). */
+export function LangToggle({ className }: { className?: string }) {
+  const { lang, setLang, t } = useLang();
+  return (
+    <div
+      role="group"
+      aria-label={t("భాష ఎంచుకోండి", "Choose language")}
+      className={cn(
+        "flex shrink-0 items-center rounded-full border border-border bg-white p-0.5 shadow-sm",
+        className
+      )}
+    >
+      <button
+        type="button"
+        onClick={() => setLang("te")}
+        aria-pressed={lang === "te"}
+        className={cn(
+          "rounded-full px-2.5 py-1 text-xs font-semibold transition-colors",
+          lang === "te"
+            ? "bg-primary text-white"
+            : "text-foreground/65 hover:text-primary"
+        )}
+      >
+        తెలుగు
+      </button>
+      <button
+        type="button"
+        onClick={() => setLang("en")}
+        aria-pressed={lang === "en"}
+        className={cn(
+          "rounded-full px-2.5 py-1 text-xs font-semibold transition-colors",
+          lang === "en"
+            ? "bg-primary text-white"
+            : "text-foreground/65 hover:text-primary"
+        )}
+      >
+        EN
+      </button>
+    </div>
   );
 }
 
@@ -61,6 +104,7 @@ const isActive = (path: string, href: string) => {
 
 export function Header() {
   const { path } = useRouter();
+  const { t, content } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -89,7 +133,7 @@ export function Header() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CIcon name="clock" className="size-3.5 text-gold" />
-              సోమ–శని: ఉ. 8 – సా. 8
+              {t("సోమ–శని: ఉ. 8 – సా. 8", "Mon–Sat: 8 AM – 8 PM")}
             </span>
           </div>
           <div className="flex items-center gap-5">
@@ -123,14 +167,14 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            ariaLabel={`${siteConfig.name} — home`}
+            ariaLabel={`${siteConfig.name} — ${t("హోమ్", "home")}`}
             className={cn("shrink-0 py-3 transition-all", scrolled ? "scale-[0.97]" : "")}
           >
             <Logo compact={scrolled} />
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="ప్రాథమిక నావిగేషన్" className="hidden items-center gap-0.5 xl:flex">
+          <nav aria-label={t("ప్రాథమిక నావిగేషన్", "Primary navigation")} className="hidden items-center gap-0.5 xl:flex">
             {siteConfig.nav.map((item) => {
               const active = isActive(path, item.href);
               return (
@@ -142,7 +186,7 @@ export function Header() {
                     active ? "text-primary" : "text-foreground/75 hover:bg-secondary hover:text-primary"
                   )}
                 >
-                  {item.label}
+                  {t(item.te, item.en)}
                   {active && (
                     <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-gold" aria-hidden />
                   )}
@@ -152,6 +196,8 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2 py-3">
+            <LangToggle className="mr-1" />
+
             {/* Call */}
             <a href={`tel:${siteConfig.phone.tel}`} className="hidden sm:block">
               <Button
@@ -162,7 +208,7 @@ export function Header() {
                 )}
               >
                 <CIcon name="phone-call" className="size-4" />
-                ఇప్పుడే కాల్
+                {t("ఇప్పుడే కాల్", "Call now")}
               </Button>
             </a>
             {/* Book */}
@@ -174,7 +220,7 @@ export function Header() {
                 )}
               >
                 <CIcon name="calendar-check" className="size-4" />
-                అపాయింట్‌మెంట్ బుక్
+                {t("అపాయింట్‌మెంట్ బుక్", "Book appointment")}
               </Button>
             </Link>
 
@@ -185,7 +231,7 @@ export function Header() {
                   variant="outline"
                   size="icon"
                   className="size-10 rounded-full border-border xl:hidden"
-                  aria-label="నావిగేషన్ మెనూ తెరవండి"
+                  aria-label={t("నావిగేషన్ మెనూ తెరవండి", "Open navigation menu")}
                 >
                   <CIcon name="menu" className="size-5" />
                 </Button>
@@ -196,7 +242,7 @@ export function Header() {
                     <Logo />
                   </SheetTitle>
                 </SheetHeader>
-                <nav aria-label="మొబైల్ నావిగేషన్" className="flex flex-col gap-1 px-3 py-4">
+                <nav aria-label={t("మొబైల్ నావిగేషన్", "Mobile navigation")} className="flex flex-col gap-1 px-3 py-4">
                   {siteConfig.nav.map((item) => (
                     <Link
                       key={item.href}
@@ -209,16 +255,16 @@ export function Header() {
                           : "text-foreground/80 hover:bg-muted"
                       )}
                     >
-                      {item.label}
+                      {t(item.te, item.en)}
                     </Link>
                   ))}
                 </nav>
                 <div className="mt-auto space-y-3 border-t bg-muted/50 p-5">
                   <p className="text-xs font-semibold tracking-wide text-muted-foreground">
-                    ప్రసిద్ధ స్పెషాలిటీలు
+                    {t("ప్రసిద్ధ స్పెషాలిటీలు", "Popular specialities")}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {departments.slice(0, 6).map((d) => (
+                    {content.departments.slice(0, 6).map((d) => (
                       <Link
                         key={d.slug}
                         to={`/specialities/${d.slug}`}
@@ -232,12 +278,15 @@ export function Header() {
                   <div className="grid grid-cols-2 gap-2 pt-2">
                     <a href={`tel:${siteConfig.phone.tel}`}>
                       <Button variant="outline" className="h-11 w-full rounded-xl">
-                        <CIcon name="phone-call" className="size-4" /> కాల్
+                        <CIcon name="phone-call" className="size-4" /> {t("కాల్", "Call")}
                       </Button>
                     </a>
                     <Link to="/appointments" onClick={() => setOpen(false)}>
-                      <Button className="h-11 w-full rounded-xl">ఇప్పుడే బుక్</Button>
+                      <Button className="h-11 w-full rounded-xl">{t("ఇప్పుడే బుక్", "Book now")}</Button>
                     </Link>
+                  </div>
+                  <div className="pt-1">
+                    <LangToggle className="w-full justify-center" />
                   </div>
                 </div>
               </SheetContent>

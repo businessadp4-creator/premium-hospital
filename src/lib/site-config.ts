@@ -22,8 +22,11 @@ export const siteConfig = {
   stateTe: "కర్ణాటక",
 
   tagline: "అద్భుతమైన వైద్య సేవలు. మానవీయమైన సంరక్షణ.",
+  taglineEn: "Expert medical care. Human touch.",
   description:
     "బెంగళూరులోని దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్ — 12కి పైగా స్పెషాలిటీలలో అనుభవజ్ఞులైన వైద్య నిపుణుల సేవలు: గుండె జబ్బులు, ఎముకల వ్యాధులు, నరాల వ్యాధులు, మాతృ శిశు సంరక్షణ మరియు మరిన్ని. అదే భవనంలో ఆధునిక పరీక్షలు, ఆధునిక ఆపరేషన్ థియేటర్లు మరియు రోగి-కేంద్రీకృత సంరక్షణ బృందం.",
+  descriptionEn:
+    "Durga Multi Specialty Hospital, Bangalore — experienced specialists across 12+ specialities: heart care, orthopaedics, neurology, mother & child care and more. Advanced diagnostics, modern operation theatres and a patient-first care team, all under one roof.",
 
   /**
    * [PLACEHOLDER] Official website domain — used for canonical URLs, sitemap
@@ -77,6 +80,13 @@ export const siteConfig = {
     emergency: "అత్యవసర వైద్యం & ఫార్మసీ: 24 గంటలూ తెరిచి ఉంటాయి [ప్రారంభానికి ముందు ధృవీకరించండి]",
   },
 
+  /** English mirrors of the localised config strings (EN language mode). */
+  hoursEn: {
+    opd: "Monday – Saturday: 8:00 AM – 8:00 PM",
+    opdSunday: "Sunday: 9:00 AM – 2:00 PM (by appointment only)",
+    emergency: "Emergency care & pharmacy: open 24 hours [verify before launch]",
+  },
+
   /**
    * [PLACEHOLDER] Social media profiles — remove entries that do not exist.
    */
@@ -90,17 +100,17 @@ export const siteConfig = {
   /** [PLACEHOLDER] Founding year / history claims — verify before publishing. */
   establishedYear: null as number | null,
 
-  /** Navigation model */
+  /** Navigation model — labels per language */
   nav: [
-    { label: "హోమ్", href: "/" },
-    { label: "మా గురించి", href: "/about" },
-    { label: "స్పెషాలిటీలు", href: "/specialities" },
-    { label: "వైద్యులు", href: "/doctors" },
-    { label: "సేవలు", href: "/services" },
-    { label: "సౌకర్యాలు", href: "/facilities" },
-    { label: "ఆరోగ్య ప్యాకేజీలు", href: "/health-packages" },
-    { label: "రోగి సమాచారం", href: "/patient-information" },
-    { label: "సంప్రదించండి", href: "/contact" },
+    { href: "/", te: "హోమ్", en: "Home" },
+    { href: "/about", te: "మా గురించి", en: "About Us" },
+    { href: "/specialities", te: "స్పెషాలిటీలు", en: "Specialities" },
+    { href: "/doctors", te: "వైద్యులు", en: "Doctors" },
+    { href: "/services", te: "సేవలు", en: "Services" },
+    { href: "/facilities", te: "సౌకర్యాలు", en: "Facilities" },
+    { href: "/health-packages", te: "ప్యాకేజీలు", en: "Health Packages" },
+    { href: "/patient-information", te: "రోగి సమాచారం", en: "Patient Info" },
+    { href: "/contact", te: "సంప్రదించండి", en: "Contact" },
   ],
 } as const;
 
@@ -119,4 +129,8 @@ export const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destina
 
 export const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
   `నమస్కారం, దుర్గా మల్టీ స్పెషాలిటీ హాస్పిటల్‌లో అపాయింట్‌మెంట్ గురించి విచారించాలనుకుంటున్నాను.`
+)}`;
+
+export const whatsappUrlEn = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
+  `Hello, I would like to enquire about an appointment at Durga Multi Specialty Hospital.`
 )}`;

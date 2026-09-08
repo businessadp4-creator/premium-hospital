@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
-import { departments, doctors, getDoctor, getDoctorsByDepartment } from "@/lib/content";
+import { useLang } from "@/lib/i18n";
 import { CIcon } from "@/components/site/icon";
 import { Link, usePageMeta } from "@/lib/router";
 import { PageHero, Container, SectionHeading } from "@/components/site/primitives";
@@ -15,34 +15,44 @@ import { cn } from "@/lib/utils";
 
 /* ═════════════════ DOCTORS DIRECTORY ═════════════════ */
 export function DoctorsView({ presetDept }: { presetDept?: string }) {
+  const { t, content } = useLang();
   const [activeDept, setActiveDept] = useState<string>(presetDept ?? "all");
 
   usePageMeta({
-    title: `${siteConfig.cityTe} వైద్యులు — సరైన నిపుణుడిని కనుగొనండి`,
-    description: `${siteConfig.name}, ${siteConfig.cityTe}లోని కన్సల్టెంట్ ప్రొఫైల్స్: అర్హతలు, స్పెషాలిటీలు, అనుభవం మరియు కన్సల్టేషన్ సమయాలు. ఆన్‌లైన్‌లో, ఫోన్ లేదా వాట్సాప్ ద్వారా అపాయింట్‌మెంట్ బుక్ చేయండి.`,
+    title: t(
+      `${siteConfig.cityTe} డాక్టర్స్ — సరైన నిపుణుడిని కనుగొనండి`,
+      `Doctors in ${siteConfig.address.city} — find the right specialist`
+    ),
+    description: t(
+      `${siteConfig.name}, ${siteConfig.cityTe}లోని కన్సల్టెంట్ ప్రొఫైల్స్: అర్హతలు, స్పెషాలిటీలు, అనుభవం మరియు కన్సల్టేషన్ సమయాలు. ఆన్‌లైన్‌లో, ఫోన్ లేదా వాట్సాప్ ద్వారా అపాయింట్‌మెంట్ బుక్ చేయండి.`,
+      `Consultant profiles at ${siteConfig.name}, ${siteConfig.address.city}: qualifications, specialities, experience and consultation hours. Book an appointment online, by phone or on WhatsApp.`
+    ),
   });
 
-  const visible = activeDept === "all" ? doctors : getDoctorsByDepartment(activeDept);
+  const visible = activeDept === "all" ? content.doctors : content.getDoctorsByDepartment(activeDept);
 
   return (
     <>
       <PageHero
-        eyebrow="మా వైద్యులు"
-        title="మీకు సరిపోయే సరైన వైద్యుడిని కనుగొనండి"
-        description="ప్రతి కన్సల్టెంట్ ప్రొఫైల్‌లో అర్హతలు, ప్రత్యేక ఆసక్తులు, మాట్లాడే భాషలు మరియు కన్సల్టేషన్ సమయాలు ఉంటాయి — ధైర్యంగా ఎంచుకోవడానికి."
-        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "వైద్యులు" }]}
+        eyebrow={t("మా వైద్యులు", "Our doctors")}
+        title={t("మీకు సరిపోయే సరైన డాక్టర్‌ని కనుగొనండి", "Find the right doctor for you")}
+        description={t(
+          "ప్రతి ప్రొఫైల్‌లో అర్హతలు, ప్రత్యేక ఆసక్తులు, మాట్లాడే భాషలు మరియు కన్సల్టేషన్ టైమింగ్స్ ఉంటాయి — కాన్ఫిడెన్స్‌తో ఎంచుకోవడానికి.",
+          "Every profile lists qualifications, special interests, spoken languages and consultation hours — so you can choose with confidence."
+        )}
+        breadcrumbs={[{ label: t("హోమ్", "Home"), href: "/" }, { label: t("వైద్యులు", "Doctors") }]}
       >
         <div className="flex flex-wrap gap-2">
           <a href={`tel:${siteConfig.phone.tel}`}>
             <Button variant="outline" className="h-11 rounded-full border-white/30 bg-white/5 px-5 font-semibold text-white hover:bg-white/15 hover:text-white">
               <CIcon name="phone-call" className="size-4" />
-              ఎంచుకోవడంలో సహాయానికి కాల్
+              {t("ఎంపికలో హెల్ప్ కోసం కాల్", "Call for help choosing")}
             </Button>
           </a>
           <Link to="/appointments">
             <Button className="h-11 rounded-full bg-gold px-5 font-semibold text-white hover:bg-gold/90">
               <CIcon name="calendar-check" className="size-4" />
-              అపాయింట్‌మెంట్ బుక్ చేయండి
+              {t("అపాయింట్‌మెంట్ బుక్ చేయండి", "Book an appointment")}
             </Button>
           </Link>
         </div>
@@ -54,7 +64,7 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
           <Reveal>
             <div
               role="tablist"
-              aria-label="శాఖ ప్రకారం వైద్యులను ఫిల్టర్ చేయండి"
+              aria-label={t("శాఖ ప్రకారం డాక్టర్స్ ఫిల్టర్ చేయండి", "Filter doctors by department")}
               className="scroll-slim -mx-4 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0"
             >
               <button
@@ -68,9 +78,9 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
                     : "border-border bg-white text-foreground/75 hover:border-primary/30 hover:text-primary"
                 )}
               >
-                అన్ని శాఖలు
+                {t("అన్ని శాఖలు", "All departments")}
               </button>
-              {departments.map((d) => (
+              {content.departments.map((d) => (
                 <button
                   key={d.slug}
                   role="tab"
@@ -101,9 +111,14 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
           ) : (
             <div className="mt-10 rounded-2xl border border-dashed border-border bg-white p-10 text-center">
               <CIcon name="user-search" className="mx-auto size-8 text-muted-foreground" />
-              <p className="mt-3 font-medium">ఈ శాఖ కోసం ఇంకా కన్సల్టెంట్ ప్రొఫైల్స్ ప్రచురించబడలేదు.</p>
+              <p className="mt-3 font-medium">
+                {t("ఈ శాఖ కోసం ఇంకా కన్సల్టెంట్ ప్రొఫైల్స్ ప్రచురించలేదు.", "No consultant profiles published for this department yet.")}
+              </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                మా OPD ప్రతిరోజూ నడుస్తుంది — {siteConfig.phone.display}కి కాల్ చేయండి; రిసెప్షన్ డ్యూటీ కన్సల్టెంట్‌ను కలిపిస్తుంది.
+                {t(
+                  `మా OPD ప్రతిరోజూ నడుస్తుంది — ${siteConfig.phone.display}కి కాల్ చేయండి; రిసెప్షన్ డ్యూటీ కన్సల్టెంట్‌ను కలిపిస్తుంది.`,
+                  `Our OPD runs every day — call ${siteConfig.phone.display} and reception will connect you with the duty consultant.`
+                )}
               </p>
             </div>
           )}
@@ -116,17 +131,23 @@ export function DoctorsView({ presetDept }: { presetDept?: string }) {
 
 /* ═════════════════ DOCTOR PROFILE ═════════════════ */
 export function DoctorProfileView({ slug }: { slug: string }) {
-  const doctor = getDoctor(slug);
-  const dept = doctor ? departments.find((d) => d.slug === doctor.departmentSlug) : undefined;
+  const { t, content } = useLang();
+  const doctor = content.getDoctor(slug);
+  const dept = doctor ? content.departments.find((d) => d.slug === doctor.departmentSlug) : undefined;
 
   usePageMeta({
-    title: doctor ? `${doctor.name} — ${doctor.designation}` : "వైద్యుడు కనబడలేదు",
+    title: doctor
+      ? t(`${doctor.name} — ${doctor.designation}`, `${doctor.name} — ${doctor.designation}`)
+      : t("వైద్యుడు కనబడలేదు", "Doctor not found"),
     description: doctor
-      ? `${doctor.name}, ${doctor.qualifications}. ${doctor.designation} — ${siteConfig.name}, ${siteConfig.cityTe}. ${doctor.experienceYears}+ ఏళ్ల అనుభవం. అపాయింట్‌మెంట్ బుక్ చేయండి.`
+      ? t(
+          `${doctor.name}, ${doctor.qualifications}. ${doctor.designation} — ${siteConfig.name}, ${siteConfig.cityTe}. ${doctor.experienceYears}+ ఏళ్ల అనుభవం. అపాయింట్‌మెంట్ బుక్ చేయండి.`,
+          `${doctor.name}, ${doctor.qualifications}. ${doctor.designation} — ${siteConfig.name}, ${siteConfig.address.city}. ${doctor.experienceYears}+ years experience. Book an appointment.`
+        )
       : undefined,
   });
 
-  if (!doctor) return <NotFoundInline label="వైద్యుడి ప్రొఫైల్" />;
+  if (!doctor) return <NotFoundInline label={t("వైద్యుడి ప్రొఫైల్", "doctor profile")} />;
 
   return (
     <>
@@ -135,11 +156,11 @@ export function DoctorProfileView({ slug }: { slug: string }) {
         <div className="absolute inset-0 bg-dots-light" aria-hidden />
         <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-primary/60 blur-[120px]" aria-hidden />
         <Container className="relative">
-          <nav aria-label="బ్రెడ్‌క్రంబ్" className="text-sm text-white/70">
+          <nav aria-label={t("బ్రెడ్‌క్రంబ్", "Breadcrumb")} className="text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-1.5">
-              <li><Link to="/" className="transition-colors hover:text-gold">హోమ్</Link></li>
+              <li><Link to="/" className="transition-colors hover:text-gold">{t("హోమ్", "Home")}</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
-              <li><Link to="/doctors" className="transition-colors hover:text-gold">వైద్యులు</Link></li>
+              <li><Link to="/doctors" className="transition-colors hover:text-gold">{t("వైద్యులు", "Doctors")}</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
               <li aria-current="page" className="font-medium text-white">{doctor.name}</li>
             </ol>
@@ -166,13 +187,13 @@ export function DoctorProfileView({ slug }: { slug: string }) {
                   className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm font-medium text-teal-soft transition-all hover:border-gold hover:text-gold"
                 >
                   <CIcon name={dept.icon} className="size-4" />
-                  {dept.name} శాఖ
+                  {t(`${dept.name} శాఖ`, `${dept.name} department`)}
                 </Link>
               )}
               <div className="mt-5 flex flex-wrap gap-2 text-[13px]">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5">
                   <CIcon name="award" className="size-3.5 text-gold" />
-                  {doctor.experienceYears}+ ఏళ్ల అనుభవం
+                  {doctor.experienceYears}+ {t("ఏళ్ల అనుభవం", "yrs experience")}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5">
                   <CIcon name="languages" className="size-3.5 text-gold" />
@@ -184,13 +205,13 @@ export function DoctorProfileView({ slug }: { slug: string }) {
               <Link to={`/appointments?doctor=${doctor.slug}`}>
                 <Button className="h-12 w-full rounded-full bg-gold font-semibold text-white hover:bg-gold/90">
                   <CIcon name="calendar-check" className="size-4" />
-                  అపాయింట్‌మెంట్ బుక్ చేయండి
+                  {t("అపాయింట్‌మెంట్ బుక్ చేయండి", "Book an appointment")}
                 </Button>
               </Link>
               <a href={`tel:${siteConfig.phone.tel}`}>
                 <Button variant="outline" className="h-12 w-full rounded-full border-white/30 bg-white/5 font-semibold text-white hover:bg-white/15 hover:text-white">
                   <CIcon name="phone-call" className="size-4" />
-                  రిసెప్షన్‌కు కాల్
+                  {t("రిసెప్షన్‌కు కాల్", "Call reception")}
                 </Button>
               </a>
             </div>
@@ -202,7 +223,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
       <section className="bg-white py-16 md:py-20">
         <Container className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
-            <SectionHeading eyebrow="ప్రొఫైల్" title={`${doctor.name} గురించి`} />
+            <SectionHeading eyebrow={t("ప్రొఫైల్", "Profile")} title={t(`${doctor.name} గురించి`, `About ${doctor.name}`)} />
             <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               {doctor.bio.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -210,7 +231,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
             </div>
 
             <Reveal className="mt-10">
-              <h3 className="font-display text-xl font-semibold">నైపుణ్య రంగాలు</h3>
+              <h3 className="font-display text-xl font-semibold">{t("నైపుణ్య రంగాలు", "Areas of expertise")}</h3>
               <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
                 {doctor.expertise.map((e) => (
                   <li key={e} className="flex gap-2.5 text-sm text-foreground/85">
@@ -222,7 +243,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
             </Reveal>
 
             <Reveal className="mt-10">
-              <h3 className="font-display text-xl font-semibold">అర్హతలు</h3>
+              <h3 className="font-display text-xl font-semibold">{t("అర్హతలు", "Qualifications")}</h3>
               <p className="mt-3 flex items-start gap-2.5 text-sm text-foreground/85">
                 <CIcon name="graduation-cap" className="mt-0.5 size-4 shrink-0 text-gold" />
                 {doctor.qualifications}
@@ -236,7 +257,7 @@ export function DoctorProfileView({ slug }: { slug: string }) {
               <div className="rounded-2xl border border-border bg-cream/70 p-6 shadow-card">
                 <h3 className="flex items-center gap-2.5 font-display text-lg font-semibold">
                   <CIcon name="calendar-clock" className="size-5 text-primary" />
-                  కన్సల్టేషన్ సమయాలు
+                  {t("కన్సల్టేషన్ టైమింగ్స్", "Consultation hours")}
                 </h3>
                 <ul className="mt-4 space-y-3">
                   {doctor.timings.map((slot) => (
@@ -250,10 +271,13 @@ export function DoctorProfileView({ slug }: { slug: string }) {
                   <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">{doctor.consultationNote}</p>
                 )}
                 <Link to={`/appointments?doctor=${doctor.slug}`} className="mt-5 block">
-                  <Button className="h-11 w-full rounded-full font-semibold">స్లాట్ అభ్యర్థించండి</Button>
+                  <Button className="h-11 w-full rounded-full font-semibold">{t("స్లాట్ రిక్వెస్ట్ చేయండి", "Request a slot")}</Button>
                 </Link>
                 <p className="mt-3 text-center text-xs text-muted-foreground">
-                  పబ్లిక్ సెలవుల్లో సమయాలు మారవచ్చు — దయచేసి రిసెప్షన్ వద్ద ధృవీకరించండి.
+                  {t(
+                    "పబ్లిక్ సెలవుల్లో టైమింగ్స్ మారవచ్చు — దయచేసి రిసెప్షన్ వద్ద కన్ఫర్మ్ చేసుకోండి.",
+                    "Timings may change on public holidays — please confirm with reception."
+                  )}
                 </p>
               </div>
             </Reveal>

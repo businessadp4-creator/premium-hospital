@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
-import { allBlogPosts, getPost, blogCategories, getDoctor } from "@/lib/content";
+import { useLang } from "@/lib/i18n";
 import { CIcon } from "@/components/site/icon";
 import { Link, usePageMeta } from "@/lib/router";
 import { PageHero, Container, SectionHeading } from "@/components/site/primitives";
@@ -14,20 +14,30 @@ import { Button } from "@/components/ui/button";
 
 /* ═════════════════ BLOG LIST ═════════════════ */
 export function BlogListView() {
+  const { t, content, dateLocale } = useLang();
   usePageMeta({
-    title: "ఆరోగ్య గ్రంథాలయం — వైద్యుల ఆరోగ్య కథనాలు",
-    description: `${siteConfig.name}, ${siteConfig.cityTe} వైద్యులు రాసిన ఆరోగ్య సూచనలు, వ్యాధి అవగాహన మరియు నివారణ సంరక్షణ కథనాలు. గుండె ఆరోగ్యం, షుగర్, జ్వరాలు, పిల్లల పోషకాహారం మరియు ఆరోగ్యకరమైన వృద్ధాప్యంపై ఆచరణాత్మక మార్గదర్శకం.`,
+    title: t(
+      "ఆరోగ్య లైబ్రరీ — డాక్టర్ల హెల్త్ ఆర్టికల్స్",
+      "Health Library — doctor-written articles"
+    ),
+    description: t(
+      `${siteConfig.name}, ${siteConfig.cityTe} డాక్టర్లు రాసిన ఆరోగ్య టిప్స్, వ్యాధి అవగాహన మరియు ప్రివెన్షన్ ఆర్టికల్స్ — గుండె హెల్త్, షుగర్, జ్వరాలు, పిల్లల న్యూట్రిషన్ మరియు హెల్దీ ఏజింగ్‌పై సింపుల్ గైడ్స్.`,
+      `Practical health tips, disease awareness and prevention articles written by the doctors of ${siteConfig.name}, ${siteConfig.address.city} — heart health, diabetes, fevers, child nutrition and healthy ageing.`
+    ),
   });
 
-  const featured = allBlogPosts[0];
+  const featured = content.blogPosts[0];
 
   return (
     <>
       <PageHero
-        eyebrow="ఆరోగ్య గ్రంథాలయం"
-        title="రోజువారీ ఆరోగ్యం కోసం వైద్యుల మార్గదర్శకం"
-        description="భయం చెల్లించే కథనాలు కాదు, అద్భుత చికిత్సల వాగ్దానాలు కాదు — మా OPDలో మీరు కలిసే వైద్యుల ఆచరణాత్మక, నిజాయితీ ఆరోగ్య విద్య మాత్రమే."
-        breadcrumbs={[{ label: "హోమ్", href: "/" }, { label: "ఆరోగ్య గ్రంథాలయం" }]}
+        eyebrow={t("ఆరోగ్య లైబ్రరీ", "Health Library")}
+        title={t("రోజువారీ హెల్త్ కోసం డాక్టర్ల గైడెన్స్", "Doctor guidance for everyday health")}
+        description={t(
+          "ఫైర్ చేసే హెడ్‌లైన్స్ కాదు, మ్యాజిక్ క్యూర్ ప్రామిస్‌లు కాదు — మా OPDలో మీరు కలిసే డాక్టర్లే రాసే సింపుల్, నిజాయితీ హెల్త్ ఎడ్యుకేషన్.",
+          "No scare headlines, no miracle-cure promises — just practical, honest health education from the doctors you meet in our OPD."
+        )}
+        breadcrumbs={[{ label: t("హోమ్", "Home"), href: "/" }, { label: t("ఆరోగ్య లైబ్రరీ", "Health Library") }]}
       />
 
       {/* Featured article */}
@@ -54,7 +64,7 @@ export function BlogListView() {
                     {featured.category}
                   </span>
                   <span className="text-muted-foreground">
-                    {new Date(featured.publishedAt).toLocaleDateString("te-IN", { day: "numeric", month: "long", year: "numeric" })}
+                    {new Date(featured.publishedAt).toLocaleDateString(dateLocale, { day: "numeric", month: "long", year: "numeric" })}
                   </span>
                 </div>
                 <h2 className="mt-4 font-display text-2xl font-bold leading-snug text-foreground transition-colors group-hover:text-primary md:text-3xl">
@@ -65,7 +75,9 @@ export function BlogListView() {
                   <DoctorAvatar name={featured.authorName} className="size-10 rounded-full" textClassName="text-sm" />
                   <div className="text-sm">
                     <p className="font-semibold text-foreground">{featured.authorName}</p>
-                    <p className="text-xs text-muted-foreground">{featured.readMinutes} నిమిషాల పఠనం</p>
+                    <p className="text-xs text-muted-foreground">
+                      {featured.readMinutes} {t("నిమిషాల పఠనం", "min read")}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -79,11 +91,11 @@ export function BlogListView() {
         <Container>
           <SectionHeading
             className="pt-14"
-            eyebrow="అన్ని కథనాలు"
-            title="మీ మనసులో ఉన్న దాని ప్రకారం చూడండి"
+            eyebrow={t("అన్ని ఆర్టికల్స్", "All articles")}
+            title={t("మీకు కావాల్సిన టాపిక్ ఎంచుకోండి", "Browse the topics you care about")}
           />
           <div className="mt-6 flex flex-wrap gap-2">
-            {blogCategories.map((cat) => (
+            {content.blogCategories.map((cat) => (
               <span
                 key={cat}
                 className="rounded-full border border-border bg-cream/70 px-3.5 py-1.5 text-xs font-medium text-muted-foreground"
@@ -93,7 +105,7 @@ export function BlogListView() {
             ))}
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {allBlogPosts.map((post, i) => (
+            {content.blogPosts.map((post, i) => (
               <BlogCard key={post.slug} post={post} index={i % 3} />
             ))}
           </div>
@@ -106,17 +118,18 @@ export function BlogListView() {
 
 /* ═════════════════ BLOG DETAIL ═════════════════ */
 export function BlogDetailView({ slug }: { slug: string }) {
-  const post = getPost(slug);
-  const author = post ? getDoctor(post.authorSlug) : undefined;
+  const { t, content, dateLocale } = useLang();
+  const post = content.getPost(slug);
+  const author = post ? content.getDoctor(post.authorSlug) : undefined;
 
   usePageMeta({
-    title: post ? post.title : "కథనం కనబడలేదు",
+    title: post ? post.title : t("ఆర్టికల్ కనబడలేదు", "Article not found"),
     description: post?.excerpt,
   });
 
-  if (!post) return <NotFoundInline label="కథనం" />;
+  if (!post) return <NotFoundInline label={t("ఆర్టికల్", "article")} />;
 
-  const related = allBlogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const related = content.blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -139,9 +152,9 @@ export function BlogDetailView({ slug }: { slug: string }) {
         <Container className="relative max-w-4xl">
           <nav aria-label="Breadcrumb" className="text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-1.5">
-              <li><Link to="/" className="transition-colors hover:text-gold">హోమ్</Link></li>
+              <li><Link to="/" className="transition-colors hover:text-gold">{t("హోమ్", "Home")}</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
-              <li><Link to="/blog" className="transition-colors hover:text-gold">ఆరోగ్య గ్రంథాలయం</Link></li>
+              <li><Link to="/blog" className="transition-colors hover:text-gold">{t("ఆరోగ్య లైబ్రరీ", "Health Library")}</Link></li>
               <li aria-hidden><CIcon name="chevron-right" className="size-3.5 text-white/50" /></li>
               <li aria-current="page" className="font-medium text-white">{post.category}</li>
             </ol>
@@ -154,16 +167,16 @@ export function BlogDetailView({ slug }: { slug: string }) {
               <DoctorAvatar name={post.authorName} className="size-9 rounded-full" textClassName="text-xs" />
               <span>
                 <span className="block font-semibold text-white">{post.authorName}</span>
-                <span className="block text-xs text-teal-soft">{author?.designation ?? "కన్సల్టెంట్"}</span>
+                <span className="block text-xs text-teal-soft">{author?.designation ?? t("కన్సల్టెంట్", "Consultant")}</span>
               </span>
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CIcon name="calendar-check" className="size-4 text-gold" />
-              {new Date(post.publishedAt).toLocaleDateString("te-IN", { day: "numeric", month: "long", year: "numeric" })}
+              {new Date(post.publishedAt).toLocaleDateString(dateLocale, { day: "numeric", month: "long", year: "numeric" })}
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CIcon name="clock" className="size-4 text-gold" />
-              {post.readMinutes} నిమిషాల పఠనం
+              {post.readMinutes} {t("నిమిషాల పఠనం", "min read")}
             </span>
           </div>
         </Container>
@@ -231,16 +244,16 @@ export function BlogDetailView({ slug }: { slug: string }) {
             <div className="mt-10 flex flex-col items-start gap-5 rounded-3xl border border-border bg-cream/50 p-6 sm:flex-row sm:items-center md:p-8">
               <DoctorAvatar name={author.name} className="size-20 rounded-2xl" textClassName="text-2xl" />
               <div className="flex-1">
-                <p className="text-xs font-semibold tracking-wide text-muted-foreground">రచయిత</p>
+                <p className="text-xs font-semibold tracking-wide text-muted-foreground">{t("రచయిత", "Author")}</p>
                 <h3 className="mt-1 font-display text-xl font-bold">{author.name}</h3>
                 <p className="text-sm text-muted-foreground">{author.designation} · {author.qualifications}</p>
               </div>
               <div className="flex gap-2">
                 <Link to={`/doctors/${author.slug}`}>
-                  <Button variant="outline" className="h-10 rounded-full">ప్రొఫైల్</Button>
+                  <Button variant="outline" className="h-10 rounded-full">{t("ప్రొఫైల్", "Profile")}</Button>
                 </Link>
                 <Link to={`/appointments?doctor=${author.slug}`}>
-                  <Button className="h-10 rounded-full">బుక్</Button>
+                  <Button className="h-10 rounded-full">{t("బుక్", "Book")}</Button>
                 </Link>
               </div>
             </div>
@@ -251,7 +264,7 @@ export function BlogDetailView({ slug }: { slug: string }) {
       {/* Related */}
       <section className="bg-cream py-16">
         <Container>
-          <SectionHeading eyebrow="చదువుతూ ఉండండి" title="సంబంధిత ఆరోగ్య కథనాలు" />
+          <SectionHeading eyebrow={t("చదువుతూ ఉండండి", "Keep reading")} title={t("సంబంధిత హెల్త్ ఆర్టికల్స్", "Related health articles")} />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {related.map((p, i) => (
               <BlogCard key={p.slug} post={p} index={i} />

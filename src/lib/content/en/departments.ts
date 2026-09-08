@@ -1,0 +1,448 @@
+import type { Department } from "../types";
+
+/**
+ * Department directory — 12 core specialities (English mirror pack).
+ * Slugs, order and structure mirror src/lib/content/departments-a.ts and
+ * departments-b.ts exactly. Clinical descriptions are standard, conservative
+ * healthcare copy for a multi-specialty hospital. Review with the hospital's
+ * medical team and adjust to match the departments actually offered. No
+ * outcomes, cure claims or rankings are made anywhere.
+ */
+
+export const departmentsA: Department[] = [
+  {
+    slug: "cardiology",
+    name: "Cardiology",
+    shortName: "Heart Care",
+    icon: "heart-pulse",
+    tagline: "Complete care for your heart, under one roof",
+    cardDescription:
+      "From preventive heart checks to modern cardiac diagnostics, our cardiology team looks after your heart health at every stage of life.",
+    overview: [
+      "Heart disease often begins quietly, before anyone notices. That is why early detection and regular follow-up matter so much. Our cardiology department brings experienced cardiologists, modern testing technology and structured prevention programmes to one place, so you can understand and manage your heart health with confidence.",
+      "We follow a continuum-of-care approach: accurate diagnosis, evidence-based treatment, lifestyle guidance and long-term follow-up, all coordinated within one department. So patients and their families always know what the next step is.",
+    ],
+    conditions: [
+      "Coronary artery disease (blocked heart arteries)",
+      "High blood pressure (hypertension)",
+      "Heart failure",
+      "Irregular heart rhythm (arrhythmia)",
+      "High cholesterol",
+      "Heart valve disorders",
+      "Care after a heart attack and cardiac rehabilitation",
+    ],
+    treatments: [
+      "ECG, 2D echo and TMT (treadmill stress test)",
+      "Holter and 24-hour blood pressure monitoring",
+      "Preventive heart check packages",
+      "Medical management of heart failure",
+      "Cholesterol and blood pressure clinics",
+      "Cardiac rehabilitation and lifestyle programmes",
+      "Referral to specialists for interventional procedures",
+    ],
+    highlights: [
+      "ECG, 2D echo and TMT in the same building, so you get answers on the day you visit",
+      "Dedicated prevention clinics for blood pressure, cholesterol and diabetes-related risks",
+      "Coordinated cardiac rehabilitation with diet and physiotherapy",
+    ],
+  },
+  {
+    slug: "orthopaedics",
+    name: "Orthopaedics",
+    shortName: "Bone & Joint Care",
+    icon: "bone",
+    tagline: "Guiding you back to an active life",
+    cardDescription:
+      "Specialist care for bones, joints, sports injuries and back problems, from accurate diagnosis to surgery when it is needed, and physiotherapy afterwards.",
+    overview: [
+      "Bone and joint problems can trouble anyone, from young people with sports injuries to older adults living with arthritis. Our orthopaedic team focuses on relieving pain, restoring movement and getting you back to the activities you enjoy, always considering the least painful, effective treatment first.",
+      "Consultations are backed by digital X-ray and modern imaging. When surgery is needed, we operate in modern operation theatres, and dedicated physiotherapy services are available for a safe, quicker recovery.",
+    ],
+    conditions: [
+      "Knee and hip arthritis",
+      "Back pain and spine problems",
+      "Sports injuries and ligament tears",
+      "Fractures (broken bones)",
+      "Shoulder, elbow and wrist problems",
+      "Neck and lower back disc problems",
+      "Weakening of the bones (osteoporosis)",
+    ],
+    treatments: [
+      "Digital X-ray and modern bone imaging",
+      "Physiotherapy and rehabilitation services",
+      "Arthroscopic (keyhole) surgery for joint injuries",
+      "Joint care and joint replacement surgery advice",
+      "Plaster treatment for fractures",
+      "Back pain assessment and non-surgical treatment",
+      "Bone strength testing and treatment",
+    ],
+    highlights: [
+      "Non-surgical treatment first, surgery only when it is genuinely needed",
+      "Dedicated physiotherapy support for recovery after an injury",
+      "Digital imaging reports are usually available the same day",
+    ],
+  },
+  {
+    slug: "neurology",
+    name: "Neurology",
+    shortName: "Nerve Care",
+    icon: "brain",
+    tagline: "Care for the brain, spine and nerves",
+    cardDescription:
+      "Careful, scientific diagnosis and long-term management of nervous system problems such as stroke, epilepsy, headaches and nerve pain.",
+    overview: [
+      "Nervous system problems need a doctor who listens patiently, an accurate diagnosis and long-term follow-up. Our neurology team uses a detailed clinical examination along with modern imaging and neurophysiology tests to find the real cause of your symptoms, and builds a realistic treatment plan that fits each patient's life.",
+      "For stroke recovery, seizure control, headache management and nerve care, we work together with our radiology, physiotherapy and general medicine teams under one coordinated plan.",
+    ],
+    conditions: [
+      "Stroke and post-stroke care",
+      "Epilepsy (seizures, fits)",
+      "Migraine and chronic headaches",
+      "Dizziness and balance problems",
+      "Nerve pain (neuropathy)",
+      "Parkinson's disease and movement problems",
+      "Memory problems and dementia assessment",
+    ],
+    treatments: [
+      "Neurological examination and detailed assessment",
+      "EEG (a test of the brain's electrical activity)",
+      "Nerve conduction studies (NCS) and EMG",
+      "Brain and spine MRI/CT scans, through our imaging centre",
+      "Stroke risk assessment and prevention clinics",
+      "Medication management and reviews at set intervals",
+      "Coordination of neuro-rehabilitation",
+    ],
+    highlights: [
+      "Fast imaging arrangements for serious neurological symptoms",
+      "Long-term follow-up clinics for epilepsy and Parkinson's",
+      "Friendly counselling that involves family members as partners",
+    ],
+  },
+  {
+    slug: "general-medicine",
+    name: "General Medicine",
+    shortName: "General Care",
+    icon: "stethoscope",
+    tagline: "Your first stop for health care",
+    cardDescription:
+      "Fevers, infections, diabetes, thyroid problems and lifestyle diseases: experienced internal medicine doctors for whatever health concern brings a family member in.",
+    overview: [
+      "General physicians are the doctors patients meet first, and the ones who come to know their health history well. Our internal medicine team diagnoses and treats a wide range of adult health problems, refers you to the right specialist when needed, and stays involved at every step of your treatment.",
+      "We pay special attention to lifestyle disease management: diabetes, blood pressure, thyroid disorders, obesity (excess weight) and cholesterol. These need regular monitoring, patient education and medication reviews, all provided through structured follow-up clinics.",
+    ],
+    conditions: [
+      "Fevers and infections (including dengue, typhoid and viral fevers)",
+      "Diabetes (high blood sugar)",
+      "High blood pressure",
+      "Thyroid problems",
+      "Anaemia and nutritional deficiencies",
+      "Chest infections and asthma follow-up",
+      "Preventive health checks",
+    ],
+    treatments: [
+      "Full outpatient (OPD) consultations",
+      "Diabetes and blood pressure follow-up clinics",
+      "Thyroid and metabolic testing",
+      "Infection management and monitoring",
+      "Master health check-ups",
+      "Adult vaccination services",
+      "Coordinated referrals to the right specialist",
+    ],
+    highlights: [
+      "Results for most common tests available the same day",
+      "Structured follow-up with reminders for long-term conditions",
+      "One doctor who knows your full health history, every visit",
+    ],
+  },
+  {
+    slug: "general-surgery",
+    name: "General Surgery",
+    shortName: "Surgery",
+    icon: "scissors",
+    tagline: "Precise surgery, careful recovery",
+    cardDescription:
+      "Modern surgical services for hernia, gallbladder, appendix, piles and other abdominal problems, using keyhole (laparoscopic) methods wherever suitable.",
+    overview: [
+      "Surgery is a big decision, and patients deserve clear information. Our general surgery team examines every case closely, explains all the available treatment options, including keyhole methods, and makes the patient and family partners in the treatment and recovery plan.",
+      "Operations are performed by experienced surgeons and anaesthesia teams in modern operation theatres. Where the case allows, we prefer laparoscopic (keyhole) methods: smaller cuts, less pain and a faster return home.",
+    ],
+    conditions: [
+      "Hernias (inguinal, umbilical and incisional)",
+      "Gallstones and gallbladder disease",
+      "Appendicitis",
+      "Piles, fissure and fistula",
+      "Breast lumps and breast problems",
+      "Skin and soft tissue swellings",
+      "Diabetic foot wounds and wound care",
+    ],
+    treatments: [
+      "Laparoscopic gallbladder and hernia surgery",
+      "Day-care surgical procedures",
+      "Treatment for piles, fissure and fistula",
+      "Breast lump assessment and surgery",
+      "Emergency surgical services",
+      "Pre-surgery assessment and anaesthesia review",
+      "Wound care and follow-up after surgery",
+    ],
+    highlights: [
+      "The keyhole method is preferred wherever the case allows",
+      "A clear discussion of surgical risks and alternatives",
+      "Structured follow-up until you have fully recovered",
+    ],
+  },
+  {
+    slug: "obstetrics-gynaecology",
+    name: "Obstetrics & Gynaecology",
+    shortName: "Women's Health",
+    icon: "heart-handshake",
+    tagline: "Care for every stage of a woman's life",
+    cardDescription:
+      "Pregnancy care, safe deliveries, women's health, fertility advice and modern gynaecological treatment, with our experienced women's health team.",
+    overview: [
+      "A woman's health needs change at every stage of life: adolescence, pregnancy, motherhood and menopause. Our obstetrics & gynaecology team offers women unhurried, respectful consultations and scientific care through all of these stages.",
+      "During pregnancy, our focus is safe, closely monitored antenatal care with clear guidance at every visit. In the same way, we look after menstrual health, PCOS, fertility problems, menopause and preventive screening in a private, comfortable setting.",
+    ],
+    conditions: [
+      "Pregnancy care and high-risk pregnancies",
+      "Menstrual problems and PCOS",
+      "Infertility assessment and advice",
+      "Menopause and hormone health",
+      "Uterine fibroids, ovarian cysts and endometriosis",
+      "Urinary and pelvic floor problems",
+      "Cervical and breast cancer screening",
+    ],
+    treatments: [
+      "Antenatal (pregnancy) check-ups and scan coordination",
+      "Normal delivery and caesarean care",
+      "Well-woman health checks",
+      "Pap smear and HPV vaccination",
+      "PCOS and hormone clinics",
+      "Laparoscopic gynaecological surgery",
+      "Menopause management",
+    ],
+    highlights: [
+      "Unhurried, confidential women's health consultations",
+      "A structured pregnancy programme with diet and birth planning",
+      "Preventive screening built into every well-woman visit",
+    ],
+  },
+];
+
+export const departmentsB: Department[] = [
+  {
+    slug: "paediatrics",
+    name: "Paediatrics",
+    shortName: "Child Care",
+    icon: "baby",
+    tagline: "Gentle care for little ones",
+    cardDescription:
+      "Newborn care, growth monitoring, vaccinations and treatment of childhood illnesses, with doctors children come to trust easily.",
+    overview: [
+      "Children are not small adults. They need a special approach to examination, communication and building trust, and worried parents need reassurance too. Our paediatric team provides treatment of everyday illnesses, growth and development monitoring, and newborn care in a child-friendly setting.",
+      "Working together with parents is our method: clear guidance on nutrition, sleep, development and the vaccination schedule, so that after every visit families know exactly what comes next in their child's growth.",
+    ],
+    conditions: [
+      "Newborn care and jaundice",
+      "Childhood fevers and infections",
+      "Growth and development concerns",
+      "Nutritional deficiencies",
+      "Childhood asthma and allergies",
+      "Vaccine-preventable diseases",
+      "Adolescent health advice",
+    ],
+    treatments: [
+      "Well-baby and well-child clinics",
+      "Complete vaccination services (as per the IAP schedule)",
+      "Growth and development assessment",
+      "Management of childhood asthma and allergies",
+      "Newborn examination and breastfeeding support",
+      "Paediatric OPD for acute illnesses",
+      "Parenting and nutrition counselling",
+    ],
+    highlights: [
+      "Child-friendly consultation rooms that ease children's fears",
+      "Vaccination reminders on time for every registered child",
+      "A newborn support programme for first-time parents",
+    ],
+  },
+  {
+    slug: "ent",
+    name: "ENT (Ear, Nose & Throat)",
+    shortName: "ENT",
+    icon: "ear",
+    tagline: "Hearing, breathing, speaking: we help you improve them",
+    cardDescription:
+      "Specialist treatment for ear infections, sinus problems, tonsils, hearing issues, throat problems and head-neck conditions, for all ages.",
+    overview: [
+      "Ear, nose and throat problems disturb daily life quietly: disturbed sleep, infection after infection, hearing difficulty, a cough or blocked nose that never fully settles. Our ENT specialists use detailed endoscopic examination along with modern diagnostics to find the root cause and treat it effectively.",
+      "From a child's repeated tonsil trouble to an adult's snoring problem to hearing loss in older people, we offer clear treatment paths: medical treatment first, and precise day-care surgery only when it is genuinely needed.",
+    ],
+    conditions: [
+      "Repeated ear infections and discharge from the ear",
+      "Sinusitis and nasal allergies",
+      "Tonsil and adenoid problems",
+      "Hearing loss and earwax problems",
+      "Vertigo (spinning sensation) and balance problems",
+      "Snoring and sleep apnoea assessment",
+      "Voice and swallowing problems",
+    ],
+    treatments: [
+      "Diagnostic nasal and ear endoscopy",
+      "Audiometry (hearing test)",
+      "Medical treatment for sinus and allergic conditions",
+      "Tonsillectomy and adenoidectomy surgery",
+      "Eardrum (tympanic membrane) repair and minor ear surgery",
+      "Removal of objects stuck in the ear, nose or throat",
+      "Vertigo assessment and repositioning exercises",
+    ],
+    highlights: [
+      "Endoscopic diagnosis at the first visit itself",
+      "Audiometry (hearing test) facility in the same building",
+      "Day-care ENT surgeries with quick discharge",
+    ],
+  },
+  {
+    slug: "dermatology",
+    name: "Dermatology",
+    shortName: "Skin Care",
+    icon: "sparkles",
+    tagline: "Healthy skin, hair and nails",
+    cardDescription:
+      "Medical treatment for acne, pigmentation, hair loss, eczema, psoriasis and allergies, with honest, realistic treatment plans.",
+    overview: [
+      "Skin problems affect confidence as much as health. Our dermatology team believes in honest skin care: accurate diagnosis, realistic expectations and treatment plans that fit each patient's skin type, lifestyle and budget.",
+      "From teenage acne and hair loss to eczema, psoriasis and pigmentation, we treat the full range of medical skin, hair and nail problems, adding patch testing and diagnostic procedures when needed.",
+    ],
+    conditions: [
+      "Acne and acne scars",
+      "Hair loss and scalp problems",
+      "Eczema and dermatitis",
+      "Psoriasis",
+      "Pigmentation and melasma",
+      "Fungal and bacterial skin infections",
+      "Drug allergies and hives (urticaria)",
+    ],
+    treatments: [
+      "Skin examination and skin analysis",
+      "Patch testing for contact allergies",
+      "Medical treatment programmes for acne and pigmentation",
+      "Hair loss assessment and treatment",
+      "Chemical peels where needed",
+      "Cryotherapy and minor procedures",
+      "Skin cancer screening and mole checks",
+    ],
+    highlights: [
+      "An evidence-based, treatment-first approach: no unnecessary procedures",
+      "Plans suited to Indian skin types",
+      "Clear, written skin care instructions patients can actually follow",
+    ],
+  },
+  {
+    slug: "urology",
+    name: "Urology",
+    shortName: "Urinary Care",
+    icon: "droplets",
+    tagline: "Private, specialist care for bladder and kidney problems",
+    cardDescription:
+      "Kidney stones, urinary infections, prostate problems and men's health, treated with sensitivity and modern methods.",
+    overview: [
+      "Urinary and kidney problems are very common and largely treatable, yet many patients delay care out of embarrassment. Our urology team offers private, entirely non-judgemental consultations and clear explanations, so problems can be sorted out at the early stage when treatment is easy.",
+      "We assess kidney stones, prostate enlargement, urinary infections and bladder problems with ultrasound imaging and lab facilities in the same building, and treat with medical or minimally invasive methods where those are the right choice.",
+    ],
+    conditions: [
+      "Kidney and urinary tract stones",
+      "Urinary infections (men and women)",
+      "Prostate enlargement (BPH)",
+      "Inability to control urination (incontinence)",
+      "Blood in the urine (haematuria)",
+      "Male infertility and sexual health",
+      "Paediatric urology problems",
+    ],
+    treatments: [
+      "Ultrasound KUB and urological imaging",
+      "Medical expulsion therapy for stones",
+      "Endoscopic stone surgery (URS/cystoscopy)",
+      "Prostate assessment and medical management",
+      "Uroflowmetry and bladder assessment",
+      "Men's sexual health clinics",
+      "Preventive kidney health checks",
+    ],
+    highlights: [
+      "Ultrasound on the same visit for stone and prostate assessment",
+      "Minimally invasive methods wherever possible",
+      "Complete privacy in every consultation",
+    ],
+  },
+  {
+    slug: "pulmonology",
+    name: "Pulmonology",
+    shortName: "Lung Care",
+    icon: "wind",
+    tagline: "Breathe easily, live fully",
+    cardDescription:
+      "Asthma, COPD, tuberculosis (TB), sleep apnoea and chronic cough: structured respiratory care with modern lung function testing.",
+    overview: [
+      "Breathlessness and a long-standing cough should not be guessed at; they should be examined carefully. Our pulmonology team finds the real cause of respiratory symptoms through lung function tests (spirometry), imaging and structured clinical assessment.",
+      "We manage long-term conditions like asthma and COPD with written action plans, inhaler technique training and reviews at set intervals, because good respiratory care means preventing flare-ups early, not just treating them.",
+    ],
+    conditions: [
+      "Asthma and allergic airway diseases",
+      "COPD and the effect of smoking on the lungs",
+      "Persistent and chronic cough",
+      "Tuberculosis (TB) diagnosis and follow-up",
+      "Obstructive sleep apnoea (breathing pauses during sleep)",
+      "Pneumonia and respiratory infections",
+      "Occupational (workplace-related) lung diseases",
+    ],
+    treatments: [
+      "Spirometry (lung function test)",
+      "Inhaler technique training and review",
+      "Sleep apnoea testing",
+      "Chest X-ray and CT scan coordination",
+      "TB assessment and DOTS-linked care",
+      "Support to quit smoking",
+      "Allergy assessment",
+    ],
+    highlights: [
+      "Spirometry in the same building for accurate diagnosis",
+      "A written action plan for every asthma and COPD patient",
+      "An inhaler technique check at every review",
+    ],
+  },
+  {
+    slug: "radiology",
+    name: "Radiology & Imaging",
+    shortName: "Imaging",
+    icon: "scan-line",
+    tagline: "Answers you can see",
+    cardDescription:
+      "Digital X-ray, ultrasound, CT and lab services with fast, accurate reporting. The diagnostic backbone of every department in the hospital.",
+    overview: [
+      "Accurate diagnosis is the foundation of good treatment. Our radiology and imaging centre supports every department with digital X-ray, ultrasound, CT scanning and a fully equipped clinical laboratory, managed with timings that keep care from being delayed.",
+      "Reports reach patients and referring doctors quickly. Our radiologists are available for consultation, so imaging results become clear next steps rather than a source of worry.",
+    ],
+    conditions: [
+      "Routine and emergency imaging needs",
+      "Abdominal and pregnancy ultrasound",
+      "Chest and bone X-ray assessment",
+      "CT imaging for stroke, injuries and cancer",
+      "Lab-based disease testing",
+      "Pre-surgery health checks",
+      "Preventive health check panels",
+    ],
+    treatments: [
+      "Digital X-ray",
+      "Ultrasound and Doppler studies",
+      "CT scanning",
+      "Fully automated clinical laboratory",
+      "ECG and TMT services",
+      "Same-day reporting for most common tests",
+      "Digital reports patients and doctors can view",
+    ],
+    highlights: [
+      "Same-day reports for most routine lab and X-ray tests",
+      "Radiologist consultation on every significant result",
+      "Priority always given to emergency imaging",
+    ],
+  },
+];

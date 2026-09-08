@@ -12,22 +12,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const staticViews: MetadataRoute.Sitemap = [
-    { url: `${base}/`, changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/about`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/specialities`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/doctors`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/services`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/facilities`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${base}/health-packages`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/patient-information`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/appointments`, changeFrequency: "monthly", priority: 0.95 },
-    { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/emergency`, changeFrequency: "yearly", priority: 0.85 },
-    { url: `${base}/privacy-policy`, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/terms`, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/medical-disclaimer`, changeFrequency: "yearly", priority: 0.3 },
-  ].map((entry) => ({ ...entry, lastModified: now }));
+    { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: `${base}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/specialities`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/doctors`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/facilities`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/health-packages`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/patient-information`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/appointments`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/emergency`, lastModified: now, changeFrequency: "yearly", priority: 0.85 },
+    { url: `${base}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/medical-disclaimer`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+  ];
 
   const deptViews: MetadataRoute.Sitemap = departments.map((d) => ({
     url: `${base}/specialities/${d.slug}`,

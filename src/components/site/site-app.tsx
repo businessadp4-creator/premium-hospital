@@ -1,6 +1,7 @@
 "use client";
 
 import { RouterProvider, useRouter } from "@/lib/router";
+import { LangProvider, useLang } from "@/lib/i18n";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { MobileBottomBar } from "./mobile-bottom-bar";
@@ -21,9 +22,11 @@ import {
 } from "@/components/views/patient-contact-emergency";
 import { BlogListView, BlogDetailView } from "@/components/views/blog";
 import { PrivacyView, TermsView, DisclaimerView } from "@/components/views/legal";
+import { BizMealsBand } from "./bizmeals-band";
 
 function ViewRouter() {
   const { path, query } = useRouter();
+  const { t } = useLang();
   const seg = path.split("/").filter(Boolean).map(decodeURIComponent);
 
   let view: React.ReactNode;
@@ -71,7 +74,7 @@ function ViewRouter() {
   } else if (path === "/medical-disclaimer") {
     view = <DisclaimerView />;
   } else {
-    view = <NotFoundInline label="పేజీ" />;
+    view = <NotFoundInline label={t("పేజీ", "page")} />;
   }
 
   return (
@@ -83,17 +86,20 @@ function ViewRouter() {
 
 export function SiteApp() {
   return (
-    <RouterProvider>
-      <div className="flex min-h-screen flex-col bg-background">
-        <Header />
-        <main className="flex-1">
-          <ViewRouter />
-        </main>
-        <Footer />
-        {/* Spacer so the fixed mobile CTA bar never covers footer content */}
-        <div className="h-14 bg-teal-deep md:hidden" aria-hidden />
-      </div>
-      <MobileBottomBar />
-    </RouterProvider>
+    <LangProvider>
+      <RouterProvider>
+        <div className="flex min-h-screen flex-col bg-background">
+          <Header />
+          <main className="flex-1">
+            <ViewRouter />
+          </main>
+          <BizMealsBand />
+          <Footer />
+          {/* Spacer so the fixed mobile CTA bar never covers footer content */}
+          <div className="h-14 bg-teal-deep md:hidden" aria-hidden />
+        </div>
+        <MobileBottomBar />
+      </RouterProvider>
+    </LangProvider>
   );
 }
